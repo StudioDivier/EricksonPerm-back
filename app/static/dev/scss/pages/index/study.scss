@@ -1,0 +1,119 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.study {
+  background-image: url("../img/study/bg-study.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .row {
+    margin-bottom: 30px;
+  }
+
+  .name {
+    h2 {
+      color: white;
+      font-size: $h2FontSize;
+      font-family: "MuseoCyrl700", serif;
+      margin-bottom: 25px;
+    }
+  }
+
+  .study-card{
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    position: center;
+    padding: 25px;
+    height: 100%;
+
+    .photo-name {
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      img{
+        width: 85px;
+      }
+      p{
+        font-family: "MuseoCyrl500", serif;
+        padding-left: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    .list-card{
+      font-family: "MuseoCyrl100", serif;
+      margin-top: 10px;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: center;
+      //height: 100%;
+      a{
+        color: black;
+        text-decoration: underline;
+        margin-top: 10px;
+        display: block;
+      }
+    }
+  }
+}
+
+@include max-w(992){
+  .study{
+    .col-lg-4{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include max-w(768){
+  .study{
+    .col-lg-4{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .study {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .row{
+      margin-bottom: 10px;
+    }
+
+    .name{
+      h2{
+        font-size: $h2FontSize375;
+      }
+    }
+    .col-lg-4 {
+      margin-bottom: 15px;
+      .study-card {
+        .photo-name{
+          img{
+            width: 65px;
+          }
+          p{
+            font-size: $pFontSizeMax375;
+          }
+        }
+        .list-card{
+          a{
+            font-size: $pFontSizeMin375;
+          }
+        }
+      }
+    }
+  }
+}

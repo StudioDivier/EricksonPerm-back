@@ -1,0 +1,198 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.near-date {
+  background-image: url("../img/near-date/bg-near-date.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .name {
+    h2 {
+      color: black;
+      font-size: $h2FontSize;
+      font-family: "MuseoCyrl700", serif;
+      margin-bottom: 25px;
+    }
+  }
+
+  .card-date {
+    height: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid #f15a29;
+
+    .card-date-label {
+      //background-image: url("../img/near-date/bg-label.png");
+      border-radius: 0 0 15px 0;
+      background-color: #818181;
+      width: 35%;
+      //background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include pya(6px);
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .date {
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .card-text {
+      padding-top: 15px;
+      padding-left: 15px;
+
+      h5 {
+        font-family: "MuseoCyrl500", serif;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: "MuseoCyrl100", serif;
+      }
+    }
+
+    .teach {
+      margin-top: 50px;
+      padding-top: 15px;
+      padding-left: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .teach-name {
+        margin-left: 15px;
+        justify-content: flex-end;
+      }
+    }
+
+    .button {
+      padding-top: 15px;
+      padding-left: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+
+    }
+  }
+
+  .button-opac {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 35px;
+    .btn-opac {
+      border-radius: 19px;
+      border: 1px solid #1d1d1d;
+      color: #1d1d1d;
+      display: flex;
+      justify-content: center;
+      @include pxa(29px);
+      @include pya(10px);
+      font-family: "MuseoSansCyrl500", serif;
+    }
+  }
+}
+
+@include max-w(992){
+  .near-date{
+    .col-lg-4{
+      margin-bottom: 25px;
+      @include mxa(100px);
+    }
+  }
+}
+
+
+@include max-w(768){
+  .near-date{
+    .col-lg-4{
+      margin-bottom: 15px;
+      @include mxa(35px);
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .near-date {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .name {
+      h2 {
+        font-size: $h2FontSize375;
+      }
+    }
+    .col-lg-4 {
+      @include mxa(35px);
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      .card-date {
+        width: 100%;
+        .card-date-label {
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+        .date {
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+        .card-text {
+          h5 {
+            font-size: $h5FontSize375;
+          }
+
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+        .teach{
+          margin-top: 30px;
+          img{
+            width: 100%;
+          }
+          .teach-name{
+            h5{
+              font-size: $h4FontSize375;
+            }
+            p{
+              font-size: $pFontSizeMin375;
+            }
+          }
+        }
+      }
+    }
+
+    .button-opac{
+      margin: 25px;
+      a{
+        font-size: $pFontSizeMax375;
+      }
+    }
+  }
+}

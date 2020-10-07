@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'dev/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dev/css/style.css' %}">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+{#header#}
+{% include 'base/header.html' %}
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1>СТАРТ нового потока тренингов второго полугодия 2020 г.</h1>
+                <p>Сентябрь, ноябрь - наука и искусство трансформационного коучинга, октябрь - квантовый ум, ноябрь -
+                    энеаграмма!</p>
+                <p>Успейте присоединиться к группам по специальным ценам. Подробности на сайте и у
+                    организаторов.</p>
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <a href="#" class="btn">Узнать расписание</a>
+    </div>
+</section>
+
+{% include 'main/form.html' %}
+
+<section class="banner1">
+    <div class="container">
+        <div class="row">
+            <div class="f-row">
+                <div class="text">
+                    <h3>Является одной из
+                        крупнейших компаний,
+                        проводящих обучение
+                        коучингу</h3>
+                </div>
+                <div class="logo-eric">
+                    <img src="{% static 'dev/img/banner1/logo-eric.png' %}" alt="logo-eric">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="s-row">
+                <div class="mono-text">
+                    <p>Наши выпускники работают в Международной Федерации Коучей, руководят крупнейшими компаниями во
+                        всем мире.
+                        Международный Эриксоновский Университет во всех странах присутствия ежегодно выпускает несколько
+                        тысяч
+                        сертифицированных коучей и тренеров.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{#footer#}
+{% include 'base/footer.html' %}
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="{% static 'dev/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

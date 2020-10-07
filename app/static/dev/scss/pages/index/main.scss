@@ -1,0 +1,83 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.main {
+  background-image: url("../img/bg-main.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  @include lg-min {
+    height: 680px;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  p {
+    color: #ffffff;
+    font-family: "MuseoCyrl500", serif;
+  }
+
+  a {
+    margin-top: 50px;
+    border-radius: 25px;
+    background-color: #e9f1f7;
+    font-family: "MuseoCyrl500", serif;
+    letter-spacing: 0.5px;
+    padding: 10px 35px;
+  }
+}
+
+@include max-w(992){
+  .main{
+    .col-lg-7{
+      padding-top: 35px;
+    }
+    a{
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@include max-w(768){
+  .main{
+    .col-lg-7{
+      padding-top: 15px;
+    }
+    a{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    .col-lg-7 {
+
+      h1 {
+        font-size: $h1FontSize375;
+        @include py(25px, 15px);
+      }
+
+      p {
+        font-size: 10px;
+      }
+    }
+
+    a {
+      margin-top: 25px !important;
+      margin-bottom: 25px;
+      font-size: 10px !important;
+      padding: 5px 18px !important;
+    }
+  }
+
+}

@@ -1,0 +1,104 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.banner1 {
+  background-image: url("../img/banner1/bg-banner1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .f-row{
+    @include mya(45px);
+    display: flex;
+
+    h3{
+      color: white;
+      font-family: "MuseoCyrl700", serif;
+      font-size: $h3FontSize;
+      text-align: left;
+    }
+
+  }
+  .s-row{
+    margin-top: 35px;
+    p{
+      font-family: "MuseoCyrl100", serif;
+      color: white;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+}
+
+@include max-w(992){
+  .banner1{
+    .f-row{
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column-reverse;
+      .text{
+        margin-top: 25px;
+      }
+      .logo-eric{
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(768){
+  .banner1{
+    .f-row{
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column-reverse;
+      .text{
+        margin-top: 25px;
+      }
+      .logo-eric{
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner1 {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    .f-row{
+      margin-top: 15px;
+      margin-bottom: 15px;
+      @include mxa(15px);
+      .text {
+        h3 {
+          font-size: $h3FontSize375;
+        }
+      }
+      .logo-eric {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .s-row{
+      margin-top: 15px;
+      @include mxa(15px);
+      p{
+        font-size: $pFontSizeMax375;
+      }
+    }
+  }
+}

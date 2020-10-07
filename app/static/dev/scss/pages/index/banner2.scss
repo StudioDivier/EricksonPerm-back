@@ -1,0 +1,149 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.banner2 {
+  background-image: url("../img/banner2/bg-banner2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .content{
+    @include mya(35px);
+    margin-top: 35px;
+    display: flex;
+    color: white;
+
+    .text{
+      width: 50%;
+      padding-top: 45px;
+      padding-right: 15px;
+      text-align: left;
+      font-family: "MuseoCyrl100", serif;
+      .our{
+        font-size: 35px;
+      }
+      .name{
+        font-family: "MuseoCyrl700", serif;
+        font-size: 40px;
+      }
+      .main-text{
+        font-size: 20px;
+      }
+    }
+    .photo{
+      width: 50%;
+    }
+  }
+}
+
+@include max-w(1200){
+  .banner2{
+    .content{
+      display: flex;
+      flex-direction: row;
+
+      .text{
+        width: 50%;
+        padding-top: 0!important;
+        margin-bottom: 10px;
+      }
+      .photo {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(992){
+  .banner2{
+    .content{
+      display: flex;
+      flex-direction: row;
+
+      .text{
+        width: 50%;
+        padding-top: 0!important;
+        margin-bottom: 10px;
+
+      }
+      .photo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(768){
+  .banner2{
+    .content{
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .text{
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .photo {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  .banner2 {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    .content {
+      margin-top: 10px;
+      @include mxa(15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .text{
+        padding-top: 0;
+        width: 100%;
+        .our{
+          font-size: $h3FontSize375!important;
+        }
+        .name{
+          font-size: $h3FontSize375!important;
+        }
+        .main-text{
+          font-size: $pFontSizeMin375!important;
+        }
+      }
+      .photo {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  //.text, .photo{
+  //  width: 100%!important;
+  //  display: flex;
+  //  flex-wrap: wrap;
+  //}
+}

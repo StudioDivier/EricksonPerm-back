@@ -1,0 +1,238 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+footer {
+  .content {
+
+    @include mya(35px);
+    font-size: 15px;
+    font-family: "MuseoCyrl100", serif;
+
+    .f-row {
+      margin-bottom: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+
+      .list1 {
+        font-family: "MuseoCyrl700", serif;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .list2 {
+        font-family: "MuseoCyrl700", serif;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list3 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list4 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list5 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list6 {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-family: "MuseoCyrl700", serif;
+        }
+
+        .social {
+          display: flex;
+        }
+      }
+
+      a {
+        color: black;
+      }
+    }
+
+    .s-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include pya(25px);
+
+      a {
+        text-decoration: underline;
+        color: #f15a29;
+      }
+    }
+  }
+}
+
+@include max-w(992) {
+  footer {
+    .content {
+      .f-row {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+
+        .logo-footer {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          img, p {
+            width: 50%;
+          }
+        }
+
+        .list1, .list2 {
+          width: 25%;
+          font-size: $pFontSizeMin375;
+          margin-top: 15px;
+          padding-top: 15px;
+          display: flex;
+          flex-direction: column !important;
+          justify-content: space-between;
+        }
+
+        .list5, .list6, .list3, .list4 {
+          width: 25%;
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          p {
+            margin-bottom: 5px;
+          }
+        }
+
+        .social {
+          display: flex;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  footer {
+    .content {
+      @include my(15px, 0);
+
+      .f-row {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+
+        .logo-footer {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .list1, .list2, .list3, .list4 {
+          width: 25%;
+          font-size: $pFontSizeMin375;
+          margin-top: 15px;
+          padding-top: 15px;
+          display: flex;
+          flex-direction: column !important;
+          justify-content: space-between;
+        }
+
+        .list5, .list6 {
+          width: 50%;
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          p {
+            margin-bottom: 5px;
+          }
+        }
+
+        .social {
+          display: flex;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .s-row {
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    .content {
+      @include my(15px, 0);
+
+      .f-row {
+        .logo-footer {
+          margin-bottom: 15px;
+
+          p {
+            font-size: $pFontSizeMax375;
+          }
+
+          img {
+            margin-bottom: 15px;
+            width: 100%;
+          }
+        }
+
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+
+        .list1, .list2, .list3, .list4, .list5, .list6 {
+          font-size: $pFontSizeMin375;
+          margin-top: 15px;
+          padding-top: 15px;
+          display: flex;
+          flex-direction: row !important;
+          justify-content: space-between;
+        }
+
+        .social {
+          display: flex;
+        }
+      }
+
+      .s-row {
+        @include pya(15px);
+
+        p {
+          font-size: $pFontSizeMin375;
+        }
+      }
+    }
+  }
+}
+

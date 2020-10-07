@@ -1,0 +1,123 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.our-programs {
+  background-image: url("../img/bg-programs.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .row > div {
+    margin-top: 35px;
+  }
+
+  .name {
+    h2 {
+      font-size: $h2FontSize;
+      font-family: "MuseoCyrl700", serif;
+      margin-bottom: 25px;
+    }
+  }
+
+  .programs {
+    display: flex;
+    flex-wrap: wrap;
+    .col-lg-4 {
+      margin-bottom: 15px;
+      .program-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .photo {
+          img {
+            width: 100%;
+          }
+        }
+
+        .text {
+          padding: 25px 15px 0 15px;
+
+          h5 {
+            font-family: "MuseoCyrl500", serif;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-family: "MuseoCyrl100", serif;
+          }
+
+          a {
+            color: #f15a29;
+            text-decoration: underline;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: flex-start;
+
+          padding: 25px 15px 0 15px;
+
+          a:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .our-programs {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .name {
+      h2 {
+        font-size: $h2FontSize375;
+        margin-bottom: 5px;
+      }
+    }
+
+    .col-lg-4 {
+      margin-top: 15px!important;
+      .program-card {
+        .photo {
+          img {
+            width: 100%;
+          }
+        }
+
+        .text {
+          h5 {
+            font-size: $h5FontSize375;
+          }
+
+          p, a {
+            font-size: $pFontSizeMin375;
+          }
+
+        }
+
+        .buttons {
+          padding: 15px 5px 0 5px;
+
+          a {
+            font-size: $pFontSizeMin375;
+          }
+        }
+      }
+    }
+  }
+}

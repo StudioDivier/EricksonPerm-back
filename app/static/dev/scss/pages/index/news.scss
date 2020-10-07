@@ -1,0 +1,133 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.news {
+  background-image: url("../img/news/bg-news.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .content {
+    @include mya(35px);
+    .name {
+      h2 {
+        color: black;
+        font-size: $h2FontSize;
+        font-family: "MuseoCyrl700", serif;
+        margin-bottom: 25px;
+      }
+    }
+
+    .program-card {
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .photo {
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        padding: 25px 15px 0 15px;
+
+
+        h5 {
+          font-family: "MuseoCyrl500", serif;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: "MuseoCyrl100", serif;
+        }
+
+        a {
+          color: #f15a29;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .button-opac {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 35px;
+
+      .btn-opac {
+        border-radius: 19px;
+        border: 1px solid #1d1d1d;
+        color: #1d1d1d;
+        display: flex;
+        justify-content: center;
+        @include pxa(29px);
+        @include pya(10px);
+        font-family: "MuseoSansCyrl500", serif;
+      }
+    }
+  }
+}
+
+
+@include max-w(768){
+  .news{
+    .content{
+      .col-lg-4{
+        @include mya(25px);
+        @include mxa(25px);
+      }
+    }
+  }
+}
+
+@include max-w(375){
+  .news{
+    .content{
+      .name{
+        h2{
+          font-size: $h2FontSize375;
+        }
+      }
+      .row{
+        @include mxa(15px);
+        display: flex;
+        justify-content: center;
+        .col-lg-4{
+          @include mya(15px);
+          .program-card{
+            .photo{
+              width: 100%;
+            }
+            .text{
+              p{
+                font-size: $pFontSizeMax375;
+              }
+              h5{
+                font-size: $h5FontSize375;
+              }
+              a{
+                font-size: $pFontSizeMax375;
+              }
+            }
+          }
+        }
+      }
+      .button-opac{
+        a{
+          font-size: $pFontSizeMax375;
+        }
+      }
+    }
+  }
+}

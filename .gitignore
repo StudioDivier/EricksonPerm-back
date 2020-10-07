@@ -7,6 +7,8 @@ __pycache__/
 *.so
 venv/
 .idea/
+EricksonPerm_back/config.py
+app/migrations/
 
 # Distribution / packaging
 .Python

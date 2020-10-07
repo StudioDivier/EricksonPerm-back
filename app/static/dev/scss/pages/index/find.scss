@@ -1,0 +1,55 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.find {
+  background-image: url("../img/news/bg-news.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .name {
+    @include mya(35px);
+
+    h2 {
+      color: black;
+      font-size: $h2FontSize;
+      font-family: "MuseoCyrl700", serif;
+      margin-bottom: 25px;
+    }
+    p{
+      font-size: 24px;
+      font-family: "MuseoCyrl100", serif;
+      span{
+        font-family: "MuseoCyrl700", serif;
+      }
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+
+@include max-w(375){
+  .find{
+    .name{
+      h2{
+        font-size: $h2FontSize375;
+      }
+      p{
+        font-size: $pFontSizeMax375;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
