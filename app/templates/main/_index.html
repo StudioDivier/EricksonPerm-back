@@ -1,39 +1,22 @@
+{% extends "base/base.html" %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block title %}Erickson Perm - Главная{% endblock %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'dev/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'dev/css/style.css' %}">
+{% block content %}
 
-    <title>Hello, world!</title>
-</head>
-<body>
+{% include 'main/components/main.html' %}
 
-{#header#}
-{% include 'base/header.html' %}
+{% include 'main/components/representation.html' %}
 
-<section class="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <h1>СТАРТ нового потока тренингов второго полугодия 2020 г.</h1>
-                <p>Сентябрь, ноябрь - наука и искусство трансформационного коучинга, октябрь - квантовый ум, ноябрь -
-                    энеаграмма!</p>
-                <p>Успейте присоединиться к группам по специальным ценам. Подробности на сайте и у
-                    организаторов.</p>
-            </div>
-            <div class="col-lg-5"></div>
-        </div>
-        <a href="#" class="btn">Узнать расписание</a>
-    </div>
-</section>
+{% include 'main/components/couching.html' %}
 
-{% include 'main/form.html' %}
+{% include 'main/components/our-programs.html' %}
+
+{% include 'main/components/study.html' %}
+
+{% include 'main/components/near-date.html' %}
+
+{% include 'base/form.html' %}
 
 <section class="banner1">
     <div class="container">
@@ -46,7 +29,7 @@
                         коучингу</h3>
                 </div>
                 <div class="logo-eric">
-                    <img src="{% static 'dev/img/banner1/logo-eric.png' %}" alt="logo-eric">
+                    <img src="{% static 'dev/img/main/banner1/logo-eric.png' %}" alt="logo-eric">
                 </div>
             </div>
         </div>
@@ -64,19 +47,278 @@
     </div>
 </section>
 
+<section class="office">
+    <div class="container">
+        <div class="head">
+            <h2>Центральный офис</h2>
+            <h3>Международного эриксоновского университета</h3>
+            <h4>Находится в Ванкувере, Канада</h4>
+            <div class="text-bottom">
+                <h5><span>Международный Эриксоновский Университет</span> проводит обучение, тренинги, сертификационные
+                    программы,
+                    школы управления:</h5>
+            </div>
+        </div>
+        <div class="body-block">
+            <div class="stat-row">
+                <div class="elem">
+                    <span class="f"><b>в</b></span>
+                    <span class="s">102</span>
+                    <span class="t">городах</span>
+                </div>
+                <div class="elem">
+                    <span class="f"><b>в</b></span>
+                    <span class="s">85</span>
+                    <span class="t">странах</span>
+                </div>
+                <div class="elem">
+                    <span class="f"><b>на</b></span>
+                    <span class="s">5</span>
+                    <span class="t">континентах</span>
+                </div>
+                <div class="elem">
+                    <span class="f"><b>с</b></span>
+                    <span class="s">1980</span>
+                    <span class="t">года</span>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <img src="{% static 'dev/img/main/office/map.png' %}" alt="map">
+        </div>
+    </div>
+</section>
 
-{#footer#}
-{% include 'base/footer.html' %}
+<section class="cto">
+    <div class="container">
+        <div class="base">
+            <div class="photo">
+                <img src="{% static 'dev/img/main/cto/cto-img.png' %}">
+            </div>
+            <div class="text">
+                <p class="ons">Основатель:</p>
+                <p class="name">МЭРИЛИН АТКИНСОН</p>
+                <p class="description">Президент Международного Эриксоновского Университета.</p>
+                <p class="text-base">Доктор психологии, Коуч, всемирно известный тренер Мэрилин
+                    Аткинсон является автором многих работ, с 1985 года ведет
+                    преподавательскую и консультативную деятельность в ведущих
+                    корпорациях мира, является основателем и президентом
+                    Международного Эриксоновского Университета (Канада).</p>
 
+                <p class="text-base">Президент Международного Эриксоновского Университета
+                    Мэрилин Аткинсон работает в России на протяжении 16 лет.
+                    Мэрилин Аткинсон вырастила несколько поколений Российских
+                    руководителей, оказала огромное влияние на развитие тренеров и
+                    бизнес - образования в СНГ, на формирование понятия коучинг.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="{% static 'dev/js/bootstrap.min.js' %}"></script>
-</body>
-</html>
+<section class="banner2">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <div class="text">
+                    <p class="our">Наша команда</p>
+                    <p class="name">ERICKSON PERM</p>
+                    <p class="main-text">В команде Эриксоновского Университета работают
+                        профессиональные сертифицированные коучи. Люди,
+                        вдохновленные принципами Милтона Эриксона и коучингом,
+                        ориентированным на поиск решения.</p>
+
+                    <p class="main-text">Наши сотрудники имеют различное образование, прошли
+                        обучение коучингу и регулярно повышают квалификацию.</p>
+                </div>
+                <div class="photo">
+                    <img src="{% static 'dev/img/main/banner2/banner2-photo.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-mission">
+    <div class="container">
+        <div class="row">
+            <div class="text">
+                <h2>Наша миссия:</h2>
+                <p class="under-name">трансформировать мир с каждым диалогом!</p>
+                <p>В работе университета мы воплощаем философию Милтона Эриксона:</p>
+            </div>
+            <div class="body-block">
+                <div class="stat-row">
+                    <div class="elem">
+                        <span class="f"><b>01</b></span>
+                        <span class="s">любовь и уважение к людям</span>
+                    </div>
+                    <div class="elem">
+                        <span class="f"><b>02</b></span>
+                        <span class="s">развитие человеческого потенциала</span>
+                    </div>
+                    <div class="elem">
+                        <span class="f"><b>03</b></span>
+                        <span class="s">технологии,ориентированные на решения</span>
+                    </div>
+                    <div class="elem">
+                        <span class="f"><b>04</b></span>
+                        <span class="s">направленность на повышение эффективности</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="work">
+    <div class="container">
+        <div class="row">
+            <div class="text_work">
+                <p class="f_work">Направления работы</p>
+                <p class="s_work">ERICKSON PERM</p>
+                <p class="t_work">У нас вы можете выбрать:</p>
+            </div>
+            <div class="cards">
+                <div class="branch" id="first">
+                    <div class="bottom">
+                        <p>Индивидуальный коучинг</p>
+                        <div class="btn">
+                            <a href="#" class="btn-orange">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="branch" id="second">
+                    <div class="bottom">
+                        <p>Индивидуальный коучинг</p>
+                        <div class="btn">
+                            <a href="#" class="btn-orange">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="branch" id="third">
+                    <div class="bottom">
+                        <p>Индивидуальный коучинг</p>
+                        <div class="btn">
+                            <a href="#" class="btn-orange">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'main/components/feeds.html' %}
+
+<section class="partners">
+    <div class="container">
+        <div class="row">
+            <div class="text">
+                <h2>Наши партнеры</h2>
+            </div>
+            <div class="partners-img">
+                <img src="{% static 'dev/img/main/partners/p1.png' %}">
+                <img src="{% static 'dev/img/main/partners/p2.png' %}">
+                <img src="{% static 'dev/img/main/partners/p3.png' %}">
+                <img src="{% static 'dev/img/main/partners/p4.png' %}">
+                <img src="{% static 'dev/img/main/partners/p5.png' %}">
+                <img src="{% static 'dev/img/main/partners/p6.png' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news">
+    <div class="container">
+        <div class="content">
+            <div class="name">
+                <h2>Новости</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div>
+                            <div class="photo">
+                                <img src="{% static 'dev/img/main/news/news-pic1.png' %}" alt="sience&art">
+                            </div>
+                            <div class="text">
+                                <p>25.08.2020</p>
+                                <h5>Коучинг в образовании -
+                                    завершили первый модуль</h5>
+                                <p>21 августа мы успешно завешили
+                                    #обучениекоучингу в 1 модуле
+                                    программы "Коучинг в образовании".</p>
+                                <a href="#" class="click">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div>
+                            <div class="photo">
+                                <img src="{% static 'dev/img/main/news/news-pic2.png' %}" alt="sience&art">
+                            </div>
+                            <div class="text">
+                                <p>16.06.2020</p>
+                                <h5>Завершили самый
+                                    трансформационный
+                                    поток - группа 27</h5>
+                                <p>Мы это сделали. Сейчас я уже точно могу
+                                    сказать, что это самый необычный, самый...</p>
+                                <a href="#" class="click">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="program-card">
+                        <div>
+                            <div class="photo">
+                                <img src="{% static 'dev/img/main/news/news-pic3.png' %}" alt="sience&art">
+                            </div>
+                            <div class="text">
+                                <p>19.03.2020</p>
+                                <h5>Открыли 27 программу
+                                    началом первого модуля</h5>
+                                <p>Это только начало. Первые 4 дня из 16
+                                    дней профессионального пути ребят, но
+                                    они уже большие профессионалы.</p>
+                                <a href="#" class="click">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="button-opac">
+                    <a class="btn-opac" href="#">Читать все новости</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="find_us contacts_page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="find_us__header">
+                    <h2>Как нас найти</h2>
+                    <p><span>Наш адрес:</span> г. Пермь, ул. Монастырская, 14, оф. 545</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="for_big_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1056.7021495559457!2d56.229328787326715!3d58.01485445941531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c7210f526a37%3A0xd296af7a754188ad!2sUlitsa%20Monastyrskaya%2C%2014%2C%20Perm%2C%20Permskiy%20kray%2C%20614045!5e0!3m2!1sen!2sru!4v1602082691633!5m2!1sen!2sru"
+                            width="100%" height="450" frameborder="0" style="border-radius: 15px;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div><!--for_big_map-->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -9,9 +9,13 @@ def add_offer_to_db(name:str, email: str, form:str):
     :param form: название или нахождение формы
     :return: True
     """
-    offer = Offers()
-    offer.name = name
-    offer.email = email
-    offer.form = form
-    offer.save()
-    return True
+    try:
+        offer = Offers()
+        offer.name = name
+        offer.email = email
+        offer.form = form
+        offer.save()
+        return True
+
+    except BaseException:
+        return False

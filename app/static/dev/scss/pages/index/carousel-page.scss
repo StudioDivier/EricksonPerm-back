@@ -4,7 +4,7 @@
 @import "../../common/mixins";
 
 .carousel-page {
-  background-image: url("../img/carousel-page/bg-carousel-page.png");
+  background-image: url("../img/main/carousel-page/bg-carousel-page.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,9 +30,13 @@
   }
 
   #feedback-carousel {
+    width: 100%;
     .carousel-inner {
       @include pxa(30px);
       .carousel-item {
+        img {
+          width: 100%;
+        }
         background-color: rgba(25, 25, 25, 0.44);
         margin-top: 35px;
         font-size: 18px;

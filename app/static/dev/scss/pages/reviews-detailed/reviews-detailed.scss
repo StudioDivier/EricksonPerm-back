@@ -1,0 +1,159 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.detailed-review {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 125px;
+
+  .quote-block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .person-avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quote-block__text {
+      height: 100%;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .detailed-review__subHeader {
+        font-size: 22px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  h2 {
+    font-size: $h2FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  h4 {
+    font-size: $h4FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  p {
+    font-size: $pFontSizeMin;
+  }
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .detailed-review {
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h4 {
+      font-size: $h4FontSize375;
+    }
+
+    p {
+      font-size: $pFontSizeMin375 !important;
+    }
+
+    .detailed-review__subHeader {
+      font-size: 16px !important;
+    }
+
+    .quote-block {
+      margin-bottom: 20px;
+
+      .person-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      .quote-block__text {
+        padding: 20px 30px;
+
+      }
+    }
+
+    .video-container {
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .detailed-review {
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h4 {
+      font-size: $h4FontSize375;
+    }
+
+    p {
+      font-size: $pFontSizeMax375 !important;
+    }
+
+    .detailed-review__subHeader {
+      font-size: 18px !important;
+    }
+
+    .quote-block {
+      margin-bottom: 20px;
+
+      .person-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      .quote-block__text {
+        padding: 20px 30px;
+
+      }
+    }
+
+    .video-container {
+      iframe {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .detailed-review {
+
+  }
+}

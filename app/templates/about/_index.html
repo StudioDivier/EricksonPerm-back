@@ -1,0 +1,79 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - О компании{% endblock %}
+
+{% block content %}
+
+<section class="breadcr">
+    <div class="breadcr-container container">
+        <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">О компании</span>
+                </span>
+            </span>
+        </p>
+    </div>
+</section>
+
+<section class="about-page">
+    <div class="container">
+        <div class="section-header">
+            <div class="row">
+                <div class="col">
+                    <h2>О компании</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Уральская Академия Коучинга</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                        - это создание уникального пространства для пробуждения и
+                        воплощения вашей самой смелой мечты!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                <img src="{% static 'dev/img/about/illustration.png' %}" alt="illustration">
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                <div class="text-container">
+                    <div>
+                        <p>Потому что коучинг – это процесс, в результате которого
+                            человек осознаёт своё величие, вспоминает свой путь, свое
+                            призвание и научается следовать ему, наполняя свою жизнь
+                            смыслом, творчеством и радостью бытия.</p>
+                        <p>Да, это труд постоянного осознания – а что мне важно на
+                            самом деле? Что же я хочу? И полная ответственность за все,
+                            что происходит в собственной жизни. А результат — яркая,
+                            насыщенная, полная разнообразных событий, идей и чувств
+                            жизнь.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row details">
+            <div class="col">
+                <p>ICF определяет коучинг как процесс партнерства, стимулирующий работу мысли и креативность клиента, в
+                    котором
+                    он с помощью коуча максимально раскрывает свой личный и профессиональный потенциал.</p>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-outline-secondary">Наши тренеры</button>
+        </div>
+    </div>
+</section>
+
+{% include 'base/form.html' %}
+
+{% endblock %}

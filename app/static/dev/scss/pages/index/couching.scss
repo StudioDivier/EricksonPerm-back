@@ -4,7 +4,7 @@
 @import "../../common/mixins";
 
 .couching {
-  background-image: url("../img/bg-couch.png");
+  background-image: url("../img/main/bg-couch.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,20 +28,23 @@
   }
 
   .row-blocks {
+    margin-top: 65px;
     display: flex;
 
     .couch-card {
-      height: 350px;
+      height: 100%;
       border: 30px solid #ed700b;
-      border-image: url("../img/border-card.png") 20 round round;
+      border-image: url("../img/main/border-card.png") 20 round round;
       opacity: 0.8;
-      margin-top: 65px;
       position: center;
       display: flex;
       flex-direction: column;
 
       .card-img {
         text-align: center;
+        img {
+          width: 100%;
+        }
 
         .card-name {
           margin-top: 15px;

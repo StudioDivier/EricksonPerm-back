@@ -1,11 +1,12 @@
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
 
 
 class Offers(models.Model):
 
     name = models.CharField(name="name", max_length=128)
-    email = models.EmailField(name='email')
+    email = models.EmailField(name='email', unique=True)
     form = models.CharField(name="form", max_length=128)
 
     class Meta:
@@ -34,11 +35,16 @@ class Feeds(models.Model):
 
     img = models.FilePathField(name="img", path=settings.MEDIA_URL)
     title = models.CharField(name="title", max_length=128)
-    description = models.TextField(name="description")
+    description_short = models.TextField(name="description_short")  # preview short
+    description_long = models.TextField(name="description_long")  # long
+    video_review = models.URLField(name='video_review')
 
     class Meta:
         verbose_name = 'Feed'
         verbose_name_plural = 'Feeds'
+
+    def get_absolute_url(self):
+        return reverse('index:feed_list', args=[self.id])
 
 
 class Telephone(models.Model):
@@ -77,4 +83,6 @@ class InfoCompany(models.Model):
     class Meta:
         verbose_name = 'InfoCompany'
         verbose_name_plural = 'InfoCompanies'
+
+
 

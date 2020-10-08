@@ -1,0 +1,82 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - Контакты{% endblock %}
+
+{% block content %}
+    
+<section class="breadcr">
+    <div class="breadcr-container container">
+        <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">Контакты</span>
+                </span>
+            </span>
+        </p>
+    </div>
+</section>
+
+<section class="contacts_page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>
+                    Контакты
+                </h1>
+            </div>
+        </div>
+        <div class="fancy-wrapper">
+            <div class="row">
+                <div class="contact col-xs-12 col-sm-12 col-lg-5">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true" style="font-size: 2rem"></i>
+                    <div>
+                        <h5>Адрес:</h5>
+                        <p>г. Пермь, ул. Монастырская, 14, оф. 545</p>
+                    </div>
+                </div>
+                <div class="contact col-xs-12 col-sm-12 col-lg-4">
+                    <i class="fas fa-phone-alt" aria-hidden="true" style="font-size: 2rem"></i>
+                    <div>
+                        <h5>Телефон:</h5>
+                        <p>+7 (902) 834-44-99</p>
+                    </div>
+                </div>
+                <div class="contact col-xs-12 col-sm-12 col-lg-3">
+                    <i class="far fa-envelope" aria-hidden="true" style="font-size: 2rem"></i>
+                    <div>
+                        <h5>E-mail:</h5>
+                        <p>coachperm@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="find_us contacts_page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="find_us__header">
+                    <h2>Как нас найти</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="for_big_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1056.7021495559457!2d56.229328787326715!3d58.01485445941531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c7210f526a37%3A0xd296af7a754188ad!2sUlitsa%20Monastyrskaya%2C%2014%2C%20Perm%2C%20Permskiy%20kray%2C%20614045!5e0!3m2!1sen!2sru!4v1602082691633!5m2!1sen!2sru"
+                            width="100%" height="450" frameborder="0" style="border-radius: 15px;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div><!--for_big_map-->
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% include 'base/form.html' %}
+
+{% endblock %}

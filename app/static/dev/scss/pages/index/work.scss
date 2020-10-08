@@ -4,7 +4,7 @@
 @import "../../common/mixins";
 
 .work {
-  background-image: url("../img/work/bg-work.png");
+  background-image: url("../img/main/work/bg-work.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@
 
     .text_work {
       font-family: "MuseoCyrl100", serif;
-
+      width: 100%;
 
       .f_work {
         font-size: $h4FontSize;
@@ -41,6 +41,7 @@
 
     .cards {
       display: flex;
+      width: 100%;
 
       .branch {
         margin-right: 20px;
@@ -66,7 +67,7 @@
       }
 
       #first {
-        background-image: url("../img/work/card1.png");
+        background-image: url("../img/main/work/card1.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -76,7 +77,7 @@
       }
 
       #second {
-        background-image: url("../img/work/card2.png");
+        background-image: url("../img/main/work/card2.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -85,7 +86,7 @@
       }
 
       #third {
-        background-image: url("../img/work/card3.png");
+        background-image: url("../img/main/work/card3.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -103,7 +104,7 @@
       .cards {
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: 10px;
+        //margin-left: 10px;
         #first, #second, #third {
           @include mya(10px);
           width: 320px !important;
@@ -121,7 +122,7 @@
       .cards {
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: 10px;
+        //margin-left: 10px;
         #first, #second, #third {
           @include mya(10px);
           width: 290px !important;
@@ -138,7 +139,7 @@
       .cards {
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: 10px;
+        //margin-left: 10px;
         #first, #second, #third {
           @include mya(10px);
           width: 300px !important;
@@ -171,7 +172,7 @@
 
       .cards {
         flex-wrap: wrap;
-        margin-left: 10px;
+        //margin-left: 10px;
         #first, #second, #third {
           @include mya(10px);
           width: 280px !important;

@@ -6,27 +6,27 @@
 // FONTS
 @font-face {
   font-family: "MuseoCyrl900";
-  src: url("/fonts/MuseoCyrl900.otf");
+  src: url("../fonts/MuseoCyrl900.otf");
 }
 
 @font-face {
   font-family: "MuseoCyrl700";
-  src: url("/fonts/MuseoCyrl700.otf");
+  src: url("../fonts/MuseoCyrl700.otf");
 }
 
 @font-face {
   font-family: "MuseoCyrl500";
-  src: url("/fonts/MuseoCyrl500.otf");
+  src: url("../fonts/MuseoCyrl500.otf");
 }
 
 @font-face {
   font-family: "MuseoCyrl300";
-  src: url("/fonts/MuseoCyrl300.otf");
+  src: url("../fonts/MuseoCyrl300.otf");
 }
 
 @font-face {
   font-family: "MuseoCyrl100";
-  src: url("/fonts/MuseoCyrl100.otf");
+  src: url("../fonts/MuseoCyrl100.otf");
 }
 
 // COMMON STYLES
@@ -78,6 +78,11 @@
 // IMPORT COMPONENTS
 @import "pages/_common/components";
 @import "pages/_common/cross";
+@import "pages/_common/breadcr";
 @import "pages/index/index";
+@import "pages/feed_list/index";
+@import "pages/contacts/contacts";
+@import "pages/about/about";
+@import "pages/reviews-detailed/reviews-detailed";
 
 

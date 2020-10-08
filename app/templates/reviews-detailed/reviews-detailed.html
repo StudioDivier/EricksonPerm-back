@@ -1,0 +1,65 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - О компании{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <a href="/feed-list">Отзывы</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">{{ review.title }}</span>
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="detailed-review">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>{{ review.title }}</h2>
+                </div>
+            </div>
+            <div class="quote-block">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 person-avatar">
+                        <img src="{{ review.img }}" alt="Photo">
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="quote-block__text">
+                            <div class="wrapper">
+                                <p class="detailed-review__subHeader">Я пойду на этот курс еще раз!</p>
+                                <p>{{ review.description_short}} </p>
+                                <p>{{ review.description_long}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="detailed-review__subHeader">Видео-отзыв:</p>
+                </div>
+                <div class="col-12">
+                    <div class="video-container">
+                        <iframe width="60%" height="315" src="{{ review.video_review }}"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'base/form.html' %}
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - Отзывы{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">Отзывы</span>
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="feed-list">
+        <div class="container">
+            <div class="row">
+                <h1>Отзывы наших клиентов</h1>
+            </div>
+            <div class="list">
+                {% for feed in feeds %}
+                    <div class="list-elem">
+                        <div class="image-elem">
+                            <img src="{{ feed.img }}">
+                        </div>
+                        <div class="text-elem">
+                            <p class="name">
+                                {{ feed.title }}
+                            </p>
+                            <p class="text">
+                                {{ feed.description_short }}
+                            </p>
+                            <div class="button-opac">
+                                <a class="btn-opac" href="{% url 'index:feed_detail' feed.id %}">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="under-elem">
+                            <img src="{% static 'dev/img/feed-list/icon.png' %}">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+    </section>
+
+    {% include 'base/form.html' %}
+
+{% endblock %}
