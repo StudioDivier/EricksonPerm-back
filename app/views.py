@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from .forms import MainForm
 from .services import database_form
-from .models import Feeds
+from .models import Feeds, Games, Trainers
+from .models import Experience, WayWork, Education
 
 
 def index(request):
@@ -117,3 +119,117 @@ def about(request):
         form_status = False
         form = MainForm()
         return render(request, 'about/_index.html', {'form': form, 'form_status': form_status})
+
+
+def coaching(request):
+    """
+
+    :param request:
+    :return:
+    """
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'coaching/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'coaching/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'coaching/_index.html', {'form': form, 'form_status': form_status})
+
+
+def coaches(request):
+    """
+
+    :param request:
+    :return:
+    """
+    coach_list = Trainers.objects.all()
+    page = request.GET.get('page', 1)
+    paginator = Paginator(coach_list, 4)
+    try:
+        coach_list = paginator.page(page)
+    except PageNotAnInteger:
+        coach_list = paginator.page(1)
+    except EmptyPage:
+        coach_list = paginator.page(paginator.num_pages)
+
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'coaches/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'coaches/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'coaches/_index.html', {'form': form, 'form_status': form_status,
+                                                       'coach_list': coach_list})
+
+
+def coaches_detail(request, id):
+    """
+
+    :param request:
+    :param id:
+    :return:
+    """
+    coach = get_object_or_404(Trainers, id=id)
+    ed = Education.objects.filter(coach=id)
+    exp = Experience.objects.filter(coach=id)
+    way = WayWork.objects.filter(coach=id)
+
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'coaches_detail/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'coaches_detail/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+    else:
+        form_status = False
+        form = MainForm()
+    return render(request, 'coaches_detail/_index.html', {'form': form, 'coach': coach,
+                                                          'ed': ed, 'exp': exp, 'way': way})
+
+
+def games(request):
+    """
+
+    :param request:
+    :return:
+    """
+    game_list = Games.objects.all()
+    page = request.GET.get('page', 1)
+    paginator = Paginator(game_list, 10)
+    try:
+        game_list = paginator.page(page)
+    except PageNotAnInteger:
+        game_list = paginator.page(1)
+    except EmptyPage:
+        game_list = paginator.page(paginator.num_pages)
+
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'games/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+
+            return render(request, 'games/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'games/_index.html', {'form': form, 'form_status': form_status,
+                                                     'game_list': game_list})

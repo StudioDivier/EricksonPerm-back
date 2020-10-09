@@ -9,6 +9,8 @@ venv/
 .idea/
 EricksonPerm_back/config.py
 app/migrations/
+STATICFILES/
+admin/
 
 # Distribution / packaging
 .Python

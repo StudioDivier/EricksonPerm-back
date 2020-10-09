@@ -1,0 +1,82 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - Тренеры{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <a href="/coaches">Тренеры</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">{{ coach.name }}</span>
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="coaches-detailed-page">
+        <div class="container">
+            <div class="page__header">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h2>{{ coach.name }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 coach-avatar">
+                    <img src="{{ coach.img }}" alt="Photo">
+                </div>
+                <div class="col-md-8">
+                    <div class="desc">
+                        <div>
+                            <p>{{ coach.description }}.</p>
+                            <div class="education">
+                                <h3>Образование:</h3>
+                                <ul>
+                                    {% for e in ed %}
+                                    <li>{{ e.ed_title }},
+                                        <strong>{{ e.start_ed }} - {{ e.end_ed }}гг.</strong></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col experience">
+                    <h3>Опыт работы:</h3>
+                    <ul>
+                        {% for e in exp %}
+                            <li>С <strong>{{ e.start_exp }} г.</strong> {{ e.title_exp}}.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 directions">
+                    <h3>Направления деятельности:</h3>
+                </div>
+                <div class="col-12">
+                    <div class="directions__wrapper">
+                        {% for w in way %}
+                            <div class="col-xs-12 col-md-3 direction-num"><span>{{ w.id }}</span> {{ w.way }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'base/form.html' %}
+
+{% endblock %}

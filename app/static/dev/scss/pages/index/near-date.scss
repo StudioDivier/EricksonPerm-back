@@ -94,6 +94,11 @@
       margin-top: 20px;
       margin-bottom: 20px;
 
+      .btn-orange {
+        @include pxa(10px);
+        @include pya(4px);
+      }
+
 
     }
   }
@@ -103,6 +108,7 @@
     justify-content: center;
     width: 100%;
     margin: 35px;
+
     .btn-opac {
       border-radius: 19px;
       border: 1px solid #1d1d1d;
@@ -116,9 +122,9 @@
   }
 }
 
-@include max-w(992){
-  .near-date{
-    .col-lg-4{
+@include max-w(992) {
+  .near-date {
+    .col-lg-4 {
       margin-bottom: 25px;
       @include mxa(100px);
     }
@@ -126,9 +132,9 @@
 }
 
 
-@include max-w(768){
-  .near-date{
-    .col-lg-4{
+@include max-w(768) {
+  .near-date {
+    .col-lg-4 {
       margin-bottom: 15px;
       @include mxa(35px);
     }
@@ -145,23 +151,28 @@
         font-size: $h2FontSize375;
       }
     }
+
     .col-lg-4 {
       @include mxa(35px);
       margin-bottom: 15px;
       display: flex;
       justify-content: center;
+
       .card-date {
         width: 100%;
+
         .card-date-label {
           p {
             font-size: $pFontSizeMin375;
           }
         }
+
         .date {
           p {
             font-size: $pFontSizeMin375;
           }
         }
+
         .card-text {
           h5 {
             font-size: $h5FontSize375;
@@ -171,16 +182,20 @@
             font-size: $pFontSizeMin375;
           }
         }
-        .teach{
+
+        .teach {
           margin-top: 30px;
-          img{
+
+          img {
             width: 100%;
           }
-          .teach-name{
-            h5{
+
+          .teach-name {
+            h5 {
               font-size: $h4FontSize375;
             }
-            p{
+
+            p {
               font-size: $pFontSizeMin375;
             }
           }
@@ -188,9 +203,10 @@
       }
     }
 
-    .button-opac{
+    .button-opac {
       margin: 25px;
-      a{
+
+      a {
         font-size: $pFontSizeMax375;
       }
     }

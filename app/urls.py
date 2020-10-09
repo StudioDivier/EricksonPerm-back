@@ -11,8 +11,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('feed-list', views.feed_list, name='feed_list'),
     path('review/<int:id>', views.feed_detail, name='feed_detail'),
+    path('coaches', views.coaches, name='coaches'),
+    path('coaches/<int:id>', views.coaches_detail, name='coaches_detail'),
+    path('games', views.games, name='games'),
     path('contacts', views.contacts, name='contacts'),
-    path('about', views.about, name='about')
+    path('about', views.about, name='about'),
+    path('coaching', views.coaching, name='coaching'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

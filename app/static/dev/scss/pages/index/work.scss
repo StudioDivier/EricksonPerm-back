@@ -60,8 +60,9 @@
             font-size: 22px;
           }
 
-          .btn {
-            padding: 0;
+          .btn-orange {
+            @include pxa(15px);
+            @include pya(4px);
           }
         }
       }

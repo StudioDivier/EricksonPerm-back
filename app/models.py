@@ -85,4 +85,97 @@ class InfoCompany(models.Model):
         verbose_name_plural = 'InfoCompanies'
 
 
+class Trainers(models.Model):
 
+    title = models.CharField(name="title", max_length=128)
+    description = models.TextField(name="description")
+    img = models.FilePathField(name="img", path=settings.TRAIN_ROOT)
+
+    class Meta:
+        verbose_name = 'Trainer'
+        verbose_name_plural = 'Trainers'
+
+    def get_absolute_url(self):
+        return reverse('index:coaches_detail', args=[self.id])
+
+    def __str__(self):
+        return str(self.title)
+
+
+class Education(models.Model):
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+    start = models.IntegerField(name='start_ed')
+    end = models.IntegerField(name='end_ed')
+    ed_title = models.CharField(name='ed_title', max_length=256)
+
+    class Meta:
+        verbose_name = 'Education'
+        verbose_name_plural = 'Educations'
+
+    def __str__(self):
+        return str(self.coach.title)
+
+
+class Experience(models.Model):
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+    start_exp = models.IntegerField(name='start_exp')
+    title_exp = models.CharField(name='title_exp', max_length=256)
+
+    class Meta:
+        verbose_name = 'Experience'
+        verbose_name_plural = 'Experiences'
+
+    def __str__(self):
+        return str(self.coach.title)
+
+
+class WayWork(models.Model):
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+    way = models.CharField(name='way', max_length=64)
+
+    class Meta:
+        verbose_name = 'WayWork'
+        verbose_name_plural = 'WayWork'
+
+    def __str__(self):
+        return str(self.coach.title)
+
+
+class Games(models.Model):
+
+    title = models.CharField(name="title", max_length=128)
+    description = models.TextField(name="description")
+    img = models.FilePathField(name="img", path=settings.MEDIA_URL)
+    price = models.DecimalField(name='price', max_digits=9, decimal_places=2)
+    description_short = models.TextField(name="description_short")  # preview short
+    description_long = models.TextField(name="description_long")
+
+    class Meta:
+        verbose_name = 'Game'
+        verbose_name_plural = 'Games'
+
+    def __str__(self):
+        return str(self.title)
+
+    def get_absolute_url(self):
+        return reverse('index:games', args=[self.id])
+
+
+class Timetables(models.Model):
+
+    date_day = models.IntegerField(name='date_day')
+    date_month = models.IntegerField(name='date_month')
+    date_year = models.IntegerField(name='date_year')
+    time_start = models.IntegerField(name='time_start')
+    time_end = models.IntegerField(name='time_end')
+    long = models.CharField(name='long', max_length=64)
+    title = models.CharField(name='title', max_length=128)
+    description_short = models.TextField(name='description_short')
+    couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+
+    class Meta:
+        verbose_name = 'Timetable'
+        verbose_name_plural = 'Timetables'
+
+    def __str__(self):
+        return str(self.title)

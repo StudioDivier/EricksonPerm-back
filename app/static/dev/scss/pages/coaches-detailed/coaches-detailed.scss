@@ -1,0 +1,243 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.coaches-detailed-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+
+  .page__header {
+    margin-bottom: 30px;
+  }
+
+  .coach-avatar {
+    img {
+      width: 100%;
+    }
+  }
+
+  .desc {
+    height: 100%;
+    padding: 10px;
+
+    .education {
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 30px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .experience {
+    margin-top: 25px;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .directions {
+    margin-top: 20px;
+  }
+
+  .directions__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+
+    .direction-num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-family: "MuseoCyrl700", serif;
+        color: #f15a29;
+        font-size: 50px;
+        margin-right: 20px;
+      }
+
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: $h2FontSize;
+    font-family: "MuseoCyrl700", serif;
+    //width: 100%;
+  }
+
+  h5 {
+    font-size: $h5FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  strong {
+    font-family: "MuseoCyrl700", serif;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h3 {
+      font-size: $h4FontSize375 !important;
+    }
+
+    p, li {
+      font-size: $pFontSizeMin375;
+    }
+
+    .coach-avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .desc {
+      padding: 0;
+    }
+
+    .experience {
+      margin-top: 10px;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .directions {
+      margin-top: 10px;
+    }
+
+    .directions__wrapper {
+      margin-top: 20px;
+      padding: 10px;
+
+      .direction-num {
+        margin-bottom: 5px;
+        font-size: 12px;
+        span {
+          font-size: 30px;
+        }
+      }
+      .direction-num:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h3 {
+      font-size: $h3FontSize375 !important;
+    }
+
+    p, li {
+      font-size: $pFontSizeMax375;
+    }
+
+    .coach-avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .desc {
+      padding: 0;
+    }
+
+    .experience {
+      margin-top: 10px;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .directions {
+      margin-top: 10px;
+    }
+
+    .directions__wrapper {
+      margin-top: 20px;
+      padding: 10px;
+
+      .direction-num {
+        margin-bottom: 5px;
+        font-size: 14px;
+        span {
+          font-size: 30px;
+        }
+      }
+      .direction-num:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .coaches-detailed {
+
+  }
+}

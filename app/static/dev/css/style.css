@@ -1,22 +1,22 @@
 @font-face {
   font-family: "MuseoCyrl900";
-  src: url("../fonts/MuseoCyrl900.otf");
+  src: url("/fonts/MuseoCyrl900.otf");
 }
 @font-face {
   font-family: "MuseoCyrl700";
-  src: url("../fonts/MuseoCyrl700.otf");
+  src: url("/fonts/MuseoCyrl700.otf");
 }
 @font-face {
   font-family: "MuseoCyrl500";
-  src: url("../fonts/MuseoCyrl500.otf");
+  src: url("/fonts/MuseoCyrl500.otf");
 }
 @font-face {
   font-family: "MuseoCyrl300";
-  src: url("../fonts/MuseoCyrl300.otf");
+  src: url("/fonts/MuseoCyrl300.otf");
 }
 @font-face {
   font-family: "MuseoCyrl100";
-  src: url("../fonts/MuseoCyrl100.otf");
+  src: url("/fonts/MuseoCyrl100.otf");
 }
 .btn-orange {
   border-radius: 25px;
@@ -24,7 +24,9 @@
   font-size: 14px;
   font-family: "MuseoCyrl500", serif;
   letter-spacing: 0.5px;
-  padding: 10px 35px;
+  width: 100%;
+  height: 100%;
+  border: none;
   background-color: #f15a29;
   color: white;
 }
@@ -44,7 +46,9 @@
   font-size: 14px;
   font-family: "MuseoCyrl500", serif;
   letter-spacing: 0.5px;
-  padding: 10px 35px;
+  width: 100%;
+  height: 100%;
+  border: none;
   background-color: #515151;
   color: white;
 }
@@ -274,6 +278,46 @@ footer .content .s-row a {
 }
 .breadcr p {
   margin: 0;
+}
+
+.pagination-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.pagination-block .page-item {
+  margin: 0 10px;
+}
+.pagination-block .page-item .page-link {
+  color: #8c8c8c;
+  background-color: white;
+  border-color: #8c8c8c;
+  border-radius: 27px;
+  padding: 0.625rem 1rem;
+}
+.pagination-block .page-item .page-link:hover {
+  background-color: #f15a29;
+  border-color: #f15a29;
+  color: white;
+}
+.pagination-block .page-item + .active .page-link {
+  color: #f15a29 !important;
+  border-color: #f15a29 !important;
+}
+.pagination-block .page-item + .active .page-link:hover {
+  background-color: #f15a29;
+  color: white;
+}
+.pagination-block .next-btn:hover .page-link {
+  border: 1px solid #f15a29 !important;
+  background-color: white !important;
+  color: #f15a29;
+}
+.pagination-block .next-prev:hover .page-link {
+  border-color: #f15a29 !important;
+  background-color: white !important;
+  color: #f15a29;
 }
 
 .main {
@@ -755,6 +799,12 @@ footer .content .s-row a {
   padding-left: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.near-date .card-date .button .btn-orange {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .near-date .button-opac {
   display: flex;
@@ -1551,8 +1601,11 @@ footer .content .s-row a {
   text-transform: uppercase;
   font-size: 22px;
 }
-.work .row .cards .branch .bottom .btn {
-  padding: 0;
+.work .row .cards .branch .bottom .btn-orange {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .work .row .cards #first {
   background-image: url("../img/main/work/card1.png");
@@ -2016,6 +2069,11 @@ footer .content .s-row a {
   padding-bottom: 10px;
   font-family: "MuseoSansCyrl500", serif;
 }
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  .under-elem {
+    display: none;
+  }
+}
 .contacts_page h1, .contacts_page h2, .contacts_page h5 {
   font-family: "MuseoCyrl700", serif;
 }
@@ -2318,5 +2376,657 @@ footer .content .s-row a {
   }
   .detailed-review .video-container iframe {
     width: 100%;
+  }
+}
+.coaches-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaches-page .page__header {
+  margin-bottom: 30px;
+}
+.coaches-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-page .single-coach {
+  margin-bottom: 30px;
+}
+.coaches-page .single-coach .single-coach-container {
+  border-radius: 20px;
+  padding: 30px 20px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coaches-page .single-coach .row {
+  margin: 0;
+}
+.coaches-page .single-coach img {
+  width: 100%;
+  border-radius: 50%;
+}
+.coaches-page .single-coach button {
+  background-color: transparent;
+  font-family: "MuseoCyrl500", serif;
+  font-size: 14px;
+  border: 1px solid #1d1d1d;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: #1d1d1d;
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-page h2 {
+    font-size: 20px;
+  }
+  .coaches-page h5 {
+    font-size: 14px;
+  }
+  .coaches-page .single-coach {
+    margin-bottom: 30px;
+  }
+  .coaches-page .single-coach .single-coach-container {
+    padding: 30px 20px;
+  }
+  .coaches-page .single-coach .single-coach-container p {
+    font-size: 10px;
+  }
+  .coaches-page .single-coach .single-coach-container .coach-details {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .coaches-page .single-coach button {
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 30px;
+  }
+  .coaches-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coaches-page .coach-avatar img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-page h2 {
+    font-size: 20px;
+  }
+  .coaches-page h5 {
+    font-size: 18px;
+  }
+  .coaches-page .single-coach {
+    margin-bottom: 30px;
+  }
+  .coaches-page .single-coach .single-coach-container {
+    padding: 30px 20px;
+  }
+  .coaches-page .single-coach .single-coach-container p {
+    font-size: 15px;
+  }
+  .coaches-page .single-coach .single-coach-container .coach-details {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .coaches-page .single-coach button {
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 30px;
+  }
+  .coaches-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coaches-page .coach-avatar img {
+    width: 50%;
+  }
+}
+.coaches-detailed-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaches-detailed-page .page__header {
+  margin-bottom: 30px;
+}
+.coaches-detailed-page .coach-avatar img {
+  width: 100%;
+}
+.coaches-detailed-page .desc {
+  height: 100%;
+  padding: 10px;
+}
+.coaches-detailed-page .desc .education h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.coaches-detailed-page .desc .education ul {
+  list-style-type: none;
+  padding: 0;
+}
+.coaches-detailed-page .desc .education ul li {
+  margin-bottom: 10px;
+}
+.coaches-detailed-page .experience {
+  margin-top: 25px;
+}
+.coaches-detailed-page .experience h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.coaches-detailed-page .experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+.coaches-detailed-page .experience ul li {
+  margin-bottom: 10px;
+}
+.coaches-detailed-page .directions {
+  margin-top: 20px;
+}
+.coaches-detailed-page .directions__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+}
+.coaches-detailed-page .directions__wrapper .direction-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.coaches-detailed-page .directions__wrapper .direction-num span {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+  font-size: 50px;
+  margin-right: 20px;
+}
+.coaches-detailed-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-detailed-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-detailed-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+  }
+  .coaches-detailed-page h2 {
+    font-size: 20px;
+  }
+  .coaches-detailed-page h3 {
+    font-size: 14px !important;
+  }
+  .coaches-detailed-page p, .coaches-detailed-page li {
+    font-size: 10px;
+  }
+  .coaches-detailed-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .coach-avatar img {
+    width: 50%;
+  }
+  .coaches-detailed-page .desc {
+    padding: 0;
+  }
+  .coaches-detailed-page .experience {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .coaches-detailed-page .experience ul li {
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .directions {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num span {
+    font-size: 30px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+  }
+  .coaches-detailed-page h2 {
+    font-size: 20px;
+  }
+  .coaches-detailed-page h3 {
+    font-size: 18px !important;
+  }
+  .coaches-detailed-page p, .coaches-detailed-page li {
+    font-size: 15px;
+  }
+  .coaches-detailed-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .coach-avatar img {
+    width: 50%;
+  }
+  .coaches-detailed-page .desc {
+    padding: 0;
+  }
+  .coaches-detailed-page .experience {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .coaches-detailed-page .experience ul li {
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .directions {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num span {
+    font-size: 30px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num:last-child {
+    margin-bottom: 0;
+  }
+}
+.games-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.games-page .page__header {
+  margin-bottom: 30px;
+}
+.games-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.games-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.games-page .games-container img {
+  width: 100%;
+  height: 100%;
+}
+.games-page .games-container .greyBck {
+  background-color: #f7f7f7;
+}
+.games-page .games-container .lightBck {
+  background-color: white;
+}
+.games-page .games-container .game-container {
+  padding: 30px 0;
+}
+.games-page .games-container .game-container .game-header {
+  margin-bottom: 20px;
+}
+.games-page .games-container .game-container .game-header .col {
+  display: flex;
+  justify-content: space-between;
+}
+.games-page .games-container .game-container .game-price {
+  border: 1px solid #515151;
+  border-radius: 19px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+.games-page .games-container .game-container .game-details {
+  padding: 0 15px;
+}
+.games-page .games-container .game-container .game-details p {
+  font-size: 17px;
+}
+.games-page .games-container .game-container .buttons-container {
+  display: flex;
+}
+.games-page .games-container .game-container .buttons-container button {
+  padding: 7px 0;
+}
+.games-page .games-container .game-container .buttons-container .col-4:first-child {
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .games-page {
+    margin-bottom: 50px;
+  }
+  .games-page .page__header {
+    margin-bottom: 30px;
+  }
+  .games-page h2 {
+    font-size: 20px;
+  }
+  .games-page h5 {
+    font-size: 12px;
+  }
+  .games-page .game-details .game-header {
+    margin-top: 20px;
+  }
+  .games-page .game-details .game-header .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .games-page .game-details .game-header .col h5 {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .games-page .game-details .game-header .game-price {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .games-page .game-details .game-body p {
+    font-size: 10px !important;
+    margin-bottom: 20px;
+  }
+  .games-page .pagination-block {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .games-page {
+    margin-bottom: 50px;
+  }
+  .games-page .page__header {
+    margin-bottom: 30px;
+  }
+  .games-page h2 {
+    font-size: 20px;
+  }
+  .games-page h5 {
+    font-size: 14px;
+  }
+  .games-page .game-details .game-header {
+    margin-top: 20px;
+  }
+  .games-page .game-details .game-header .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .games-page .game-details .game-header .col h5 {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .games-page .game-details .game-body p {
+    margin-bottom: 20px;
+  }
+  .games-page .pagination-block {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .games-page .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+  .games-page .buttons-container button {
+    padding: 7px 10px !important;
+  }
+}
+.coaching-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaching-page .coaching-page__page-header {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__page-header h5 {
+  margin-top: 15px;
+  font-family: "MuseoCyrl500", serif;
+}
+.coaching-page .coaching-page__description-header {
+  background-color: #f7f7f7;
+  padding: 30px 30px 50px;
+}
+.coaching-page .coaching-page__description-header h5 {
+  margin-top: 15px;
+  font-family: "MuseoCyrl500", serif;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper .description__point {
+  text-align: center;
+  height: 100%;
+  padding: 25px 15px 0;
+  background-color: white;
+  border: 4px solid #8e8e8e;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper .description__point img {
+  width: 50%;
+}
+.coaching-page .coaching-page__definition {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid #f15a29;
+  border-radius: 35px;
+  padding: 30px 35px;
+}
+.coaching-page .coaching-page__definition h3 {
+  margin-bottom: 15px;
+}
+.coaching-page .coaching-page__definition h3:first-child {
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page .coaching-page__definition strong {
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page .coaching-page__about-coaching {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .coaching-page__about-coaching .about-coaching__text {
+  padding: 20px 10px;
+}
+.coaching-page .coaching-page__erickson-coaching {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__erickson-coaching h3 {
+  margin: 30px 0;
+}
+.coaching-page .coaching-page__erickson-coaching .text-wrapper {
+  padding: 30px 10px;
+  border-radius: 30px;
+  background-color: #f7f7f7;
+}
+.coaching-page .coaching-page__erickson-coaching .text-wrapper li {
+  margin-bottom: 15px;
+}
+.coaching-page .coaching-page__erickson-coaching p {
+  margin-top: 30px;
+}
+.coaching-page .coaching-page__uniqueness {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__uniqueness h3 {
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.coaching-page .coaching-page__uniqueness img {
+  width: 100%;
+}
+.coaching-page .coaching-page__uniqueness .text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coaching-page .coaching-page__uniqueness .additional-info {
+  margin-top: 30px;
+}
+.coaching-page .results__wrapper {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 35px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .results__wrapper .new-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .results__wrapper .new-line .text {
+  margin-left: 15px;
+}
+.coaching-page .results__wrapper .direction-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coaching-page .results__wrapper hr {
+  border: 1px solid white;
+}
+.coaching-page .results__wrapper .percent {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+}
+.coaching-page .results__wrapper .number {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+  font-size: 50px;
+}
+.coaching-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+
+@media screen and (max-width: 375px) {
+  .coaching-page h2 {
+    font-size: 20px;
+  }
+  .coaching-page h3 {
+    font-size: 18px;
+  }
+  .coaching-page h5 {
+    font-size: 12px;
+  }
+  .coaching-page p, .coaching-page li {
+    font-size: 10px;
+  }
+  .coaching-page ol {
+    padding-left: 20px;
+  }
+  .coaching-page .coaching-page__description-header__points-wrapper {
+    margin-top: 20px !important;
+  }
+  .coaching-page .description__point-wrapper {
+    margin-bottom: 10px;
+  }
+  .coaching-page .description__point-wrapper img {
+    width: 25% !important;
+  }
+  .coaching-page .coaching-page__erickson-coaching h3 {
+    margin-top: 0;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 10px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaching-page h2 {
+    font-size: 20px;
+  }
+  .coaching-page h3 {
+    font-size: 18px;
+  }
+  .coaching-page h5 {
+    font-size: 12px;
+  }
+  .coaching-page p, .coaching-page li {
+    font-size: 15px;
+  }
+  .coaching-page ol {
+    padding-left: 20px;
+  }
+  .coaching-page .coaching-page__description-header__points-wrapper {
+    margin-top: 20px !important;
+  }
+  .coaching-page .description__point-wrapper {
+    margin-bottom: 10px;
+  }
+  .coaching-page .description__point-wrapper img {
+    width: 25% !important;
+  }
+  .coaching-page .coaching-page__erickson-coaching h3 {
+    margin-top: 0;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 15px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
   }
 }
