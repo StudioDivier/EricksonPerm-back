@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from .forms import MainForm
 from .services import database_form
 from .models import Feeds, Games, Trainers
-from .models import Experience, WayWork, Education
+from .models import Experience, WayWork, Education, Timetables
 
 
 def index(request):
@@ -233,3 +233,49 @@ def games(request):
         form = MainForm()
         return render(request, 'games/_index.html', {'form': form, 'form_status': form_status,
                                                      'game_list': game_list})
+
+
+def games_detail(request, id):
+    """
+
+    :param request:
+    :return:
+    """
+    game = get_object_or_404(Games, id=id)
+    couch = get_object_or_404(Trainers, title=game.couch)
+
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'game/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'game/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+    else:
+        form_status = False
+        form = MainForm()
+    return render(request, 'game/_index.html', {'form': form, 'game': game, 'couch': couch})
+
+
+def timetable(request):
+    """
+
+    :param request:
+    :return:
+    """
+    prog = Timetables.objects.all()
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'timetable/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'timetable/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status, 'prog': prog})
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': prog })

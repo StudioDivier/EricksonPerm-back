@@ -1,6 +1,8 @@
 from django.db import models
-from django.conf import settings
+# from django.conf import settings
+from EricksonPerm_back import settings
 from django.urls import reverse
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Offers(models.Model):
@@ -144,11 +146,16 @@ class WayWork(models.Model):
 class Games(models.Model):
 
     title = models.CharField(name="title", max_length=128)
-    description = models.TextField(name="description")
-    img = models.FilePathField(name="img", path=settings.MEDIA_URL)
+    title_short = models.CharField(name="title_short", max_length=64, null=True)
+    img = models.FilePathField(name="img", path=settings.MEDIA_URL + '/games/', null=True)
     price = models.DecimalField(name='price', max_digits=9, decimal_places=2)
-    description_short = models.TextField(name="description_short")  # preview short
-    description_long = models.TextField(name="description_long")
+    description_short = models.TextField(name="description_short")
+    couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+    date_day = models.IntegerField(name='date_day', null=True)
+    date_month = models.IntegerField(name='date_month', null=True)
+    date_year = models.IntegerField(name='date_year', null=True)
+    long = models.CharField(name='long', max_length=64, null=True)
+    description = RichTextUploadingField(null=True)
 
     class Meta:
         verbose_name = 'Game'
@@ -158,20 +165,19 @@ class Games(models.Model):
         return str(self.title)
 
     def get_absolute_url(self):
-        return reverse('index:games', args=[self.id])
+        return reverse('index:games_detail', args=[self.id])
 
 
 class Timetables(models.Model):
 
     date_day = models.IntegerField(name='date_day')
-    date_month = models.IntegerField(name='date_month')
-    date_year = models.IntegerField(name='date_year')
-    time_start = models.IntegerField(name='time_start')
-    time_end = models.IntegerField(name='time_end')
+    month = models.CharField(name='date_month', max_length=64)
+    start = models.TimeField(name='time_start')
+    end = models.TimeField(name='time_end')
     long = models.CharField(name='long', max_length=64)
     title = models.CharField(name='title', max_length=128)
     description_short = models.TextField(name='description_short')
-    couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
+    way = models.CharField(name='way', max_length=128, null=True)
 
     class Meta:
         verbose_name = 'Timetable'

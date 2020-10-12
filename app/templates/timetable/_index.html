@@ -1,0 +1,160 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - О компании{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">Расписание</span>
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="schedule-page">
+        <div class="container">
+            <div class="schedule-page__page-header">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h2>Расписание</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-page__date-picker-container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="row main-row">
+                            <div class="col-xs-12 col-md-5 wrapper">
+                                <h5>Выберите нужное направление:</h5>
+                                <div class="checkbox-group-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                               value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Обучение коучингу</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                               value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Для себя</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                               value="option3">
+                                        <label class="form-check-label" for="inlineCheckbox3">Для бизнеса</label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-group-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4"
+                                               value="option4">
+                                        <label class="form-check-label" for="inlineCheckbox4">Транформационные
+                                            игры</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
+                                               value="option5">
+                                        <label class="form-check-label" for="inlineCheckbox5">Мастер-классы</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="border-left:2px solid white;"></div>
+                            <div class="col-xs-12 col-md-6 pick-date">
+                                <h5>Укажите период:</h5>
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" placeholder="c">
+                                    <input type="text" class="form-control" placeholder="до">
+                                </div>
+                                <button class="btn-orange">Показать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Расписание программ</h2>
+                </div>
+            </div>
+        </div>
+        {% for elem in prog %}
+            {% if elem.id|divisibleby:2 %}
+                <div class="schedule-page__page-content grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="row event-container">
+                            <div class="col-xs-12 col-md-2 event-date light">
+                                <span>{{ elem.date_day }}</span>
+                                <span>{{ elem.date_month }}</span>
+                                <span><i class="far fa-clock"></i> с {{ elem.time_start }} до {{ elem.time_end }}</span>
+                            </div>
+                            <div class="col-md-10 event-info">
+                                <div class="wrapper">
+                                    <div class="upper-text-wrapper">
+                                        <h5>{{ elem.title }}</h5>
+                                        <span class="price">Вход свободный</span>
+                                    </div>
+                                    <p>{{ elem.description_short }}</p>
+                                </div>
+                                <div class="btn-wrapper">
+                                    <button class="btn-orange">Записаться на программу</button>
+                                    <button class="btn-grey">Узнать подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% else %}
+                <div class="schedule-page__page-content light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="row event-container">
+                            <div class="col-xs-12 col-md-2 event-date grey">
+                                <span>{{ elem.date_day }}</span>
+                                <span>{{ elem.date_month }}</span>
+                                <span><i class="far fa-clock"></i> с {{ elem.time_start }} до {{ elem.time_end }}</span>
+                            </div>
+                            <div class="col-md-10 event-info">
+                                <div class="wrapper">
+                                    <div class="upper-text-wrapper">
+                                        <h5>{{ elem.title }}</h5>
+                                        <span class="price">Вход свободный</span>
+                                    </div>
+                                    <p>{{ elem.description_short }}</p>
+                                </div>
+                                <div class="btn-wrapper">
+                                    <button class="btn-orange">Записаться на программу</button>
+                                    <button class="btn-grey">Узнать подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% endif %}
+        {% endfor %}
+
+
+    </section>
+
+    {% include 'base/form.html' %}
+
+
+
+
+{% endblock %}

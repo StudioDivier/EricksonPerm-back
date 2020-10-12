@@ -14,8 +14,10 @@ urlpatterns = [
     path('coaches', views.coaches, name='coaches'),
     path('coaches/<int:id>', views.coaches_detail, name='coaches_detail'),
     path('games', views.games, name='games'),
+    path('games/<int:id>', views.games_detail, name='games_detail'),
     path('contacts', views.contacts, name='contacts'),
     path('about', views.about, name='about'),
+    path('timetable', views.timetable, name='timetable'),
     path('coaching', views.coaching, name='coaching'),
 ]
 if settings.DEBUG:

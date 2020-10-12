@@ -1,0 +1,257 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - Трансформационые игры{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <a href="/games">Трансформационные игры</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">{{ game.title_short }}</span>
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="game-page">
+        <div class="container">
+            <div class="game-page__page-header">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h2>{{ game.title }}</h2>
+                        <h3>Приглашаем на коуч-игру</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row game-page__short-desc">
+                <div class="col-xs-12 col-md-3">
+                    <div class="subHeader">
+                        <p>Стоимость программы:</p>
+                    </div>
+                    <div class="subHeader_info">
+                        <p>{{ game.price }} руб.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="subHeader">
+                        <p>Тренер:</p>
+                    </div>
+                    <div class="subHeader_info">
+                        <img src="{{ couch.img }}" alt="">
+                        <span>{{ couch.title }}</span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="subHeader">
+                        <p>Дата проведения:</p>
+                    </div>
+                    <div class="subHeader_info">
+                        <p>{{ game.date_day }}.{{ game.date_month }}.{{ game.date_year }}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="subHeader">
+                        <p>Продолжительность:</p>
+                    </div>
+                    <div class="subHeader_info">
+                        <p>{{ game.long }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row game-page__description-block">
+                <div class="col-12">
+                    <h3>Тамболия</h3>
+                </div>
+                <div class="col-12">
+                    <p>«Представьте себе, что Вы всю жизнь провели в темноте, постоянно обо что-то спотыкаясь. Этими
+                        вещами
+                        могут
+                        быть все, что угодно: отношения, семья, деньги, бизнес, духовность.
+
+                        И вот в один момент кто-то включает свет, и Вы видите все, что находилось в Вашей комнате. Карта
+                        Тамболии
+                        показывает Вам, как выглядит Ваш ум, когда свет включен во всех его комнатах».</p>
+                    <p><strong>Тамболия</strong> - это Карта человеческих состояний, представленная в виде коллективной
+                        настольной игры.</p>
+                </div>
+                <div class="col-12">
+                    <h4>Глубинные задачи Тамболии</h4>
+                    <div class="row tasks-wrapper">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="single-task">
+                            <span>
+                                01
+                            </span>
+                                <p>Помочь участникам внести ясность в
+                                    присходящие с ними события</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="single-task">
+                            <span>
+                                02
+                            </span>
+                                <p>Разобраться со сложными запутанными
+                                    вопросами и кажущимися безвыходными
+                                    ситуациями</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="single-task">
+                            <span>
+                                03
+                            </span>
+                                <p>Встретиться со своим потенциалом,
+                                    раскрыть творческую силу</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="single-task">
+                            <span>
+                                04
+                            </span>
+                                <p>"Пролить свет" на спящие таланты и
+                                    способности</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="what-you-gain">
+                        <h3>Что Вы получите в процессе игры?</h3>
+                        <ol>
+                            <li> Игра поможет вам найти ответы на самые разные вопросы в жизни, отношениях, бизнесе…
+                                «Кто я?
+                                Что я
+                                здесь делаю? В чем мой Дар? Мое Предназначение? Как найти любовь? Как организовать
+                                проект
+                                или
+                                собственный бизнес? На чем сосредоточить внимание в стратегии?»
+                            </li>
+                            <li>Игра поможет Вам увидеть самую важную область вашей жизни, с которой необходимо начать
+                                свои
+                                позитивные изменения.
+                            </li>
+                            <li>Игра даст вам вдохновение и энергию, которые помогут вам сделать то, что вы давно
+                                откладывали
+                                ….
+                            </li>
+                        </ol>
+                    </div>
+                    <p>Это также замечательный способ узнать о себе и друг о друге тонкие и глубокие вещи за короткое
+                        время.
+                        И это
+                        удивительное развлечение, возвращающее нас в детство, к нашим корням…</p>
+
+                    <p>Карту Тамболии открыл американский ученый и буддийский монах <strong>Джеймс Тейлор
+                        Маршалл</strong> 40 лет назад. В
+                        основе
+                        открытия Джеймса лежат принципы квантовой механики и тибетских мандал, которым более 2500 лет.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="what-you-gain">
+                        <h3>Что Вы получите в процессе игры?</h3>
+                        <p>Те, кто уже знаком и практикует коучинг, ждет интересный опыт.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <h4>Тамболия - Коучинговая сессия, где</h4>
+                    <div class="row tasks-wrapper tasks-wrapper2">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                01
+                            </span>
+                                <p>Вы попеременно
+                                    являетесь то коучем,
+                                    то клиентом</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                02
+                            </span>
+                                <p>Вы получаете
+                                    коучинговую сессию
+                                    сразу от трех коучей</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                03
+                            </span>
+                                <p>После коучинговойсессии-вы
+                                    получаете настоящий
+                                    «маршрутный лист» вашего
+                                    продвижения к цели</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <h4>Тамболия - Коучинговая сессия, где</h4>
+                    <div class="row tasks-wrapper tasks-wrapper2">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                01
+                            </span>
+                                <p>Вы попеременно
+                                    являетесь то коучем,
+                                    то клиентом</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                02
+                            </span>
+                                <p>Вы получаете
+                                    коучинговую сессию
+                                    сразу от трех коучей</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="single-task">
+                            <span>
+                                03
+                            </span>
+                                <p>После коучинговойсессии-вы
+                                    получаете настоящий
+                                    «маршрутный лист» вашего
+                                    продвижения к цели</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 join-us">
+                    <p>Присоединяйтесь, <strong>ИГРА ТОГО СТОИТ!!!</strong></p>
+                    <p>Запись и вопросы по телефону <strong>8-908-24-12608</strong></p>
+                </div>
+                <div class="col-12 btn-container1">
+                    <button class="btn-orange">Подать заявку на участие</button>
+                    <button class="btn-grey">Оплатить регистрационный взнос</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'main/components/near-date.html' %}
+
+    {% include 'base/form.html' %}
+
+{% endblock %}
