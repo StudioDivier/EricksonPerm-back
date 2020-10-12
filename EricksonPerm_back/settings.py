@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5#8km4+_-(0%zw3c38u=d=wbku1e156ojo3$i_ude$1c99nn02'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['stormy-wildwood-04743.herokuapp.com','127.0.0.1']
 
