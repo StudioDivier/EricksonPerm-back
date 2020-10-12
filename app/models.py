@@ -92,7 +92,7 @@ class Trainers(models.Model):
 
     title = models.CharField(name="title", max_length=128)
     description = models.TextField(name="description")
-    img = models.FilePathField(name="img", path=settings.TRAIN_ROOT)
+    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/coach_detail'))
 
     class Meta:
         verbose_name = 'Trainer'
@@ -148,7 +148,7 @@ class Games(models.Model):
 
     title = models.CharField(name="title", max_length=128)
     title_short = models.CharField(name="title_short", max_length=64, null=True)
-    img = models.FilePathField(name="img", path=settings.MEDIA_URL + '/games/', null=True)
+    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/games'), null=True)
     price = models.DecimalField(name='price', max_digits=9, decimal_places=2)
     description_short = models.TextField(name="description_short")
     couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
