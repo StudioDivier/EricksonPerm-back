@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'EricksonPerm_back.wsgi.application'
 #     }
 # }
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@127.0.0.1:5432/perm')}
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@localhost:5432/perm')}
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
 
