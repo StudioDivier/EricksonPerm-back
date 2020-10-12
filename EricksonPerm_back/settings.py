@@ -145,7 +145,7 @@ STATIC_DIRS = [
     os.path.join(BASE_DIR, 'static/dev/')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 TRAIN_ROOT = os.path.join(BASE_DIR, 'media/coach_detail')
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
