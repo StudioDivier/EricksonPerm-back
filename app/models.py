@@ -35,7 +35,7 @@ class ProgramOffers(models.Model):
 
 class Feeds(models.Model):
 
-    img = models.FilePathField(name="img", path=settings.MEDIA_URL)
+    img = models.FilePathField(name="img", path=settings.MEDIA_URL, null=True)
     title = models.CharField(name="title", max_length=128)
     description_short = models.TextField(name="description_short")  # preview short
     description_long = models.TextField(name="description_long")  # long
