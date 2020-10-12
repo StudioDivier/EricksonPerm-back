@@ -84,16 +84,21 @@ WSGI_APPLICATION = 'EricksonPerm_back.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddca00pp4b6ek0',
-        'USER': 'lwzuvnmusoftkc',
-        'PASSWORD': '4c16437b3603dbf1de89768b38fef4cf7d7f8ad716840948539832c693ea7997',
-        'HOST': 'ec2-3-210-178-167.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'perm',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@127.0.0.1:5432/perm')}
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -211,6 +216,4 @@ CKEDITOR_CONFIGS = {
     }
 }
 CKEDITOR_BROWSE_SHOW_DIRS = True
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
