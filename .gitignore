@@ -8,7 +8,6 @@ __pycache__/
 venv/
 .idea/
 EricksonPerm_back/config.py
-app/migrations/
 STATICFILES/
 admin/
 
