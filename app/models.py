@@ -3,6 +3,7 @@ from django.db import models
 from EricksonPerm_back import settings
 from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
+import os
 
 
 class Offers(models.Model):
@@ -35,7 +36,7 @@ class ProgramOffers(models.Model):
 
 class Feeds(models.Model):
 
-    img = models.FilePathField(name="img", path=settings.BASE_DIR+'/media/feeds', null=True, blank=True)
+    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/feeds'), null=True, blank=True)
     title = models.CharField(name="title", max_length=128)
     description_short = models.TextField(name="description_short")  # preview short
     description_long = models.TextField(name="description_long")  # long
