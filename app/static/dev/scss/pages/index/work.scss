@@ -151,6 +151,14 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .work{
+    .text_work{
+      @include mxa(15px);
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .work {
     padding-top: $sectionPaddingTop375;
@@ -179,6 +187,17 @@
           width: 280px !important;
           height: 300px !important;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .work{
+    .cards{
+      p{
+        font-size: 18px!important;
+        padding-right: 15px;
       }
     }
   }

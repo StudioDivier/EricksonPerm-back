@@ -52,6 +52,12 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .s-row{
+    @include pxa(15px);
+  }
+}
+
 @media screen and (max-width: 375px) {
   .representation{
     padding-top: $sectionPaddingTop375;

@@ -1,9 +1,6 @@
 from django.db import models
-# from django.conf import settings
-from EricksonPerm_back import settings
 from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
-import os
 
 
 class Offers(models.Model):
@@ -36,7 +33,7 @@ class ProgramOffers(models.Model):
 
 class Feeds(models.Model):
 
-    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/feeds'), null=True, blank=True)
+    img = models.ImageField(upload_to='feeds/')
     title = models.CharField(name="title", max_length=128)
     description_short = models.TextField(name="description_short")  # preview short
     description_long = models.TextField(name="description_long")  # long
@@ -50,49 +47,11 @@ class Feeds(models.Model):
         return reverse('index:feed_list', args=[self.id])
 
 
-class Telephone(models.Model):
-
-    phone = models.BigIntegerField(name="phone")
-    name = models.CharField(name="name", max_length=128)
-
-    class Meta:
-        verbose_name = 'Telephone'
-        verbose_name_plural = 'Telephones'
-
-
-class Staff(models.Model):
-
-    img = models.FilePathField(name="img", path=settings.MEDIA_URL)
-    fio = models.CharField(name="fio", max_length=128)
-    content = models.CharField(name="name", max_length=128)
-    phone = models.BigIntegerField(name="phone")
-    email = models.EmailField(name='email')
-
-    class Meta:
-        verbose_name = 'Staff'
-        verbose_name_plural = 'Staffs'
-
-
-class InfoCompany(models.Model):
-
-    phone = models.ForeignKey(Telephone, on_delete=models.CASCADE)
-    email = models.EmailField(name='email')
-    adress = models.CharField(name='adress', max_length=256)
-    staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
-    vk = models.URLField(name='vk')
-    fb = models.URLField(name='fb')
-    inst = models.URLField(name='inst')
-
-    class Meta:
-        verbose_name = 'InfoCompany'
-        verbose_name_plural = 'InfoCompanies'
-
-
 class Trainers(models.Model):
 
     title = models.CharField(name="title", max_length=128)
     description = models.TextField(name="description")
-    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/coach_detail'))
+    img = models.ImageField(upload_to='coach_detail/')
 
     class Meta:
         verbose_name = 'Trainer'
@@ -100,6 +59,8 @@ class Trainers(models.Model):
 
     def get_absolute_url(self):
         return reverse('index:coaches_detail', args=[self.id])
+
+
 
     def __str__(self):
         return str(self.title)
@@ -148,7 +109,7 @@ class Games(models.Model):
 
     title = models.CharField(name="title", max_length=128)
     title_short = models.CharField(name="title_short", max_length=64, null=True)
-    img = models.FilePathField(name="img", path=os.path.join(settings.BASE_DIR, 'media/games'), null=True)
+    img = models.ImageField(upload_to='games/')
     price = models.DecimalField(name='price', max_digits=9, decimal_places=2)
     description_short = models.TextField(name="description_short")
     couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
@@ -186,3 +147,6 @@ class Timetables(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+
+

@@ -59,6 +59,14 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .partners{
+    .text{
+      @include mxa(15px);
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .partners {
     padding-top: $sectionPaddingTop375;

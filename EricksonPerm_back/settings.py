@@ -145,8 +145,7 @@ STATIC_DIRS = [
     os.path.join(BASE_DIR, 'static/dev/')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = os.path.join(BASE_DIR, 'media/')
-#MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 TRAIN_ROOT = os.path.join(BASE_DIR, 'media/coach_detail')

@@ -109,6 +109,14 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .carousel-page{
+    .text{
+      @include mxa(15px);
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .carousel-page {
     padding-top: $sectionPaddingTop375;

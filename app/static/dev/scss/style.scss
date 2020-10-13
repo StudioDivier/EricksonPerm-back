@@ -30,6 +30,12 @@
 }
 
 // COMMON STYLES
+
+a{
+ &:focus {
+   box-shadow: none;
+ }
+}
 @mixin btns {
   border-radius: 25px;
   background-color: #e9f1f7;

@@ -148,6 +148,10 @@
         }
       }
 
+      .col-lg-4{
+        @include mya(5px);
+      }
+
       .buttons {
         display: flex;
         flex-wrap: wrap;

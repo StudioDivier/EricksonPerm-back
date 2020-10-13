@@ -110,6 +110,14 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .banner2{
+    .content{
+      @include mxa(15px);
+    }
+  }
+}
+
 @media screen and (max-width: 375px){
   .banner2 {
     padding-top: $sectionPaddingTop375;

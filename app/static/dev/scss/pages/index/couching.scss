@@ -119,6 +119,12 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .f-row{
+    @include pxa(15px);
+  }
+}
+
 @media screen and (max-width: 375px) {
   .couching {
     padding-top: $sectionPaddingTop375;

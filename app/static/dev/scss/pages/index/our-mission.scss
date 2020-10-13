@@ -109,6 +109,14 @@
   }
 }
 
+@media screen and (max-width: 425px){
+  .our-mission{
+    .text{
+      @include mxa(15px);
+    }
+  }
+}
+
   @media screen and (max-width: 375px) {
     .our-mission {
       padding-top: $sectionPaddingTop375;

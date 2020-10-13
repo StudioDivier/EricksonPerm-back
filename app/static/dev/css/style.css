@@ -18,6 +18,10 @@
   font-family: "MuseoCyrl100";
   src: url("../fonts/MuseoCyrl100.otf");
 }
+a:focus {
+  box-shadow: none;
+}
+
 .btn-orange {
   border-radius: 25px;
   background-color: #e9f1f7;
@@ -240,20 +244,31 @@ footer .content .s-row a {
   }
   footer .content .f-row .logo-footer {
     margin-bottom: 15px;
+    display: flex;
   }
   footer .content .f-row .logo-footer p {
-    font-size: 15px;
-  }
-  footer .content .f-row .logo-footer img {
-    margin-bottom: 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
     width: 100%;
+  }
+  footer .content .f-row .logo-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .content .f-row .logo-footer a img {
+    margin-bottom: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   footer .content .f-row .list1, footer .content .f-row .list2, footer .content .f-row .list3, footer .content .f-row .list4, footer .content .f-row .list5, footer .content .f-row .list6 {
     font-size: 12px;
     margin-top: 15px;
     padding-top: 15px;
     display: flex;
-    flex-direction: row !important;
     justify-content: space-between;
   }
   footer .content .f-row .social {
@@ -367,6 +382,9 @@ footer .content .s-row a {
   }
 }
 @media screen and (max-width: 375px) {
+  .main {
+    margin-right: 15px;
+  }
   .main .col-lg-7 h1 {
     font-size: 20px;
     padding-top: 25px;
@@ -420,6 +438,12 @@ footer .content .s-row a {
   font-family: "MuseoCyrl700", serif;
 }
 
+@media screen and (max-width: 425px) {
+  .s-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .representation {
     padding-top: 25px;
@@ -511,6 +535,12 @@ footer .content .s-row a {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .f-row {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -703,6 +733,7 @@ footer .content .s-row a {
 }
 @media screen and (max-width: 375px) {
   .study {
+    margin-right: 12px;
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -1002,6 +1033,10 @@ footer .content .s-row a {
     padding-top: 10px;
     font-size: 12px;
   }
+  .form-1 .row .col-lg-4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   .form-1 .row .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -1049,7 +1084,7 @@ footer .content .s-row a {
 .banner1 .f-row h3 {
   color: white;
   font-family: "MuseoCyrl700", serif;
-  font-size: 45px;
+  font-size: 35px;
   text-align: left;
 }
 .banner1 .s-row {
@@ -1403,6 +1438,12 @@ footer .content .s-row a {
     width: 100%;
   }
 }
+@media screen and (max-width: 425px) {
+  .banner2 .content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .banner2 {
     padding-top: 25px;
@@ -1515,6 +1556,12 @@ footer .content .s-row a {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .our-mission .text {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1668,6 +1715,12 @@ footer .content .s-row a {
     height: 380px !important;
   }
 }
+@media screen and (max-width: 425px) {
+  .work .text_work {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .work {
     padding-top: 25px;
@@ -1696,6 +1749,12 @@ footer .content .s-row a {
     margin-bottom: 10px;
     width: 280px !important;
     height: 300px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .work .cards p {
+    font-size: 18px !important;
+    padding-right: 15px;
   }
 }
 .carousel-page {
@@ -1785,6 +1844,12 @@ footer .content .s-row a {
     padding-left: 45px;
   }
 }
+@media screen and (max-width: 425px) {
+  .carousel-page .text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .carousel-page {
     padding-top: 25px;
@@ -1859,6 +1924,12 @@ footer .content .s-row a {
   }
   .partners .partners-img img {
     width: 50% !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .partners .text {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1938,7 +2009,7 @@ footer .content .s-row a {
   padding-right: 29px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "MuseoSansCyrl500", serif;
+  font-family: "MuseoCyrl500", serif;
 }
 
 @media (max-width: 768px) {

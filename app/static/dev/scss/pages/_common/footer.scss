@@ -90,6 +90,7 @@ footer {
           display: flex;
           flex-direction: row;
           justify-content: center;
+
           img, p {
             width: 50%;
           }
@@ -196,14 +197,30 @@ footer {
       .f-row {
         .logo-footer {
           margin-bottom: 15px;
+          display: flex;
 
           p {
-            font-size: $pFontSizeMax375;
+            font-size: $pFontSizeMin375;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+
           }
 
-          img {
-            margin-bottom: 15px;
-            width: 100%;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              margin-bottom: 15px;
+              width: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+            }
           }
         }
 
@@ -216,7 +233,6 @@ footer {
           margin-top: 15px;
           padding-top: 15px;
           display: flex;
-          flex-direction: row !important;
           justify-content: space-between;
         }
 
