@@ -33,6 +33,29 @@ def index(request):
         return render(request, 'main/_index.html', {'form': form, 'form_status': form_status})
 
 
+def programs(request):
+    """
+    Отрисовка главной страницы
+        методы POST для формы1
+    :param request:
+    :return: render index.html
+    """
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'programs/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'programs/_index.html',
+                                       {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'programs/_index.html', {'form': form, 'form_status': form_status})
+
+
 def feed_list(request):
     """
 

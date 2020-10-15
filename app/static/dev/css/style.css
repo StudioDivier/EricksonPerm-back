@@ -79,6 +79,9 @@ a:focus {
   justify-content: flex-end;
 }
 
+header .navbar-brand img {
+  width: 80px;
+}
 header a {
   color: black;
   font-family: "MuseoCyrl300", serif;
@@ -88,6 +91,11 @@ header a :hover {
   color: #f15a29;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  header a {
+    font-size: 13px;
+  }
+}
 footer .content {
   margin-top: 35px;
   margin-bottom: 35px;
@@ -100,15 +108,23 @@ footer .content .f-row {
   flex-direction: row;
   justify-content: space-between;
 }
+footer .content .f-row .logo-footer {
+  width: 30%;
+}
+footer .content .f-row .logo-footer .img-footer a img {
+  width: 40%;
+}
 footer .content .f-row .list1 {
   font-family: "MuseoCyrl700", serif;
   display: flex;
   flex-direction: column;
+  font-weight: 700;
 }
 footer .content .f-row .list2 {
   font-family: "MuseoCyrl700", serif;
   display: flex;
   flex-direction: column;
+  font-weight: 700;
 }
 footer .content .f-row .list3 {
   display: flex;
@@ -411,6 +427,9 @@ footer .content .s-row a {
   flex-direction: row;
   align-items: center;
 }
+.representation .eric-logo img {
+  width: 100%;
+}
 .representation .f-row {
   display: flex;
   flex-direction: row;
@@ -421,6 +440,7 @@ footer .content .s-row a {
   width: 100%;
   margin-top: 8px;
   font-family: "MuseoCyrl700", serif;
+  padding-left: 34px;
 }
 .representation .s-row {
   margin-top: 38px;
@@ -777,7 +797,6 @@ footer .content .s-row a {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid #f15a29;
 }
 .near-date .card-date .card-date-label {
@@ -800,11 +819,16 @@ footer .content .s-row a {
   justify-content: space-between;
   text-align: center;
   padding: 10px;
+  margin-top: 10px;
   width: 100%;
 }
 .near-date .card-date .card-text {
   padding-top: 15px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
 }
 .near-date .card-date .card-text h5 {
   font-family: "MuseoCyrl500", serif;
@@ -1640,7 +1664,7 @@ footer .content .s-row a {
   padding-bottom: 35px;
 }
 .work .row .cards .branch .bottom {
-  padding-left: 32px;
+  padding-left: 20px;
 }
 .work .row .cards .branch .bottom p {
   color: white;

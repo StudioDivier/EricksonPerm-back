@@ -4,6 +4,14 @@
 @import "../../common/mixins";
 
 header {
+
+  .navbar-brand{
+    img{
+      //width: 88px;
+      width: 80px;
+    }
+  }
+
   a {
     color: black;
     font-family: "MuseoCyrl300", serif;
@@ -15,5 +23,12 @@ header {
     }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  header{
+    a{
+      font-size: 13px;
+    }
+  }
+}
 
 

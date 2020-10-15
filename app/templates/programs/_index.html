@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}Erickson Perm - Программы{% endblock %}
+
+{% block content %}
+
+    <section class="breadcr">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
+            <span>
+                <span>
+                    <a href="/">Главная</a>
+                    /
+                    <span class="breadcrumb_last" aria-current="page">Программы</span>
+
+                </span>
+            </span>
+            </p>
+        </div>
+    </section>
+
+    {% include 'main/components/our-programs.html' %}
+
+    {% include 'base/form.html' %}
+
+{% endblock %}

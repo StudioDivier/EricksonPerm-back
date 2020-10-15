@@ -30,7 +30,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
 
     border: 1px solid #f15a29;
 
@@ -57,12 +57,17 @@
       justify-content: space-between;
       text-align: center;
       padding: 10px;
+      margin-top: 10px;
       width: 100%;
     }
 
     .card-text {
       padding-top: 15px;
       padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
 
       h5 {
         font-family: "MuseoCyrl500", serif;

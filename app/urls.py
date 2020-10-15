@@ -9,6 +9,7 @@ app_name = 'index'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('programs', views.programs, name='programs'),
     path('feed-list', views.feed_list, name='feed_list'),
     path('review/<int:id>', views.feed_detail, name='feed_detail'),
     path('coaches', views.coaches, name='coaches'),
