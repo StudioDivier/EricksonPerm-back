@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import django_heroku
+
 from pathlib import Path
 import os
 
@@ -26,13 +26,11 @@ SECRET_KEY = '5#8km4+_-(0%zw3c38u=d=wbku1e156ojo3$i_ude$1c99nn02'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['salty-sierra-78360.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ericksonperm.ru', 'www.ericksonperm.ru']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'adminlte3',
-    # 'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,8 +49,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,18 +82,17 @@ WSGI_APPLICATION = 'EricksonPerm_back.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 #
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'perm',
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@localhost:5432/perm')}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u1165721_default',
+        'USER': 'u1165721_default',
+        'PASSWORD': '_217Csyv',
+        'HOST': 'localhost',
+    }
+}
+# import dj_database_url
+# DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@localhost:5432/perm')}
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
 
@@ -140,11 +135,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = os.path.join(BASE_DIR, '/static/dev/')
-STATIC_ROOT = os.path.join(BASE_DIR, 'STATICFILES/DEV')
-STATIC_DIRS = [
-    os.path.join(BASE_DIR, 'static/dev/')
-]
+STATIC_URL = os.path.join(BASE_DIR, '/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_DIRS = [
+#     os.path.join(BASE_DIR, 'static/')
+# ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
@@ -218,5 +213,5 @@ CKEDITOR_CONFIGS = {
     }
 }
 CKEDITOR_BROWSE_SHOW_DIRS = True
-django_heroku.settings(locals())
+
 

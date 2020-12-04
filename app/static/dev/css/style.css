@@ -399,7 +399,7 @@ footer .content .s-row a {
 }
 @media screen and (max-width: 375px) {
   .main {
-    margin-right: 15px;
+    margin-right: 0;
   }
   .main .col-lg-7 h1 {
     font-size: 20px;
@@ -472,7 +472,7 @@ footer .content .s-row a {
     padding-right: 15px;
   }
   .representation .f-row h2 {
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
   }
   .representation .s-row h3 {

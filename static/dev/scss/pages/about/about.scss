@@ -1,0 +1,168 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.about-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 125px;
+
+  .section-header {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: $h2FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  h4 {
+    font-size: $h4FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  p {
+    font-size: $pFontSizeMin;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-container {
+    padding: 10px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .details {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .btn-outline-secondary {
+    border-radius: 30px;
+    color: black;
+    font-family: "MuseoCyrl500", serif;
+    padding: 10px 50px;
+  }
+
+  .btn-outline-secondary:hover {
+    color: white;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .about-page {
+    margin-bottom: 75px;
+
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h4 {
+      font-size: $h4FontSize375;
+    }
+
+    p {
+      font-size: $pFontSizeMin375;
+    }
+
+    .text-container {
+      padding-top: 20px;
+
+      p {
+        font-size: $pFontSizeMin375;
+      }
+    }
+
+    .details {
+      p {
+        font-size: $pFontSizeMin375;
+      }
+    }
+
+    .details {
+      margin-top: 10px;
+    }
+
+    .btn-container {
+      .btn-outline-secondary {
+        padding: 10px 30px;
+        font-size: $pFontSizeMin375;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-page {
+    margin-bottom: 75px;
+
+    h2 {
+      font-size: $h2FontSize375;
+    }
+
+    h4 {
+      font-size: $h3FontSize375;
+    }
+
+    p {
+      font-size: $pFontSizeMax375;
+    }
+
+    .text-container {
+      padding-top: 20px;
+
+      p {
+        font-size: $pFontSizeMax375;
+      }
+    }
+
+    .details {
+      p {
+        font-size: $pFontSizeMax375;
+      }
+    }
+
+    .details {
+      margin-top: 10px;
+    }
+
+    .btn-container {
+      .btn-outline-secondary {
+        padding: 10px 30px;
+        font-size: $pFontSizeMax375;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .about-page {
+
+  }
+}

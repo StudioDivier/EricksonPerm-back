@@ -1,0 +1,56 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.pagination-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    .page-item {
+      margin: 0 10px;
+
+      .page-link {
+        color: #8c8c8c;
+        background-color: white;
+        border-color: #8c8c8c;
+        border-radius: 27px;
+        padding: .625rem 1rem;
+      }
+
+      .page-link:hover {
+        background-color: #f15a29;
+        border-color: #f15a29;
+        color: white;
+      }
+    }
+
+    .page-item + .active {
+      .page-link {
+        color: #f15a29!important;
+        border-color: #f15a29!important;
+      }
+
+      .page-link:hover {
+        background-color: #f15a29;
+        color: white;
+      }
+    }
+
+    .next-btn:hover {
+      .page-link {
+        border: 1px solid #f15a29 !important;
+        background-color: white !important;
+        color: #f15a29;
+      }
+    }
+    .next-prev:hover {
+      .page-link {
+        border-color: #f15a29 !important;
+        background-color: white !important;
+        color: #f15a29;
+      }
+    }
+  }

@@ -1,0 +1,159 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.carousel-page {
+  background-image: url("../img/main/carousel-page/bg-carousel-page.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  color: white;
+
+  .text {
+    h2 {
+      font-family: "MuseoCyrl700", serif;
+      font-size: $h2FontSize;
+    }
+
+    p {
+      font-family: "MuseoCyrl100", serif;
+      font-size: $h4FontSize;
+    }
+  }
+
+  #feedback-carousel {
+    width: 100%;
+    .carousel-inner {
+      @include pxa(30px);
+      .carousel-item {
+        img {
+          width: 100%;
+        }
+        background-color: rgba(25, 25, 25, 0.44);
+        margin-top: 35px;
+        font-size: 18px;
+        font-family: "MuseoCyrl300", serif;
+
+        .carousel-item__inner {
+          display: flex;
+          align-items: center;
+          img {
+            @include pxa(20px);
+            @include pya(20px);
+          }
+
+          p {
+            @include pxa(20px);
+          }
+        }
+      }
+    }
+    .carousel-control-prev{
+      padding-right: 150px;
+    }
+    .carousel-control-next{
+      padding-left: 150px;
+    }
+  }
+}
+
+@include max-w(992){
+  .carousel-page{
+    #feedback-carousel{
+      .carousel-item {
+        .carousel-item__inner {
+          @include mxa(15px);
+          p {
+            font-size: $pFontSizeMax375;
+          }
+        }
+      }
+      .carousel-control-prev{
+        padding-right: 100px;
+      }
+      .carousel-control-next{
+        padding-left: 100px;
+      }
+    }
+  }
+}
+
+@include max-w(768){
+  .carousel-page{
+
+    #feedback-carousel {
+      .carousel-item {
+        .carousel-item__inner {
+          flex-wrap: wrap;
+          @include mxa(15px);
+          p {
+            font-size: $pFontSizeMax375;
+          }
+        }
+      }
+      .carousel-control-prev{
+        padding-right: 45px;
+      }
+      .carousel-control-next{
+        padding-left: 45px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .carousel-page{
+    .text{
+      @include mxa(15px);
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .carousel-page {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    .text {
+      @include mxa(15px);
+
+      h2 {
+        font-size: $h2FontSize375;
+      }
+
+      p {
+        font-size: $h4FontSize375;
+      }
+    }
+
+    #feedback-carousel {
+      .carousel-item {
+        .carousel-item__inner {
+          flex-wrap: wrap;
+          @include mxa(15px);
+
+          img {
+            width: 100%;
+          }
+
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+      }
+      .carousel-control-prev{
+        padding-right: 15px;
+      }
+      .carousel-control-next{
+        padding-left: 15px;
+      }
+    }
+  }
+}

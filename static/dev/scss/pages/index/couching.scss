@@ -1,0 +1,181 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.couching {
+  background-image: url("../img/main/bg-couch.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .f-row {
+    h2 {
+      font-size: $h2FontSize;
+      font-family: "MuseoCyrl700", serif;
+    }
+
+    h5 {
+      font-size: $h5FontSize;
+      font-family: "MuseoCyrl500", serif;
+    }
+
+  }
+
+  .row-blocks {
+    margin-top: 65px;
+    display: flex;
+
+    .couch-card {
+      height: 100%;
+      border: 30px solid #ed700b;
+      border-image: url("../img/main/border-card.png") 20 round round;
+      opacity: 0.8;
+      position: center;
+      display: flex;
+      flex-direction: column;
+
+      .card-img {
+        text-align: center;
+        img {
+          width: 100%;
+        }
+
+        .card-name {
+          margin-top: 15px;
+          text-transform: uppercase;
+          font-family: "MuseoCyrl500", serif;
+        }
+      }
+
+      .text-center {
+        display: flex;
+        flex-direction: column;
+
+        .card-text {
+          font-family: "MuseoCyrl100", serif;
+        }
+      }
+    }
+
+
+  }
+}
+
+//@include max-w(1200) {
+//  .couching {
+//    .row-blocks {
+//      display: flex;
+//      justify-content: space-around;
+//      flex-wrap: wrap;
+//
+//
+//      .col-lg-3 {
+//        @include mya(10px);
+//        width: 50%;
+//        height: 100%;
+//
+//        .couch-card {
+//          height: 80%;
+//        }
+//      }
+//    }
+//  }
+//}
+
+@include max-w(992) {
+  .couching {
+    .row-blocks {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .col-lg-3 {
+        @include mya(10px);
+        width: 50%;
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  .couching {
+    .row-blocks {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .col-lg-3 {
+        @include mya(10px);
+        width: 50%;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .f-row{
+    @include pxa(15px);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .couching {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    @include pxa(15px);
+
+    .f-row {
+      h2 {
+        font-size: $h2FontSize375;
+      }
+
+      h5 {
+        font-size: $h5FontSize375;
+      }
+    }
+
+    .row-blocks {
+      display: flex;
+      justify-content: center;
+
+      .col-lg-3 {
+        display: flex;
+        justify-content: center;
+        @include mya(10px);
+
+        .couch-card {
+          margin-top: 15px;
+          width: 100%;
+          height: 100%;
+
+          .card-img {
+            display: flex;
+            flex-direction: column;
+
+            img {
+              width: 100%;
+
+            }
+
+            .card-name {
+              font-size: $pFontSizeMax375;
+            }
+          }
+
+          .text-center {
+            .card-text {
+              font-size: $pFontSizeMin375;
+            }
+          }
+        }
+      }
+    }
+  }
+}

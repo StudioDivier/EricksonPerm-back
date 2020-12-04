@@ -1,0 +1,189 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.form-1 {
+  background-image: url("../img/main/form-1/bg-form-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .row {
+    //@include mya(45px);
+    .text {
+      //width: 45%;
+      h3 {
+        color: #ffffff;
+        font-family: "MuseoCyrl700", serif;
+      }
+
+      p {
+        color: #ffffff;
+        font-family: "MuseoCyrl100", serif;
+      }
+    }
+
+    .buttons {
+      //width: 50%;
+      font-family: "MuseoCyrl100", serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include mya(25px);
+
+      .email {
+        @include mxa(15px);
+      }
+
+      input {
+        background-color: transparent;
+        padding: 10px 25px;
+        border: 1px solid white;
+        border-radius: 25px;
+        color: #ffffff;
+        width: 100%;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: white;
+      }
+
+      .subscribe {
+        margin-top: 10px;
+      }
+
+    }
+
+    .inputs-section {
+      font-family: "MuseoCyrl100", serif;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+
+      .subscribe-1 {
+        width: 100%;
+        height: 100%;
+      }
+
+      input {
+        background-color: transparent;
+        padding: 10px 25px;
+        border: 1px solid white;
+        border-radius: 25px;
+        color: #ffffff;
+        width: 100%;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: white;
+      }
+    }
+  }
+}
+
+@include max-w(992) {
+  .form-1 {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 25px;
+
+      .email {
+        @include mya(5px);
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  .form-1 {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 25px;
+
+      .email {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form-1 {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .row {
+      @include mxa(15px);
+      margin-top: 20px;
+      margin-bottom: 10px !important;
+
+      .text {
+        h3 {
+          font-size: $h3FontSize375;
+        }
+
+        p {
+          padding-top: 10px;
+          font-size: $pFontSizeMin375;
+        }
+      }
+
+      .col-lg-4{
+        @include mya(5px);
+      }
+
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 25px;
+        @include mya(15px);
+
+        .name, .email, .subscribe {
+          width: 100%;
+        }
+
+        .email {
+          @include mxa(0px)
+        }
+
+        input {
+          padding: 5px 10px;
+          font-size: $pFontSizeMin375;
+          width: 100%;
+        }
+      }
+
+      .inputs-section {
+        input {
+          margin-bottom: 10px;
+          padding: 5px 25px;
+          font-size: 12px;
+        }
+        .btn-orange {
+          font-size: 12px;
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}

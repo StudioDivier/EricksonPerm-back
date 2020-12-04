@@ -1,0 +1,153 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.coaches-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+
+  .page__header {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: $h2FontSize;
+    font-family: "MuseoCyrl700", serif;
+    //width: 100%;
+  }
+
+  h5 {
+    font-size: $h5FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  .single-coach {
+    margin-bottom: 30px;
+
+    .single-coach-container {
+      border-radius: 20px;
+      padding: 30px 20px;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    button {
+      background-color: transparent;
+      font-family: "MuseoCyrl500", serif;
+      font-size: 14px;
+      border: 1px solid #1d1d1d;
+      padding: 5px 20px;
+      border-radius: 30px;
+      color: #1d1d1d;
+    }
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-page {
+    h2 {
+      font-size: $h2FontSize375;
+      //width: 100%;
+    }
+
+    h5 {
+      font-size: $h4FontSize375;
+    }
+
+    .single-coach {
+    margin-bottom: 30px;
+
+    .single-coach-container {
+      padding: 30px 20px;
+      p {
+        font-size: $pFontSizeMin375;
+      }
+      .coach-details {
+        margin-top: 15px;
+        text-align: center;
+      }
+    }
+
+    button {
+      font-size: 12px;
+      padding: 5px 20px;
+      border-radius: 30px;
+
+    }
+  }
+
+    .coach-avatar {
+      img {
+        width: 50%;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-page {
+    h2 {
+      font-size: $h2FontSize375;
+      //width: 100%;
+    }
+
+    h5 {
+      font-size: $h3FontSize375;
+    }
+
+    .single-coach {
+    margin-bottom: 30px;
+
+    .single-coach-container {
+      padding: 30px 20px;
+      p {
+        font-size: $pFontSizeMax375;
+      }
+      .coach-details {
+        margin-top: 15px;
+        text-align: center;
+      }
+    }
+
+    button {
+      font-size: 12px;
+      padding: 5px 20px;
+      border-radius: 30px;
+
+    }
+  }
+
+    .coach-avatar {
+      img {
+        width: 50%;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .coaches-page {
+
+  }
+}

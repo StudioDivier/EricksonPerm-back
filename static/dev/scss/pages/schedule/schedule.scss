@@ -1,0 +1,297 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.schedule-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+
+  h2 {
+    font-size: $h2FontSize;
+    font-family: "MuseoCyrl700", serif;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    font-size: 27px;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  h5 {
+    font-size: $h5FontSize;
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  strong {
+    font-family: "MuseoCyrl700", serif;
+  }
+
+  .schedule-page__page-header {
+    h3 {
+      margin-top: 15px;
+    }
+  }
+
+  .light {
+    background-color: #ffffff;
+  }
+
+  .grey {
+    background-color: #f7f7f7;
+  }
+
+  .schedule-page__date-picker-container {
+    h5 {
+      font-size: $h3FontSize375;
+    }
+
+    padding: 40px;
+    border-radius: 35px;
+    margin-bottom: 40px;
+    background-color: #f7f7f7;
+
+    .main-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      .checkbox-group-1, .checkbox-group-2 {
+        margin-top: 10px;
+        width: 50%;
+
+        .form-check {
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+
+    .pick-date {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      input {
+        text-align: left;
+      }
+
+      input:first-child {
+        margin-right: 20px;
+      }
+
+      button {
+        //width: 25%;
+        height: auto;
+        padding: 7.5px 35px;
+      }
+    }
+  }
+
+  .schedule-page__page-content {
+
+    .event-container {
+      margin: 0;
+      padding: 30px 0;
+    }
+
+    .event-date {
+      //background-color: white;
+      padding: 5px 0 20px 20px;
+      display: flex;
+      flex-direction: column;
+
+      span:first-child {
+        font-family: "MuseoCyrl700", serif;
+        font-size: 50px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      svg {
+        color: #f15a29;
+      }
+    }
+
+    .event-info {
+      padding-left: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .upper-text-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          border: 1px solid #515151;
+          border-radius: 35px;
+          padding: 5px 20px;
+          font-family: "MuseoCyrl500", serif;
+        }
+      }
+
+      .btn-wrapper {
+        button {
+          width: auto;
+          height: auto;
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .schedule-page {
+    h2 {
+      font-size: $h2FontSize375 !important;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: $h3FontSize375 !important;
+    }
+
+    h4 {
+      font-size: $h4FontSize375 !important;
+    }
+
+    h5 {
+      font-size: $h5FontSize375 !important;
+    }
+
+    p, li, span, label {
+      font-size: $pFontSizeMin375 !important;
+    }
+
+    .schedule-page__page-content {
+
+      .event-container {
+        margin: 0;
+        padding: 20px 0;
+        justify-content: center;
+      }
+
+      .event-date {
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 50%;
+
+        span:first-child {
+          font-size: 20px;
+        }
+
+      }
+
+      .event-info {
+
+        .upper-text-wrapper {
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+
+        .btn-wrapper {
+          button {
+            padding: 5px 15px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .pick-date {
+      margin-top: 20px;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .schedule-page {
+    h2 {
+      font-size: $h2FontSize375 !important;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: $h3FontSize375 !important;
+    }
+
+    h4 {
+      font-size: $h4FontSize375 !important;
+    }
+
+    h5 {
+      font-size: $h5FontSize375 !important;
+    }
+
+    p, li, span, label {
+      font-size: $pFontSizeMax375 !important;
+    }
+
+    .schedule-page__page-content {
+
+      .event-container {
+        margin: 0;
+        padding: 30px 0;
+        justify-content: center;
+      }
+
+      .event-date {
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 50%;
+
+        span:first-child {
+          font-size: 30px !important;
+        }
+
+      }
+
+      .event-info {
+
+        .upper-text-wrapper {
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+
+        .btn-wrapper {
+          button {
+            padding: 5px 15px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .pick-date {
+      margin-top: 20px;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .schedule-page {
+
+  }
+}

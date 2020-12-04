@@ -1,0 +1,3565 @@
+@font-face {
+  font-family: "MuseoCyrl900";
+  src: url("../fonts/MuseoCyrl900.otf");
+}
+@font-face {
+  font-family: "MuseoCyrl700";
+  src: url("../fonts/MuseoCyrl700.otf");
+}
+@font-face {
+  font-family: "MuseoCyrl500";
+  src: url("../fonts/MuseoCyrl500.otf");
+}
+@font-face {
+  font-family: "MuseoCyrl300";
+  src: url("../fonts/MuseoCyrl300.otf");
+}
+@font-face {
+  font-family: "MuseoCyrl100";
+  src: url("../fonts/MuseoCyrl100.otf");
+}
+a:focus {
+  box-shadow: none;
+}
+
+.btn-orange {
+  border-radius: 25px;
+  background-color: #e9f1f7;
+  font-size: 14px;
+  font-family: "MuseoCyrl500", serif;
+  letter-spacing: 0.5px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #f15a29;
+  color: white;
+}
+@media screen and (max-width: 375px) {
+  .btn-orange {
+    font-size: 10px;
+    padding: 5px 25px;
+  }
+}
+.btn-orange:hover {
+  color: #ffffff;
+}
+
+.btn-grey {
+  border-radius: 25px;
+  background-color: #e9f1f7;
+  font-size: 14px;
+  font-family: "MuseoCyrl500", serif;
+  letter-spacing: 0.5px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #515151;
+  color: white;
+}
+@media screen and (max-width: 375px) {
+  .btn-grey {
+    font-size: 10px;
+    padding: 5px 25px;
+  }
+}
+
+.color-orange {
+  font-family: "MuseoCyrl500", serif;
+  color: #f15a29;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.color-black {
+  font-family: "MuseoCyrl500", serif;
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+header .navbar-brand img {
+  width: 80px;
+}
+header a {
+  color: black;
+  font-family: "MuseoCyrl300", serif;
+  font-size: 15px;
+}
+header a :hover {
+  color: #f15a29;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  header a {
+    font-size: 13px;
+  }
+}
+footer .content {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-family: "MuseoCyrl100", serif;
+}
+footer .content .f-row {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .content .f-row .logo-footer {
+  width: 30%;
+}
+footer .content .f-row .logo-footer .img-footer a img {
+  width: 40%;
+}
+footer .content .f-row .list1 {
+  font-family: "MuseoCyrl700", serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+footer .content .f-row .list2 {
+  font-family: "MuseoCyrl700", serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+footer .content .f-row .list3 {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .f-row .list4 {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .f-row .list5 {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .f-row .list6 {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .f-row .list6 span {
+  font-family: "MuseoCyrl700", serif;
+}
+footer .content .f-row .list6 .social {
+  display: flex;
+}
+footer .content .f-row a {
+  color: black;
+}
+footer .content .s-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+footer .content .s-row a {
+  text-decoration: underline;
+  color: #f15a29;
+}
+
+@media (max-width: 992px) {
+  footer .content .f-row {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  footer .content .f-row .logo-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer .content .f-row .logo-footer img, footer .content .f-row .logo-footer p {
+    width: 50%;
+  }
+  footer .content .f-row .list1, footer .content .f-row .list2 {
+    width: 25%;
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+  footer .content .f-row .list5, footer .content .f-row .list6, footer .content .f-row .list3, footer .content .f-row .list4 {
+    width: 25%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  footer .content .f-row .list5 p, footer .content .f-row .list6 p, footer .content .f-row .list3 p, footer .content .f-row .list4 p {
+    margin-bottom: 5px;
+  }
+  footer .content .f-row .social {
+    display: flex;
+  }
+  footer .content .f-row .social img {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  footer .content {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  footer .content .f-row {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  footer .content .f-row .logo-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .content .f-row .logo-footer img {
+    width: 100%;
+  }
+  footer .content .f-row .list1, footer .content .f-row .list2, footer .content .f-row .list3, footer .content .f-row .list4 {
+    width: 25%;
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+  footer .content .f-row .list5, footer .content .f-row .list6 {
+    width: 50%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  footer .content .f-row .list5 p, footer .content .f-row .list6 p {
+    margin-bottom: 5px;
+  }
+  footer .content .f-row .social {
+    display: flex;
+  }
+  footer .content .f-row .social img {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  footer .content {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  footer .content .f-row {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+  }
+  footer .content .f-row .logo-footer {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  footer .content .f-row .logo-footer p {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  footer .content .f-row .logo-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .content .f-row .logo-footer a img {
+    margin-bottom: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .content .f-row .list1, footer .content .f-row .list2, footer .content .f-row .list3, footer .content .f-row .list4, footer .content .f-row .list5, footer .content .f-row .list6 {
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .f-row .social {
+    display: flex;
+  }
+  footer .content .s-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  footer .content .s-row p {
+    font-size: 12px;
+  }
+}
+.breadcr {
+  margin: 30px 0;
+  font-family: "MuseoCyrl100", serif;
+}
+.breadcr a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.breadcr p {
+  margin: 0;
+}
+
+.pagination-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.pagination-block .page-item {
+  margin: 0 10px;
+}
+.pagination-block .page-item .page-link {
+  color: #8c8c8c;
+  background-color: white;
+  border-color: #8c8c8c;
+  border-radius: 27px;
+  padding: 0.625rem 1rem;
+}
+.pagination-block .page-item .page-link:hover {
+  background-color: #f15a29;
+  border-color: #f15a29;
+  color: white;
+}
+.pagination-block .page-item + .active .page-link {
+  color: #f15a29 !important;
+  border-color: #f15a29 !important;
+}
+.pagination-block .page-item + .active .page-link:hover {
+  background-color: #f15a29;
+  color: white;
+}
+.pagination-block .next-btn:hover .page-link {
+  border: 1px solid #f15a29 !important;
+  background-color: white !important;
+  color: #f15a29;
+}
+.pagination-block .next-prev:hover .page-link {
+  border-color: #f15a29 !important;
+  background-color: white !important;
+  color: #f15a29;
+}
+
+.main {
+  background-image: url("../img/main/bg-main.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .main {
+    height: 680px;
+  }
+}
+.main h1 {
+  color: #ffffff;
+  font-family: "MuseoCyrl700", serif;
+}
+.main p {
+  color: #ffffff;
+  font-family: "MuseoCyrl500", serif;
+}
+.main a {
+  margin-top: 50px;
+  border-radius: 25px;
+  background-color: #e9f1f7;
+  font-family: "MuseoCyrl500", serif;
+  letter-spacing: 0.5px;
+  padding: 10px 35px;
+}
+
+@media (max-width: 992px) {
+  .main .col-lg-7 {
+    padding-top: 35px;
+  }
+  .main a {
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .main .col-lg-7 {
+    padding-top: 15px;
+  }
+  .main a {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main {
+    margin-right: 15px;
+  }
+  .main .col-lg-7 h1 {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+  .main .col-lg-7 p {
+    font-size: 10px;
+  }
+  .main a {
+    margin-top: 25px !important;
+    margin-bottom: 25px;
+    font-size: 10px !important;
+    padding: 5px 18px !important;
+  }
+}
+.representation {
+  background-image: url("../img/main/bg-representation.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.representation .eric-logo img {
+  width: 100%;
+}
+.representation .f-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.representation .f-row h2 {
+  color: #000000;
+  width: 100%;
+  margin-top: 8px;
+  font-family: "MuseoCyrl700", serif;
+  padding-left: 34px;
+}
+.representation .s-row {
+  margin-top: 38px;
+}
+.representation .s-row h3 {
+  font-size: 45px;
+}
+.representation .s-row p {
+  color: #000000;
+  font-size: 35px;
+  margin-top: 26px;
+  font-family: "MuseoCyrl100", serif;
+}
+.representation .s-row b {
+  font-family: "MuseoCyrl700", serif;
+}
+
+@media screen and (max-width: 425px) {
+  .s-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .representation {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .representation .f-row h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+  .representation .s-row h3 {
+    font-size: 18px;
+  }
+  .representation .s-row p {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+}
+.couching {
+  background-image: url("../img/main/bg-couch.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.couching .f-row h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.couching .f-row h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl500", serif;
+}
+.couching .row-blocks {
+  margin-top: 65px;
+  display: flex;
+}
+.couching .row-blocks .couch-card {
+  height: 100%;
+  border: 30px solid #ed700b;
+  border-image: url("../img/main/border-card.png") 20 round round;
+  opacity: 0.8;
+  position: center;
+  display: flex;
+  flex-direction: column;
+}
+.couching .row-blocks .couch-card .card-img {
+  text-align: center;
+}
+.couching .row-blocks .couch-card .card-img img {
+  width: 100%;
+}
+.couching .row-blocks .couch-card .card-img .card-name {
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-family: "MuseoCyrl500", serif;
+}
+.couching .row-blocks .couch-card .text-center {
+  display: flex;
+  flex-direction: column;
+}
+.couching .row-blocks .couch-card .text-center .card-text {
+  font-family: "MuseoCyrl100", serif;
+}
+
+@media (max-width: 992px) {
+  .couching .row-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .couching .row-blocks .col-lg-3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .couching .row-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .couching .row-blocks .col-lg-3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .f-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .couching {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .couching .f-row h2 {
+    font-size: 20px;
+  }
+  .couching .f-row h5 {
+    font-size: 12px;
+  }
+  .couching .row-blocks {
+    display: flex;
+    justify-content: center;
+  }
+  .couching .row-blocks .col-lg-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .couching .row-blocks .col-lg-3 .couch-card {
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .couching .row-blocks .col-lg-3 .couch-card .card-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .couching .row-blocks .col-lg-3 .couch-card .card-img img {
+    width: 100%;
+  }
+  .couching .row-blocks .col-lg-3 .couch-card .card-img .card-name {
+    font-size: 15px;
+  }
+  .couching .row-blocks .col-lg-3 .couch-card .text-center .card-text {
+    font-size: 12px;
+  }
+}
+.our-programs {
+  background-image: url("../img/main/bg-programs.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.our-programs .row > div {
+  margin-top: 35px;
+}
+.our-programs .name h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.our-programs .programs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-programs .programs .col-lg-4 {
+  margin-bottom: 15px;
+}
+.our-programs .programs .col-lg-4 .program-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.our-programs .programs .col-lg-4 .program-card .photo img {
+  width: 100%;
+}
+.our-programs .programs .col-lg-4 .program-card .text {
+  padding: 25px 15px 0 15px;
+}
+.our-programs .programs .col-lg-4 .program-card .text h5 {
+  font-family: "MuseoCyrl500", serif;
+  text-transform: uppercase;
+}
+.our-programs .programs .col-lg-4 .program-card .text p {
+  font-family: "MuseoCyrl100", serif;
+}
+.our-programs .programs .col-lg-4 .program-card .text a {
+  color: #f15a29;
+  text-decoration: underline;
+}
+.our-programs .programs .col-lg-4 .program-card .buttons {
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 15px 0 15px;
+}
+.our-programs .programs .col-lg-4 .program-card .buttons a:last-child {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .our-programs {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .our-programs .name h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .our-programs .col-lg-4 {
+    margin-top: 15px !important;
+  }
+  .our-programs .col-lg-4 .program-card .photo img {
+    width: 100%;
+  }
+  .our-programs .col-lg-4 .program-card .text h5 {
+    font-size: 12px;
+  }
+  .our-programs .col-lg-4 .program-card .text p, .our-programs .col-lg-4 .program-card .text a {
+    font-size: 12px;
+  }
+  .our-programs .col-lg-4 .program-card .buttons {
+    padding: 15px 5px 0 5px;
+  }
+  .our-programs .col-lg-4 .program-card .buttons a {
+    font-size: 12px;
+  }
+}
+.study {
+  background-image: url("../img/main/study/bg-study.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.study .row {
+  margin-bottom: 30px;
+}
+.study .name h2 {
+  color: white;
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.study .study-card {
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  position: center;
+  padding: 25px;
+  height: 100%;
+}
+.study .study-card .photo-name {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.study .study-card .photo-name img {
+  width: 85px;
+}
+.study .study-card .photo-name p {
+  font-family: "MuseoCyrl500", serif;
+  padding-left: 24px;
+  margin-bottom: 0;
+}
+.study .study-card .list-card {
+  font-family: "MuseoCyrl100", serif;
+  margin-top: 10px;
+}
+.study .study-card .list-card a {
+  color: black;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .study .col-lg-4 {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .study .col-lg-4 {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .study {
+    margin-right: 12px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .study .row {
+    margin-bottom: 10px;
+  }
+  .study .name h2 {
+    font-size: 20px;
+  }
+  .study .col-lg-4 {
+    margin-bottom: 15px;
+  }
+  .study .col-lg-4 .study-card .photo-name img {
+    width: 65px;
+  }
+  .study .col-lg-4 .study-card .photo-name p {
+    font-size: 15px;
+  }
+  .study .col-lg-4 .study-card .list-card a {
+    font-size: 12px;
+  }
+}
+.near-date {
+  background-image: url("../img/main/near-date/bg-near-date.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.near-date .name h2 {
+  color: black;
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.near-date .card-date {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f15a29;
+}
+.near-date .card-date .card-date-label {
+  border-radius: 0 0 15px 0;
+  background-color: #818181;
+  width: 35%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.near-date .card-date .card-date-label p {
+  margin-bottom: 0;
+}
+.near-date .card-date .date {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.near-date .card-date .card-text {
+  padding-top: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+.near-date .card-date .card-text h5 {
+  font-family: "MuseoCyrl500", serif;
+  text-transform: uppercase;
+}
+.near-date .card-date .card-text p {
+  font-family: "MuseoCyrl100", serif;
+}
+.near-date .card-date .teach {
+  margin-top: 50px;
+  padding-top: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.near-date .card-date .teach .teach-name {
+  margin-left: 15px;
+  justify-content: flex-end;
+}
+.near-date .card-date .button {
+  padding-top: 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.near-date .card-date .button .btn-orange {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.near-date .button-opac {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 35px;
+}
+.near-date .button-opac .btn-opac {
+  border-radius: 19px;
+  border: 1px solid #1d1d1d;
+  color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "MuseoSansCyrl500", serif;
+}
+
+@media (max-width: 992px) {
+  .near-date .col-lg-4 {
+    margin-bottom: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .near-date .col-lg-4 {
+    margin-bottom: 15px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .near-date {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .near-date .name h2 {
+    font-size: 20px;
+  }
+  .near-date .col-lg-4 {
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .near-date .col-lg-4 .card-date {
+    width: 100%;
+  }
+  .near-date .col-lg-4 .card-date .card-date-label p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .date p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .card-text h5 {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .card-text p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .teach {
+    margin-top: 30px;
+  }
+  .near-date .col-lg-4 .card-date .teach img {
+    width: 100%;
+  }
+  .near-date .col-lg-4 .card-date .teach .teach-name h5 {
+    font-size: 14px;
+  }
+  .near-date .col-lg-4 .card-date .teach .teach-name p {
+    font-size: 12px;
+  }
+  .near-date .button-opac {
+    margin: 25px;
+  }
+  .near-date .button-opac a {
+    font-size: 15px;
+  }
+}
+.form-1 {
+  background-image: url("../img/main/form-1/bg-form-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.form-1 .row .text h3 {
+  color: #ffffff;
+  font-family: "MuseoCyrl700", serif;
+}
+.form-1 .row .text p {
+  color: #ffffff;
+  font-family: "MuseoCyrl100", serif;
+}
+.form-1 .row .buttons {
+  font-family: "MuseoCyrl100", serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.form-1 .row .buttons .email {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.form-1 .row .buttons input {
+  background-color: transparent;
+  padding: 10px 25px;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: #ffffff;
+  width: 100%;
+}
+.form-1 .row .buttons input:focus {
+  outline: none;
+}
+.form-1 .row .buttons input::placeholder {
+  color: white;
+}
+.form-1 .row .buttons .subscribe {
+  margin-top: 10px;
+}
+.form-1 .row .inputs-section {
+  font-family: "MuseoCyrl100", serif;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.form-1 .row .inputs-section .subscribe-1 {
+  width: 100%;
+  height: 100%;
+}
+.form-1 .row .inputs-section input {
+  background-color: transparent;
+  padding: 10px 25px;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: #ffffff;
+  width: 100%;
+}
+.form-1 .row .inputs-section input:focus {
+  outline: none;
+}
+.form-1 .row .inputs-section input::placeholder {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .form-1 .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+  }
+  .form-1 .buttons .email {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .form-1 .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+  }
+  .form-1 .buttons .email {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .form-1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .form-1 .row {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px !important;
+  }
+  .form-1 .row .text h3 {
+    font-size: 18px;
+  }
+  .form-1 .row .text p {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .form-1 .row .col-lg-4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .form-1 .row .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .form-1 .row .buttons .name, .form-1 .row .buttons .email, .form-1 .row .buttons .subscribe {
+    width: 100%;
+  }
+  .form-1 .row .buttons .email {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .form-1 .row .buttons input {
+    padding: 5px 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .form-1 .row .inputs-section input {
+    margin-bottom: 10px;
+    padding: 5px 25px;
+    font-size: 12px;
+  }
+  .form-1 .row .inputs-section .btn-orange {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+}
+.banner1 {
+  background-image: url("../img/main/banner1/bg-banner1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.banner1 .f-row {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  display: flex;
+}
+.banner1 .f-row h3 {
+  color: white;
+  font-family: "MuseoCyrl700", serif;
+  font-size: 35px;
+  text-align: left;
+}
+.banner1 .s-row {
+  margin-top: 35px;
+}
+.banner1 .s-row p {
+  font-family: "MuseoCyrl100", serif;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .banner1 .f-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .banner1 .f-row .text {
+    margin-top: 25px;
+  }
+  .banner1 .f-row .logo-eric img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .banner1 .f-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .banner1 .f-row .text {
+    margin-top: 25px;
+  }
+  .banner1 .f-row .logo-eric img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .banner1 .f-row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .banner1 .f-row .text h3 {
+    font-size: 18px;
+  }
+  .banner1 .f-row .logo-eric img {
+    width: 100%;
+  }
+  .banner1 .s-row {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .banner1 .s-row p {
+    font-size: 15px;
+  }
+}
+.office {
+  background-image: url("../img/main/office/bg-office.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.office .head {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.office .head h2 {
+  margin-top: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.office .head h3 {
+  margin-top: 15px;
+  font-family: "MuseoCyrl700", serif;
+}
+.office .head h4 {
+  margin-top: 25px;
+  font-family: "MuseoCyrl100", serif;
+}
+.office .head h5 {
+  margin-top: 45px;
+  font-family: "MuseoCyrl100", serif;
+}
+.office .head h5 span {
+  font-family: "MuseoCyrl700", serif;
+}
+.office .body-block .stat-row {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+.office .body-block .stat-row .elem {
+  font-size: 22px;
+  font-family: "MuseoCyrl100", serif;
+}
+.office .body-block .stat-row .elem .f {
+  color: #f15a29;
+}
+.office .body-block .stat-row .elem .s {
+  color: #f15a29;
+  font-family: "MuseoCyrl700", serif;
+  font-size: 55px;
+}
+.office .body-block .stat-row .elem .t {
+  color: black;
+}
+.office .map {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.office .map img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .office .body-block .stat-row {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .office .body-block .stat-row .elem {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .office {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .office .head h2 {
+    font-size: 20px;
+  }
+  .office .head h3 {
+    font-size: 18px;
+  }
+  .office .head h4 {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .office .head h5 {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  .office .body-block .stat-row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .office .body-block .stat-row .elem {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  .office .body-block .stat-row .elem .s {
+    font-size: 20px;
+  }
+  .office .map {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .office .map img {
+    width: 100%;
+  }
+}
+.cto {
+  background-image: url("../img/main/cto/bg-cto.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.cto .base {
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.cto .base img {
+  width: 100%;
+}
+.cto .base .text {
+  padding-left: 45px;
+  padding-top: 45px;
+}
+.cto .base .text .ons {
+  font-family: "MuseoCyrl100", serif;
+  font-size: 30px;
+}
+.cto .base .text .name {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 38px;
+}
+.cto .base .text .description {
+  font-family: "MuseoCyrl100", serif;
+  font-size: 18px;
+}
+.cto .base .text .text-base {
+  padding-top: 25px;
+  font-family: "MuseoCyrl100", serif;
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .cto .base {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .cto .base {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cto {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .cto .base {
+    display: flex;
+    flex-direction: column;
+  }
+  .cto .base img {
+    width: 100%;
+  }
+  .cto .base .text {
+    padding-left: 25px;
+  }
+  .cto .base .text .ons {
+    font-size: 14px;
+  }
+  .cto .base .text .name {
+    font-size: 18px;
+  }
+  .cto .base .text .description {
+    font-size: 15px;
+  }
+  .cto .base .text .text-base {
+    font-size: 15px;
+  }
+}
+.banner2 {
+  background-image: url("../img/main/banner2/bg-banner2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.banner2 .content {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  display: flex;
+  color: white;
+}
+.banner2 .content .text {
+  width: 50%;
+  padding-top: 45px;
+  padding-right: 15px;
+  text-align: left;
+  font-family: "MuseoCyrl100", serif;
+}
+.banner2 .content .text .our {
+  font-size: 35px;
+}
+.banner2 .content .text .name {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 40px;
+}
+.banner2 .content .text .main-text {
+  font-size: 20px;
+}
+.banner2 .content .photo {
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .banner2 .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .banner2 .content .text {
+    width: 50%;
+    padding-top: 0 !important;
+    margin-bottom: 10px;
+  }
+  .banner2 .content .photo {
+    width: 50%;
+  }
+  .banner2 .content .photo img {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .banner2 .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .banner2 .content .text {
+    width: 50%;
+    padding-top: 0 !important;
+    margin-bottom: 10px;
+  }
+  .banner2 .content .photo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .banner2 .content .photo img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .banner2 .content {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner2 .content .text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .banner2 .content .photo {
+    width: 100%;
+  }
+  .banner2 .content .photo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .banner2 .content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .banner2 .content {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner2 .content .text {
+    padding-top: 0;
+    width: 100%;
+  }
+  .banner2 .content .text .our {
+    font-size: 18px !important;
+  }
+  .banner2 .content .text .name {
+    font-size: 18px !important;
+  }
+  .banner2 .content .text .main-text {
+    font-size: 12px !important;
+  }
+  .banner2 .content .photo {
+    width: 100%;
+  }
+  .banner2 .content .photo img {
+    width: 100%;
+  }
+}
+.our-mission {
+  background-image: url("../img/main/our-mission/bg-mission.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.our-mission .row {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.our-mission .row .text h2 {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 55px;
+}
+.our-mission .row .text p {
+  font-family: "MuseoCyrl100", serif;
+  font-size: 25px;
+}
+.our-mission .row .text .under-name {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 35px;
+}
+.our-mission .row .body-block .stat-row {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 35px;
+}
+.our-mission .row .body-block .stat-row .elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: "MuseoCyrl100", serif;
+}
+.our-mission .row .body-block .stat-row .elem .f {
+  color: #f15a29;
+  font-family: "MuseoCyrl700", serif;
+  font-size: 60px;
+}
+.our-mission .row .body-block .stat-row .elem .s {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 10px;
+  text-align: left;
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .our-mission .row .body-block .stat-row {
+    margin-top: 15px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left !important;
+  }
+  .our-mission .row .body-block .stat-row .elem {
+    display: flex;
+    justify-content: left;
+  }
+}
+@media (max-width: 768px) {
+  .our-mission .row .body-block .stat-row {
+    margin-top: 15px !important;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .our-mission .text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .our-mission {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .our-mission .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .our-mission .row .text h2 {
+    font-size: 20px !important;
+  }
+  .our-mission .row .text p {
+    font-size: 12px !important;
+  }
+  .our-mission .row .body-block .stat-row {
+    margin-top: 15px !important;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .our-mission .row .body-block .stat-row .elem {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .our-mission .row .body-block .stat-row .elem .f {
+    font-size: 18px !important;
+  }
+  .our-mission .row .body-block .stat-row .elem .s {
+    font-size: 15px !important;
+  }
+}
+.work {
+  background-image: url("../img/main/work/bg-work.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.work .row {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.work .row .text_work {
+  font-family: "MuseoCyrl100", serif;
+  width: 100%;
+}
+.work .row .text_work .f_work {
+  font-size: 35px;
+}
+.work .row .text_work .s_work {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 45px;
+}
+.work .row .text_work .t_work {
+  font-size: 25px;
+}
+.work .row .cards {
+  display: flex;
+  width: 100%;
+}
+.work .row .cards .branch {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 35px;
+}
+.work .row .cards .branch .bottom {
+  padding-left: 20px;
+}
+.work .row .cards .branch .bottom p {
+  color: white;
+  font-family: "MuseoCyrl500", serif;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.work .row .cards .branch .bottom .btn-orange {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.work .row .cards #first {
+  background-image: url("../img/main/work/card1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 433px;
+  height: 433px;
+}
+.work .row .cards #second {
+  background-image: url("../img/main/work/card2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 433px;
+  height: 433px;
+}
+.work .row .cards #third {
+  background-image: url("../img/main/work/card3.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 433px;
+  height: 433px;
+}
+
+@media (max-width: 1200px) {
+  .work .row .cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 320px !important;
+    height: 400px !important;
+  }
+}
+@media (max-width: 992px) {
+  .work .row .cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 290px !important;
+    height: 400px !important;
+  }
+}
+@media (max-width: 768px) {
+  .work .row .cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px !important;
+    height: 380px !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .work .text_work {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .work {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .work .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .work .row .text_work .f_work {
+    font-size: 14px;
+  }
+  .work .row .text_work .s_work {
+    font-size: 18px;
+  }
+  .work .row .text_work .t_work {
+    font-size: 12px;
+  }
+  .work .row .cards {
+    flex-wrap: wrap;
+  }
+  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 280px !important;
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .work .cards p {
+    font-size: 18px !important;
+    padding-right: 15px;
+  }
+}
+.carousel-page {
+  background-image: url("../img/main/carousel-page/bg-carousel-page.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: white;
+}
+.carousel-page .text h2 {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 55px;
+}
+.carousel-page .text p {
+  font-family: "MuseoCyrl100", serif;
+  font-size: 35px;
+}
+.carousel-page #feedback-carousel {
+  width: 100%;
+}
+.carousel-page #feedback-carousel .carousel-inner {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.carousel-page #feedback-carousel .carousel-inner .carousel-item {
+  background-color: rgba(25, 25, 25, 0.44);
+  margin-top: 35px;
+  font-size: 18px;
+  font-family: "MuseoCyrl300", serif;
+}
+.carousel-page #feedback-carousel .carousel-inner .carousel-item img {
+  width: 100%;
+}
+.carousel-page #feedback-carousel .carousel-inner .carousel-item .carousel-item__inner {
+  display: flex;
+  align-items: center;
+}
+.carousel-page #feedback-carousel .carousel-inner .carousel-item .carousel-item__inner img {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.carousel-page #feedback-carousel .carousel-inner .carousel-item .carousel-item__inner p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.carousel-page #feedback-carousel .carousel-control-prev {
+  padding-right: 150px;
+}
+.carousel-page #feedback-carousel .carousel-control-next {
+  padding-left: 150px;
+}
+
+@media (max-width: 992px) {
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner p {
+    font-size: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-prev {
+    padding-right: 100px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-next {
+    padding-left: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner {
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner p {
+    font-size: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-prev {
+    padding-right: 45px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-next {
+    padding-left: 45px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .carousel-page .text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .carousel-page {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .carousel-page .text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .carousel-page .text h2 {
+    font-size: 20px;
+  }
+  .carousel-page .text p {
+    font-size: 14px;
+  }
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner {
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner img {
+    width: 100%;
+  }
+  .carousel-page #feedback-carousel .carousel-item .carousel-item__inner p {
+    font-size: 12px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-prev {
+    padding-right: 15px;
+  }
+  .carousel-page #feedback-carousel .carousel-control-next {
+    padding-left: 15px;
+  }
+}
+.partners {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.partners .row {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.partners .row .text h2 {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 55px;
+}
+.partners .row .partners-img {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.partners .row .partners-img img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .partners .partners-img {
+    flex-wrap: wrap;
+  }
+  .partners .partners-img img {
+    width: 50% !important;
+  }
+}
+@media (max-width: 768px) {
+  .partners .partners-img {
+    flex-wrap: wrap;
+  }
+  .partners .partners-img img {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .partners .text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .partners {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .partners .text h2 {
+    font-size: 20px !important;
+  }
+  .partners .partners-img {
+    flex-wrap: wrap;
+  }
+  .partners .partners-img img {
+    width: 100%;
+  }
+}
+.news {
+  background-image: url("../img/main/news/bg-news.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.news .content {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.news .content .name h2 {
+  color: black;
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.news .content .program-card {
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.news .content .program-card .photo img {
+  width: 100%;
+}
+.news .content .program-card .text {
+  padding: 25px 15px 0 15px;
+}
+.news .content .program-card .text h5 {
+  font-family: "MuseoCyrl500", serif;
+  text-transform: uppercase;
+}
+.news .content .program-card .text p {
+  font-family: "MuseoCyrl100", serif;
+}
+.news .content .program-card .text a {
+  color: #f15a29;
+  text-decoration: underline;
+}
+.news .content .button-opac {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 35px;
+}
+.news .content .button-opac .btn-opac {
+  border-radius: 19px;
+  border: 1px solid #1d1d1d;
+  color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "MuseoCyrl500", serif;
+}
+
+@media (max-width: 768px) {
+  .news .content .col-lg-4 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+@media (max-width: 375px) {
+  .news .content .name h2 {
+    font-size: 20px;
+  }
+  .news .content .row {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .news .content .row .col-lg-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .news .content .row .col-lg-4 .program-card .photo {
+    width: 100%;
+  }
+  .news .content .row .col-lg-4 .program-card .text p {
+    font-size: 15px;
+  }
+  .news .content .row .col-lg-4 .program-card .text h5 {
+    font-size: 12px;
+  }
+  .news .content .row .col-lg-4 .program-card .text a {
+    font-size: 15px;
+  }
+  .news .content .button-opac a {
+    font-size: 15px;
+  }
+}
+.find {
+  background-image: url("../img/main/news/bg-news.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.find .name {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.find .name h2 {
+  color: black;
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.find .name p {
+  font-size: 24px;
+  font-family: "MuseoCyrl100", serif;
+}
+.find .name p span {
+  font-family: "MuseoCyrl700", serif;
+}
+.find img {
+  width: 100%;
+}
+
+@media (max-width: 375px) {
+  .find .name h2 {
+    font-size: 20px;
+  }
+  .find .name p {
+    font-size: 15px;
+  }
+  .find img {
+    width: 100%;
+  }
+}
+.feed-list {
+  font-family: "MuseoCyrl100", serif;
+}
+.feed-list h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.feed-list h4 {
+  font-size: 35px;
+  font-family: "MuseoCyrl700", serif;
+}
+.feed-list p {
+  font-size: 22px;
+}
+.feed-list .list {
+  margin-top: 60px;
+}
+.feed-list .list .list-elem {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+}
+.feed-list .list .list-elem .image-elem .img {
+  width: 100%;
+}
+.feed-list .list .list-elem .text-elem {
+  padding-left: 30px;
+  padding-right: 80px;
+}
+.feed-list .list .list-elem .text-elem .name {
+  font-family: "MuseoCyrl700", serif;
+}
+.feed-list .list .list-elem .text-elem .button-opac {
+  display: flex;
+  width: 100%;
+}
+.feed-list .list .list-elem .text-elem .button-opac .btn-opac {
+  border-radius: 19px;
+  border: 1px solid #1d1d1d;
+  color: #1d1d1d;
+  display: flex;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "MuseoSansCyrl500", serif;
+}
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  .under-elem {
+    display: none;
+  }
+}
+.contacts_page h1, .contacts_page h2, .contacts_page h5 {
+  font-family: "MuseoCyrl700", serif;
+}
+.contacts_page h1 {
+  font-size: 50px;
+}
+.contacts_page .fancy-wrapper {
+  background-color: #f7f7f7;
+  padding: 35px 50px;
+  margin: 40px 0;
+  border-radius: 35px;
+}
+.contacts_page .fancy-wrapper .row {
+  align-items: center;
+}
+.contacts_page .fancy-wrapper p {
+  margin-bottom: 0;
+}
+.contacts_page svg {
+  color: #f15a29;
+  margin-right: 10px;
+}
+.contacts_page .contact {
+  display: flex;
+}
+
+.for_big_map {
+  width: 100%;
+  margin: 30px 0 90px;
+}
+
+@media screen and (max-width: 375px) {
+  .contacts_page h1 {
+    font-size: 20px;
+  }
+  .contacts_page h2 {
+    font-size: 17.5px;
+  }
+  .contacts_page h5 {
+    font-size: 14px;
+  }
+  .contacts_page p {
+    font-size: 12px;
+  }
+  .contacts_page .contact {
+    margin-bottom: 25px;
+  }
+  .contacts_page .fancy-wrapper {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .contacts_page h1 {
+    font-size: 30px;
+  }
+  .contacts_page h5 {
+    font-size: 18px;
+  }
+  .contacts_page p {
+    font-size: 15px;
+  }
+  .contacts_page .contact {
+    margin-bottom: 25px;
+  }
+  .contacts_page .fancy-wrapper {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 426px) {
+  .contacts_page .contact {
+    margin-bottom: 25px;
+  }
+  .contacts_page .fancy-wrapper {
+    margin-top: 20px;
+  }
+}
+.about-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 125px;
+}
+.about-page .section-header {
+  margin-bottom: 10px;
+}
+.about-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.about-page h4 {
+  font-size: 35px;
+  font-family: "MuseoCyrl700", serif;
+}
+.about-page p {
+  font-size: 22px;
+}
+.about-page img {
+  width: 100%;
+  height: 100%;
+}
+.about-page .text-container {
+  padding: 10px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.about-page .text-container p {
+  font-size: 18px;
+}
+.about-page .text-container p:last-child {
+  margin-bottom: 0;
+}
+.about-page .details {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.about-page .details p {
+  font-size: 18px;
+}
+.about-page .btn-outline-secondary {
+  border-radius: 30px;
+  color: black;
+  font-family: "MuseoCyrl500", serif;
+  padding: 10px 50px;
+}
+.about-page .btn-outline-secondary:hover {
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  .about-page {
+    margin-bottom: 75px;
+  }
+  .about-page h2 {
+    font-size: 20px;
+  }
+  .about-page h4 {
+    font-size: 14px;
+  }
+  .about-page p {
+    font-size: 12px;
+  }
+  .about-page .text-container {
+    padding-top: 20px;
+  }
+  .about-page .text-container p {
+    font-size: 12px;
+  }
+  .about-page .details p {
+    font-size: 12px;
+  }
+  .about-page .details {
+    margin-top: 10px;
+  }
+  .about-page .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-page .btn-container .btn-outline-secondary {
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .about-page {
+    margin-bottom: 75px;
+  }
+  .about-page h2 {
+    font-size: 20px;
+  }
+  .about-page h4 {
+    font-size: 18px;
+  }
+  .about-page p {
+    font-size: 15px;
+  }
+  .about-page .text-container {
+    padding-top: 20px;
+  }
+  .about-page .text-container p {
+    font-size: 15px;
+  }
+  .about-page .details p {
+    font-size: 15px;
+  }
+  .about-page .details {
+    margin-top: 10px;
+  }
+  .about-page .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-page .btn-container .btn-outline-secondary {
+    padding: 10px 30px;
+    font-size: 15px;
+  }
+}
+.detailed-review {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 125px;
+}
+.detailed-review .quote-block {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.detailed-review .quote-block .person-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailed-review .quote-block .quote-block__text {
+  height: 100%;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailed-review .quote-block .quote-block__text p {
+  font-size: 18px;
+}
+.detailed-review .quote-block .quote-block__text p:last-child {
+  margin-bottom: 0;
+}
+.detailed-review .quote-block .quote-block__text .detailed-review__subHeader {
+  font-size: 22px;
+}
+.detailed-review img {
+  width: 100%;
+  border-radius: 20px;
+}
+.detailed-review h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.detailed-review h4 {
+  font-size: 35px;
+  font-family: "MuseoCyrl700", serif;
+}
+.detailed-review p {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 375px) {
+  .detailed-review h2 {
+    font-size: 20px;
+  }
+  .detailed-review h4 {
+    font-size: 14px;
+  }
+  .detailed-review p {
+    font-size: 12px !important;
+  }
+  .detailed-review .detailed-review__subHeader {
+    font-size: 16px !important;
+  }
+  .detailed-review .quote-block {
+    margin-bottom: 20px;
+  }
+  .detailed-review .quote-block .person-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .detailed-review .quote-block .person-avatar img {
+    width: 50%;
+  }
+  .detailed-review .quote-block .quote-block__text {
+    padding: 20px 30px;
+  }
+  .detailed-review .video-container iframe {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .detailed-review h2 {
+    font-size: 20px;
+  }
+  .detailed-review h4 {
+    font-size: 14px;
+  }
+  .detailed-review p {
+    font-size: 15px !important;
+  }
+  .detailed-review .detailed-review__subHeader {
+    font-size: 18px !important;
+  }
+  .detailed-review .quote-block {
+    margin-bottom: 20px;
+  }
+  .detailed-review .quote-block .person-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .detailed-review .quote-block .person-avatar img {
+    width: 50%;
+  }
+  .detailed-review .quote-block .quote-block__text {
+    padding: 20px 30px;
+  }
+  .detailed-review .video-container iframe {
+    width: 100%;
+  }
+}
+.coaches-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaches-page .page__header {
+  margin-bottom: 30px;
+}
+.coaches-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-page .single-coach {
+  margin-bottom: 30px;
+}
+.coaches-page .single-coach .single-coach-container {
+  border-radius: 20px;
+  padding: 30px 20px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coaches-page .single-coach .row {
+  margin: 0;
+}
+.coaches-page .single-coach img {
+  width: 100%;
+  border-radius: 50%;
+}
+.coaches-page .single-coach button {
+  background-color: transparent;
+  font-family: "MuseoCyrl500", serif;
+  font-size: 14px;
+  border: 1px solid #1d1d1d;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: #1d1d1d;
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-page h2 {
+    font-size: 20px;
+  }
+  .coaches-page h5 {
+    font-size: 14px;
+  }
+  .coaches-page .single-coach {
+    margin-bottom: 30px;
+  }
+  .coaches-page .single-coach .single-coach-container {
+    padding: 30px 20px;
+  }
+  .coaches-page .single-coach .single-coach-container p {
+    font-size: 12px;
+  }
+  .coaches-page .single-coach .single-coach-container .coach-details {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .coaches-page .single-coach button {
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 30px;
+  }
+  .coaches-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coaches-page .coach-avatar img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-page h2 {
+    font-size: 20px;
+  }
+  .coaches-page h5 {
+    font-size: 18px;
+  }
+  .coaches-page .single-coach {
+    margin-bottom: 30px;
+  }
+  .coaches-page .single-coach .single-coach-container {
+    padding: 30px 20px;
+  }
+  .coaches-page .single-coach .single-coach-container p {
+    font-size: 15px;
+  }
+  .coaches-page .single-coach .single-coach-container .coach-details {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .coaches-page .single-coach button {
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 30px;
+  }
+  .coaches-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coaches-page .coach-avatar img {
+    width: 50%;
+  }
+}
+.coaches-detailed-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaches-detailed-page .page__header {
+  margin-bottom: 30px;
+}
+.coaches-detailed-page .coach-avatar img {
+  width: 100%;
+}
+.coaches-detailed-page .desc {
+  height: 100%;
+  padding: 10px;
+}
+.coaches-detailed-page .desc .education h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.coaches-detailed-page .desc .education ul {
+  list-style-type: none;
+  padding: 0;
+}
+.coaches-detailed-page .desc .education ul li {
+  margin-bottom: 10px;
+}
+.coaches-detailed-page .experience {
+  margin-top: 25px;
+}
+.coaches-detailed-page .experience h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.coaches-detailed-page .experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+.coaches-detailed-page .experience ul li {
+  margin-bottom: 10px;
+}
+.coaches-detailed-page .directions {
+  margin-top: 20px;
+}
+.coaches-detailed-page .directions__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+}
+.coaches-detailed-page .directions__wrapper .direction-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.coaches-detailed-page .directions__wrapper .direction-num span {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+  font-size: 50px;
+  margin-right: 20px;
+}
+.coaches-detailed-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-detailed-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaches-detailed-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+
+@media screen and (max-width: 375px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+  }
+  .coaches-detailed-page h2 {
+    font-size: 20px;
+  }
+  .coaches-detailed-page h3 {
+    font-size: 14px !important;
+  }
+  .coaches-detailed-page p, .coaches-detailed-page li {
+    font-size: 12px;
+  }
+  .coaches-detailed-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .coach-avatar img {
+    width: 50%;
+  }
+  .coaches-detailed-page .desc {
+    padding: 0;
+  }
+  .coaches-detailed-page .experience {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .coaches-detailed-page .experience ul li {
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .directions {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num span {
+    font-size: 30px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaches-detailed-page {
+    margin-bottom: 90px;
+  }
+  .coaches-detailed-page h2 {
+    font-size: 20px;
+  }
+  .coaches-detailed-page h3 {
+    font-size: 18px !important;
+  }
+  .coaches-detailed-page p, .coaches-detailed-page li {
+    font-size: 15px;
+  }
+  .coaches-detailed-page .coach-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .coach-avatar img {
+    width: 50%;
+  }
+  .coaches-detailed-page .desc {
+    padding: 0;
+  }
+  .coaches-detailed-page .experience {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .coaches-detailed-page .experience ul li {
+    margin-bottom: 10px;
+  }
+  .coaches-detailed-page .directions {
+    margin-top: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num span {
+    font-size: 30px;
+  }
+  .coaches-detailed-page .directions__wrapper .direction-num:last-child {
+    margin-bottom: 0;
+  }
+}
+.games-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.games-page .page__header {
+  margin-bottom: 30px;
+}
+.games-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.games-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.games-page .games-container img {
+  width: 100%;
+  height: 100%;
+}
+.games-page .games-container .greyBck {
+  background-color: #f7f7f7;
+}
+.games-page .games-container .lightBck {
+  background-color: white;
+}
+.games-page .games-container .game-container {
+  padding: 30px 0;
+}
+.games-page .games-container .game-container .game-header {
+  margin-bottom: 20px;
+}
+.games-page .games-container .game-container .game-header .col {
+  display: flex;
+  justify-content: space-between;
+}
+.games-page .games-container .game-container .game-price {
+  border: 1px solid #515151;
+  border-radius: 19px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+.games-page .games-container .game-container .game-details {
+  padding: 0 15px;
+}
+.games-page .games-container .game-container .game-details p {
+  font-size: 17px;
+}
+.games-page .games-container .game-container .buttons-container {
+  display: flex;
+}
+.games-page .games-container .game-container .buttons-container button {
+  padding: 7px 0;
+}
+.games-page .games-container .game-container .buttons-container .col-4:first-child {
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .games-page {
+    margin-bottom: 50px;
+  }
+  .games-page .page__header {
+    margin-bottom: 30px;
+  }
+  .games-page h2 {
+    font-size: 20px;
+  }
+  .games-page h5 {
+    font-size: 12px;
+  }
+  .games-page .game-details .game-header {
+    margin-top: 20px;
+  }
+  .games-page .game-details .game-header .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .games-page .game-details .game-header .col h5 {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .games-page .game-details .game-header .game-price {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .games-page .game-details .game-body p {
+    font-size: 12px !important;
+    margin-bottom: 20px;
+  }
+  .games-page .pagination-block {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .games-page {
+    margin-bottom: 50px;
+  }
+  .games-page .page__header {
+    margin-bottom: 30px;
+  }
+  .games-page h2 {
+    font-size: 20px;
+  }
+  .games-page h5 {
+    font-size: 14px;
+  }
+  .games-page .game-details .game-header {
+    margin-top: 20px;
+  }
+  .games-page .game-details .game-header .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .games-page .game-details .game-header .col h5 {
+    margin-bottom: 0;
+    width: 40%;
+  }
+  .games-page .game-details .game-body p {
+    margin-bottom: 20px;
+  }
+  .games-page .pagination-block {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 900px) {
+  .games-page .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+  .games-page .buttons-container button {
+    padding: 7px 10px !important;
+  }
+}
+.game-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.game-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.game-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.game-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+.game-page .game-page__page-header {
+  margin-bottom: 30px;
+}
+.game-page .game-page__page-header h3 {
+  margin-top: 15px;
+}
+.game-page .game-page__short-desc {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 35px;
+}
+.game-page .game-page__short-desc .wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.game-page .game-page__short-desc .subHeader {
+  font-family: "MuseoCyrl700", serif;
+}
+.game-page .game-page__short-desc .subHeader_info {
+  display: flex;
+  align-items: center;
+}
+.game-page .game-page__short-desc .subHeader_info img {
+  width: 30%;
+}
+.game-page .game-page__short-desc .subHeader_info span {
+  margin-left: 15px;
+  width: 50%;
+}
+.game-page .game-page__short-desc .subHeader_info p {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+  font-size: 24px;
+}
+.game-page .game-page__description-block {
+  margin-top: 40px;
+}
+.game-page .game-page__description-block h3 {
+  font-size: 45px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 20px;
+}
+.game-page .game-page__description-block h4 {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.game-page .game-page__description-block p {
+  font-size: 18px;
+}
+.game-page .game-page__description-block .tasks-wrapper {
+  background-color: #f7f7f7;
+  border-radius: 35px;
+  padding: 20px;
+}
+.game-page .game-page__description-block .tasks-wrapper .single-task {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.game-page .game-page__description-block .tasks-wrapper .single-task span {
+  color: #f15a29;
+  font-family: "MuseoCyrl700", serif;
+  font-size: 50px;
+  margin-right: 20px;
+}
+.game-page .game-page__description-block .tasks-wrapper .single-task p {
+  margin-bottom: 0;
+}
+.game-page .game-page__description-block .what-you-gain {
+  border: 3px solid #f15a29;
+  border-radius: 35px;
+  padding: 30px 40px;
+  margin: 60px 0 40px;
+}
+.game-page .game-page__description-block .what-you-gain ol {
+  padding-left: 20px;
+}
+.game-page .game-page__description-block .what-you-gain ol li {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.game-page .game-page__description-block .what-you-gain ol li:last-child {
+  margin-bottom: 0;
+}
+.game-page .game-page__description-block .the-essence {
+  margin-top: 30px;
+}
+.game-page .game-page__description-block .the-essence img {
+  width: 100%;
+}
+.game-page .game-page__description-block .the-essence .main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.game-page .game-page__description-block .the-essence .additional-info {
+  margin-top: 30px;
+}
+.game-page .game-page__description-block .tasks-wrapper2 {
+  margin-bottom: 40px;
+}
+.game-page .game-page__description-block .join-us {
+  margin-bottom: 20px;
+}
+.game-page .game-page__description-block .btn-container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-page .game-page__description-block .btn-container1 .btn-orange {
+  width: auto;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+.game-page .game-page__description-block .btn-container1 .btn-grey {
+  width: auto;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .game-page h2 {
+    font-size: 20px !important;
+  }
+  .game-page h3 {
+    font-size: 18px !important;
+  }
+  .game-page h4 {
+    font-size: 14px !important;
+  }
+  .game-page p, .game-page li {
+    font-size: 12px !important;
+  }
+  .game-page .game-page__short-desc {
+    text-align: center;
+    margin: 0;
+  }
+  .game-page .game-page__short-desc .subHeader_info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .game-page .game-page__short-desc .subHeader_info span {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .game-page .game-page__short-desc .subHeader_info img {
+    width: 20%;
+  }
+  .game-page .tasks-wrapper {
+    margin: 0;
+  }
+  .game-page .tasks-wrapper span {
+    font-size: 20px !important;
+  }
+  .game-page .join-us {
+    margin-bottom: 10px;
+  }
+  .game-page .btn-container1 {
+    justify-content: center;
+  }
+  .game-page .btn-container1 button {
+    padding: 0 15px !important;
+    margin-bottom: 10px;
+  }
+  .game-page .the-essence .main-text {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .game-page h2 {
+    font-size: 20px !important;
+  }
+  .game-page h3 {
+    font-size: 18px !important;
+  }
+  .game-page h4 {
+    font-size: 14px !important;
+  }
+  .game-page p, .game-page li {
+    font-size: 15px !important;
+  }
+  .game-page .game-page__short-desc {
+    text-align: center;
+    margin: 0;
+  }
+  .game-page .game-page__short-desc .subHeader_info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .game-page .game-page__short-desc .subHeader_info span {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .game-page .game-page__short-desc .subHeader_info img {
+    width: 20%;
+  }
+  .game-page .tasks-wrapper {
+    margin: 0;
+  }
+  .game-page .tasks-wrapper span {
+    font-size: 20px !important;
+  }
+  .game-page .join-us {
+    margin-bottom: 10px;
+  }
+  .game-page .btn-container1 {
+    justify-content: center;
+  }
+  .game-page .btn-container1 button {
+    padding: 0 15px !important;
+    margin-bottom: 10px;
+  }
+  .game-page .the-essence .main-text {
+    margin-top: 20px;
+  }
+}
+.coaching-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.coaching-page .coaching-page__page-header {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__page-header h5 {
+  margin-top: 15px;
+  font-family: "MuseoCyrl500", serif;
+}
+.coaching-page .coaching-page__description-header {
+  background-color: #f7f7f7;
+  padding: 30px 30px 50px;
+}
+.coaching-page .coaching-page__description-header h5 {
+  margin-top: 15px;
+  font-family: "MuseoCyrl500", serif;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper .description__point {
+  text-align: center;
+  height: 100%;
+  padding: 25px 15px 0;
+  background-color: white;
+  border: 4px solid #8e8e8e;
+}
+.coaching-page .coaching-page__description-header .coaching-page__description-header__points-wrapper .description__point img {
+  width: 50%;
+}
+.coaching-page .coaching-page__definition {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid #f15a29;
+  border-radius: 35px;
+  padding: 30px 35px;
+}
+.coaching-page .coaching-page__definition h3 {
+  margin-bottom: 15px;
+}
+.coaching-page .coaching-page__definition h3:first-child {
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page .coaching-page__definition strong {
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page .coaching-page__about-coaching {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .coaching-page__about-coaching .about-coaching__text {
+  padding: 20px 10px;
+}
+.coaching-page .coaching-page__erickson-coaching {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__erickson-coaching h3 {
+  margin: 30px 0;
+}
+.coaching-page .coaching-page__erickson-coaching .text-wrapper {
+  padding: 30px 10px;
+  border-radius: 30px;
+  background-color: #f7f7f7;
+}
+.coaching-page .coaching-page__erickson-coaching .text-wrapper li {
+  margin-bottom: 15px;
+}
+.coaching-page .coaching-page__erickson-coaching p {
+  margin-top: 30px;
+}
+.coaching-page .coaching-page__uniqueness {
+  margin-bottom: 30px;
+}
+.coaching-page .coaching-page__uniqueness h3 {
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 25px;
+}
+.coaching-page .coaching-page__uniqueness img {
+  width: 100%;
+}
+.coaching-page .coaching-page__uniqueness .text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coaching-page .coaching-page__uniqueness .additional-info {
+  margin-top: 30px;
+}
+.coaching-page .results__wrapper {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 35px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .results__wrapper .new-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaching-page .results__wrapper .new-line .text {
+  margin-left: 15px;
+}
+.coaching-page .results__wrapper .direction-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coaching-page .results__wrapper hr {
+  border: 1px solid white;
+}
+.coaching-page .results__wrapper .percent {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+}
+.coaching-page .results__wrapper .number {
+  font-family: "MuseoCyrl700", serif;
+  color: #f15a29;
+  font-size: 50px;
+}
+.coaching-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.coaching-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+
+@media screen and (max-width: 375px) {
+  .coaching-page h2 {
+    font-size: 20px;
+  }
+  .coaching-page h3 {
+    font-size: 18px;
+  }
+  .coaching-page h5 {
+    font-size: 12px;
+  }
+  .coaching-page p, .coaching-page li {
+    font-size: 12px;
+  }
+  .coaching-page ol {
+    padding-left: 20px;
+  }
+  .coaching-page .coaching-page__description-header__points-wrapper {
+    margin-top: 20px !important;
+  }
+  .coaching-page .description__point-wrapper {
+    margin-bottom: 10px;
+  }
+  .coaching-page .description__point-wrapper img {
+    width: 25% !important;
+  }
+  .coaching-page .coaching-page__erickson-coaching h3 {
+    margin-top: 0;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 12px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .coaching-page h2 {
+    font-size: 20px;
+  }
+  .coaching-page h3 {
+    font-size: 18px;
+  }
+  .coaching-page h5 {
+    font-size: 12px;
+  }
+  .coaching-page p, .coaching-page li {
+    font-size: 15px;
+  }
+  .coaching-page ol {
+    padding-left: 20px;
+  }
+  .coaching-page .coaching-page__description-header__points-wrapper {
+    margin-top: 20px !important;
+  }
+  .coaching-page .description__point-wrapper {
+    margin-bottom: 10px;
+  }
+  .coaching-page .description__point-wrapper img {
+    width: 25% !important;
+  }
+  .coaching-page .coaching-page__erickson-coaching h3 {
+    margin-top: 0;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 15px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
+  }
+}
+.schedule-page {
+  font-family: "MuseoCyrl100", serif;
+  margin-bottom: 90px;
+}
+.schedule-page h2 {
+  font-size: 55px;
+  font-family: "MuseoCyrl700", serif;
+  margin-bottom: 40px;
+}
+.schedule-page h4 {
+  font-size: 27px;
+  font-family: "MuseoCyrl700", serif;
+}
+.schedule-page h5 {
+  font-size: 25px;
+  font-family: "MuseoCyrl700", serif;
+}
+.schedule-page strong {
+  font-family: "MuseoCyrl700", serif;
+}
+.schedule-page .schedule-page__page-header h3 {
+  margin-top: 15px;
+}
+.schedule-page .light {
+  background-color: #ffffff;
+}
+.schedule-page .grey {
+  background-color: #f7f7f7;
+}
+.schedule-page .schedule-page__date-picker-container {
+  padding: 40px;
+  border-radius: 35px;
+  margin-bottom: 40px;
+  background-color: #f7f7f7;
+}
+.schedule-page .schedule-page__date-picker-container h5 {
+  font-size: 18px;
+}
+.schedule-page .schedule-page__date-picker-container .main-row {
+  display: flex;
+  justify-content: space-between;
+}
+.schedule-page .schedule-page__date-picker-container .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.schedule-page .schedule-page__date-picker-container .wrapper .checkbox-group-1, .schedule-page .schedule-page__date-picker-container .wrapper .checkbox-group-2 {
+  margin-top: 10px;
+  width: 50%;
+}
+.schedule-page .schedule-page__date-picker-container .wrapper .checkbox-group-1 .form-check, .schedule-page .schedule-page__date-picker-container .wrapper .checkbox-group-2 .form-check {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.schedule-page .schedule-page__date-picker-container .pick-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.schedule-page .schedule-page__date-picker-container .pick-date input {
+  text-align: left;
+}
+.schedule-page .schedule-page__date-picker-container .pick-date input:first-child {
+  margin-right: 20px;
+}
+.schedule-page .schedule-page__date-picker-container .pick-date button {
+  height: auto;
+  padding: 7.5px 35px;
+}
+.schedule-page .schedule-page__page-content .event-container {
+  margin: 0;
+  padding: 30px 0;
+}
+.schedule-page .schedule-page__page-content .event-date {
+  padding: 5px 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.schedule-page .schedule-page__page-content .event-date span:first-child {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 50px;
+}
+.schedule-page .schedule-page__page-content .event-date p {
+  margin-bottom: 0;
+}
+.schedule-page .schedule-page__page-content .event-date svg {
+  color: #f15a29;
+}
+.schedule-page .schedule-page__page-content .event-info {
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.schedule-page .schedule-page__page-content .event-info .upper-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.schedule-page .schedule-page__page-content .event-info .upper-text-wrapper span {
+  border: 1px solid #515151;
+  border-radius: 35px;
+  padding: 5px 20px;
+  font-family: "MuseoCyrl500", serif;
+}
+.schedule-page .schedule-page__page-content .event-info .btn-wrapper button {
+  width: auto;
+  height: auto;
+  padding: 5px 15px;
+}
+
+@media screen and (max-width: 375px) {
+  .schedule-page h2 {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
+  .schedule-page h3 {
+    font-size: 18px !important;
+  }
+  .schedule-page h4 {
+    font-size: 14px !important;
+  }
+  .schedule-page h5 {
+    font-size: 12px !important;
+  }
+  .schedule-page p, .schedule-page li, .schedule-page span, .schedule-page label {
+    font-size: 12px !important;
+  }
+  .schedule-page .schedule-page__page-content .event-container {
+    margin: 0;
+    padding: 20px 0;
+    justify-content: center;
+  }
+  .schedule-page .schedule-page__page-content .event-date {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+  }
+  .schedule-page .schedule-page__page-content .event-date span:first-child {
+    font-size: 20px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .upper-text-wrapper {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .btn-wrapper button {
+    padding: 5px 15px;
+    margin-bottom: 5px;
+  }
+  .schedule-page .pick-date {
+    margin-top: 20px;
+  }
+  .schedule-page .pick-date button {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .schedule-page h2 {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
+  .schedule-page h3 {
+    font-size: 18px !important;
+  }
+  .schedule-page h4 {
+    font-size: 14px !important;
+  }
+  .schedule-page h5 {
+    font-size: 12px !important;
+  }
+  .schedule-page p, .schedule-page li, .schedule-page span, .schedule-page label {
+    font-size: 15px !important;
+  }
+  .schedule-page .schedule-page__page-content .event-container {
+    margin: 0;
+    padding: 30px 0;
+    justify-content: center;
+  }
+  .schedule-page .schedule-page__page-content .event-date {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+  }
+  .schedule-page .schedule-page__page-content .event-date span:first-child {
+    font-size: 30px !important;
+  }
+  .schedule-page .schedule-page__page-content .event-info .upper-text-wrapper {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .btn-wrapper button {
+    padding: 5px 15px;
+    margin-bottom: 5px;
+  }
+  .schedule-page .pick-date {
+    margin-top: 20px;
+  }
+  .schedule-page .pick-date button {
+    margin-top: 10px;
+  }
+}
