@@ -165,6 +165,7 @@ footer .content .s-row a {
   }
   footer .content .logo-footer .img-footer {
     display: flex;
+    align-items: center;
   }
   footer .content .logo-footer .img-footer img {
     width: 50%;
@@ -304,6 +305,7 @@ footer .content .s-row a {
   }
   footer .content .logo-footer .img-footer {
     display: flex;
+    align-items: center;
   }
   footer .content .logo-footer .img-footer img {
     width: 50%;
