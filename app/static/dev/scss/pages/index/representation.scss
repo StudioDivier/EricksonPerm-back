@@ -90,3 +90,14 @@
   }
 }
 
+@media (max-width: 375px) {
+  .representation {
+    .f-row {
+      h2 {
+        font-size: 19px;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+

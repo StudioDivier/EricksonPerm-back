@@ -10,260 +10,164 @@ footer {
     font-size: 15px;
     font-family: "MuseoCyrl100", serif;
 
-    .f-row {
-      margin-bottom: 35px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    .logo-footer {
+      p {
+        font-size: 14px;
+      }
 
-      .logo-footer{
-        width: 30%;
-        p{
-
+      .img-footer {
+        img {
+          width: 40%;
         }
-        .img-footer{
-          a{
-            img{
-              width: 40%;
-            }
+      }
+    }
+
+
+    .list12 {
+      display: flex;
+    }
+
+    .list1 {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          a {
+            color: black;
+            font-family: "MuseoCyrl700", serif;
+            font-weight: 700;
           }
         }
       }
+    }
 
-      .list1 {
-        font-family: "MuseoCyrl700", serif;
-        display: flex;
-        flex-direction: column;
-            font-weight: 700;
+    .list2 {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
 
+        li {
+          a {
+            color: black;
+          }
+        }
       }
+    }
 
-      .list2 {
+    .list3 {
+      display: flex;
+      justify-content: space-between;
+
+      span {
         font-family: "MuseoCyrl700", serif;
-        display: flex;
-        flex-direction: column;
         font-weight: 700;
-      }
-
-      .list3 {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .list4 {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .list5 {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .list6 {
-        display: flex;
-        flex-direction: column;
-
-        span {
-          font-family: "MuseoCyrl700", serif;
-        }
-
-        .social {
-          display: flex;
-        }
-      }
-
-      a {
-        color: black;
       }
     }
 
     .s-row {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
 
-      @include pya(25px);
-
       a {
-        text-decoration: underline;
         color: #f15a29;
-      }
-    }
-  }
-}
-
-@include max-w(992) {
-  footer {
-    .content {
-      .f-row {
-        display: flex;
-        flex-direction: row !important;
-        flex-wrap: wrap;
-
-        .logo-footer {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-
-          img, p {
-            width: 50%;
-          }
-        }
-
-        .list1, .list2 {
-          width: 25%;
-          font-size: $pFontSizeMin375;
-          margin-top: 15px;
-          padding-top: 15px;
-          display: flex;
-          flex-direction: column !important;
-          justify-content: space-between;
-        }
-
-        .list5, .list6, .list3, .list4 {
-          width: 25%;
-          margin-top: 15px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-
-          p {
-            margin-bottom: 5px;
-          }
-        }
-
-        .social {
-          display: flex;
-
-          img {
-            margin-right: 10px;
-          }
-        }
+        text-decoration: underline;
       }
     }
   }
 }
 
 @include max-w(768) {
-  footer {
-    .content {
-      @include my(15px, 0);
-
-      .f-row {
-        display: flex;
-        flex-direction: row !important;
-        flex-wrap: wrap;
-
-        .logo-footer {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-
-          img {
-            width: 100%;
-          }
-        }
-
-        .list1, .list2, .list3, .list4 {
-          width: 25%;
-          font-size: $pFontSizeMin375;
-          margin-top: 15px;
-          padding-top: 15px;
-          display: flex;
-          flex-direction: column !important;
-          justify-content: space-between;
-        }
-
-        .list5, .list6 {
-          width: 50%;
-          margin-top: 15px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-
-          p {
-            margin-bottom: 5px;
-          }
-        }
-
-        .social {
-          display: flex;
-
-          img {
-            margin-right: 10px;
-          }
-        }
-      }
-
-      .s-row {
-
-      }
-    }
+  footer .content .row {
+    flex-direction: column;
+  }
+  footer .content .logo-footer .list01 {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 375px) {
+@include max-w(425) {
   footer {
     .content {
-      @include my(15px, 0);
 
-      .f-row {
-        .logo-footer {
-          margin-bottom: 15px;
+      @include mya(35px);
+      font-size: 15px;
+      font-family: "MuseoCyrl100", serif;
+
+      .logo-footer {
+        p {
+          font-size: 14px;
+        }
+
+        .img-footer {
           display: flex;
 
-          p {
-            font-size: $pFontSizeMin375;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-
-
+          img {
+            width: 50%;
           }
+        }
+      }
 
-          a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+      .list1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
 
-            img {
-              margin-bottom: 15px;
-              width: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+        ul {
+          list-style-type: none;
+          padding-left: 0;
 
+          li {
+            a {
+              color: black;
+              font-family: "MuseoCyrl700", serif;
+              font-weight: 700;
             }
           }
         }
-
-        display: flex;
-        flex-direction: column !important;
-        flex-wrap: wrap;
-
-        .list1, .list2, .list3, .list4, .list5, .list6 {
-          font-size: $pFontSizeMin375;
-          margin-top: 15px;
-          padding-top: 15px;
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .social {
-          display: flex;
-        }
       }
 
-      .s-row {
-        @include pya(15px);
+      .list2 {
+        display: none;
+      }
 
-        p {
-          font-size: $pFontSizeMin375;
+      .list3 {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-family: "MuseoCyrl700", serif;
+          font-weight: 700;
         }
+
+        .phone, .social {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .social-img {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    .s-row {
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      p {
+        font-size: 10px;
+      }
+
+      a {
+        color: #f15a29;
+        text-decoration: underline;
       }
     }
   }
 }
-
