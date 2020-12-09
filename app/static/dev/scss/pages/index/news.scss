@@ -100,11 +100,13 @@
         }
       }
       .row{
-        @include mxa(15px);
+        @include mxa(0);
         display: flex;
         justify-content: center;
         .col-lg-4{
           @include mya(15px);
+          margin-right: 0;
+          margin-left: 0;
           .program-card{
             .photo{
               width: 100%;

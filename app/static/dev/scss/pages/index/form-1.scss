@@ -110,6 +110,16 @@
         margin-left: 0 !important;
       }
     }
+
+    .row {
+      .col-lg-4 {
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 8px;
+      }
+    }
   }
 }
 
@@ -124,6 +134,16 @@
         margin-left: 0 !important;
       }
     }
+
+    .row {
+      .col-lg-4 {
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 8px;
+      }
+    }
   }
 }
 
@@ -133,9 +153,11 @@
     padding-bottom: $sectionPaddingBottom375;
 
     .row {
-      @include mxa(15px);
+      @include mxa(0);
       margin-top: 20px;
       margin-bottom: 10px !important;
+      display: flex;
+      justify-content: center;
 
       .text {
         h3 {
@@ -148,7 +170,7 @@
         }
       }
 
-      .col-lg-4{
+      .col-lg-4 {
         @include mya(5px);
       }
 
@@ -179,6 +201,7 @@
           padding: 5px 25px;
           font-size: 12px;
         }
+
         .btn-orange {
           font-size: 12px;
           padding: 10px 25px;

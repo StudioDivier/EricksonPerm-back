@@ -486,7 +486,7 @@ footer .content .s-row a {
   align-items: center;
 }
 .representation .eric-logo img {
-  width: 100%;
+  width: 35%;
 }
 .representation .f-row {
   display: flex;
@@ -643,12 +643,14 @@ footer .content .s-row a {
   .couching .row-blocks {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .couching .row-blocks .col-lg-3 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 100%;
   }
   .couching .row-blocks .col-lg-3 .couch-card {
     margin-top: 15px;
@@ -658,15 +660,16 @@ footer .content .s-row a {
   .couching .row-blocks .col-lg-3 .couch-card .card-img {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .couching .row-blocks .col-lg-3 .couch-card .card-img img {
-    width: 100%;
+    width: 60%;
   }
   .couching .row-blocks .col-lg-3 .couch-card .card-img .card-name {
     font-size: 12px;
   }
   .couching .row-blocks .col-lg-3 .couch-card .text-center .card-text {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .our-programs {
@@ -1093,6 +1096,12 @@ footer .content .s-row a {
     margin-bottom: 5px;
     margin-left: 0 !important;
   }
+  .form-1 .row .col-lg-4 {
+    margin-bottom: 15px;
+  }
+  .form-1 .row button {
+    padding: 8px;
+  }
 }
 @media (max-width: 768px) {
   .form-1 .buttons {
@@ -1103,6 +1112,12 @@ footer .content .s-row a {
   .form-1 .buttons .email {
     margin-left: 0 !important;
   }
+  .form-1 .row .col-lg-4 {
+    margin-bottom: 15px;
+  }
+  .form-1 .row button {
+    padding: 8px;
+  }
 }
 @media screen and (max-width: 425px) {
   .form-1 {
@@ -1110,10 +1125,12 @@ footer .content .s-row a {
     padding-bottom: 25px;
   }
   .form-1 .row {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 20px;
     margin-bottom: 10px !important;
+    display: flex;
+    justify-content: center;
   }
   .form-1 .row .text h3 {
     font-size: 18px;
@@ -2092,14 +2109,16 @@ footer .content .s-row a {
     font-size: 20px;
   }
   .news .content .row {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
     display: flex;
     justify-content: center;
   }
   .news .content .row .col-lg-4 {
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-right: 0;
+    margin-left: 0;
   }
   .news .content .row .col-lg-4 .program-card .photo {
     width: 100%;
