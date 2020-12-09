@@ -517,6 +517,17 @@ footer .content .s-row a {
 }
 
 @media screen and (max-width: 425px) {
+  .representation .f-row {
+    padding-right: 0;
+  }
+  .representation .f-row h2 {
+    padding-left: 8px;
+    font-size: 28px;
+  }
+  .representation .eric-logo img {
+    width: 60%;
+  }
+
   .s-row {
     padding-left: 15px;
     padding-right: 15px;
@@ -1722,7 +1733,6 @@ footer .content .s-row a {
 }
 .work .row .text_work {
   font-family: "MuseoCyrl100", serif;
-  width: 100%;
 }
 .work .row .text_work .f_work {
   font-size: 35px;
