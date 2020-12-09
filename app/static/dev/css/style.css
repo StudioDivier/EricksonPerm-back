@@ -18,6 +18,14 @@
   font-family: "MuseoCyrl100";
   src: url("../fonts/MuseoCyrl100.otf");
 }
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 a:focus {
   box-shadow: none;
 }
@@ -101,6 +109,9 @@ footer .content {
   margin-bottom: 35px;
   font-size: 15px;
   font-family: "MuseoCyrl100", serif;
+}
+footer .content a {
+  color: black;
 }
 footer .content .logo-footer p {
   font-size: 14px;
@@ -241,6 +252,9 @@ footer .content {
   margin-bottom: 35px;
   font-size: 15px;
   font-family: "MuseoCyrl100", serif;
+}
+footer .content a {
+  color: black;
 }
 footer .content .logo-footer p {
   font-size: 14px;
@@ -590,10 +604,20 @@ footer .content .s-row a {
   flex-direction: column;
 }
 .couching .row-blocks .couch-card .card-img {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.couching .row-blocks .couch-card .card-img img {
-  width: 100%;
+.couching .row-blocks .couch-card .card-img .circle {
+  background-color: #f15a29;
+  border-radius: 100%;
+  /* padding: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
 }
 .couching .row-blocks .couch-card .card-img .card-name {
   margin-top: 15px;
@@ -673,8 +697,13 @@ footer .content .s-row a {
     flex-direction: column;
     align-items: center;
   }
-  .couching .row-blocks .col-lg-3 .couch-card .card-img img {
-    width: 45%;
+  .couching .row-blocks .col-lg-3 .couch-card .card-img .circle {
+    background-color: #f15a29;
+    border-radius: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .couching .row-blocks .col-lg-3 .couch-card .card-img .card-name {
     font-size: 16px;

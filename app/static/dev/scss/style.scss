@@ -30,12 +30,22 @@
 }
 
 // COMMON STYLES
+button:focus {
+    outline: none;
+  }
 
-a{
- &:focus {
-   box-shadow: none;
- }
+
+input:focus {
+    outline: none;
+  }
+
+
+a {
+  &:focus {
+    box-shadow: none;
+  }
 }
+
 @mixin btns {
   border-radius: 25px;
   background-color: #e9f1f7;
@@ -47,19 +57,22 @@ a{
   border: none;
   //padding: 10px 35px;
 
-  @media screen and(max-width: 375px){
+  @media screen and(max-width: 375px) {
     font-size: 10px;
     padding: 5px 25px;
   }
 }
+
 .btn-orange {
   @include btns;
   background-color: #f15a29;
   color: white;
+
   &:hover {
     color: #ffffff;
   }
 }
+
 .btn-grey {
   @include btns;
   background-color: #515151;

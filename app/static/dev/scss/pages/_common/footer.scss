@@ -6,6 +6,10 @@
 footer {
   .content {
 
+    a{
+      color: black;
+    }
+
     @include mya(35px);
     font-size: 15px;
     font-family: "MuseoCyrl100", serif;
