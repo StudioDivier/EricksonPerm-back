@@ -1,6 +1,9 @@
 {% extends "base/base.html" %}
 {% load static %}
-{% block title %}Erickson Perm - Главная{% endblock %}
+
+{% block description %}{{ description }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
 
@@ -10,7 +13,7 @@
 
 {% include 'main/components/couching.html' %}
 
-{% include 'main/components/study.html' %}
+{#{% include 'main/components/study.html' %}#}
 
 {% include 'main/components/near-date.html' %}
 
@@ -20,14 +23,14 @@
     <div class="container">
         <div class="row">
             <div class="f-row">
+                <div class="logo-eric">
+                    <img src="{% static 'dev/img/main/logo40.png' %}" alt="logo-eric">
+                </div>
                 <div class="text">
                     <h3>Является одной из
                         крупнейших компаний,
                         проводящих обучение
                         коучингу</h3>
-                </div>
-                <div class="logo-eric">
-                    <img src="{% static 'dev/img/main/banner1/logo-eric.png' %}" alt="logo-eric">
                 </div>
             </div>
         </div>
@@ -129,7 +132,7 @@
                         обучение коучингу и регулярно повышают квалификацию.</p>
                 </div>
                 <div class="photo">
-                    <img src="{% static 'dev/img/main/banner2/banner2-photo.png' %}">
+                    <img src="{% static 'dev/img/main/photo.jpg' %}">
                 </div>
             </div>
         </div>
@@ -147,20 +150,20 @@
             <div class="body-block">
                 <div class="stat-row">
                     <div class="elem">
-                        <span class="f"><b>01</b></span>
-                        <span class="s">любовь и уважение к людям</span>
+                        <p class="f"><b>01</b></p>
+                        <p class="s">любовь и уважение к людям</p>
                     </div>
                     <div class="elem">
-                        <span class="f"><b>02</b></span>
-                        <span class="s">развитие человеческого потенциала</span>
+                        <p class="f"><b>02</b></p>
+                        <p class="s">развитие человеческого потенциала</p>
                     </div>
                     <div class="elem">
-                        <span class="f"><b>03</b></span>
-                        <span class="s">технологии,ориентированные на решения</span>
+                        <p class="f"><b>03</b></p>
+                        <p class="s">технологии, ориентированные на решения</p>
                     </div>
                     <div class="elem">
-                        <span class="f"><b>04</b></span>
-                        <span class="s">направленность на повышение эффективности</span>
+                        <p class="f"><b>04</b></p>
+                        <p class="s">направленность на повышение эффективности</p>
                     </div>
                 </div>
             </div>

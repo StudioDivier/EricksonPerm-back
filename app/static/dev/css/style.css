@@ -87,13 +87,18 @@ a:focus {
   justify-content: flex-end;
 }
 
+header .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 header .navbar-brand img {
-  width: 80px;
+  width: 110px;
 }
 header a {
   color: black;
   font-family: "MuseoCyrl300", serif;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 header a :hover {
   color: #f15a29;
@@ -230,13 +235,18 @@ footer .content .s-row a {
     text-decoration: underline;
   }
 }
+header .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 header .navbar-brand img {
-  width: 80px;
+  width: 110px;
 }
 header a {
   color: black;
   font-family: "MuseoCyrl300", serif;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 header a :hover {
   color: #f15a29;
@@ -1227,11 +1237,26 @@ footer .content .s-row a {
   margin-bottom: 45px;
   display: flex;
 }
+.banner1 .f-row .logo-eric {
+  display: flex;
+  align-items: center;
+}
+.banner1 .f-row .logo-eric img {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+}
+.banner1 .f-row .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .banner1 .f-row h3 {
   color: white;
   font-family: "MuseoCyrl700", serif;
   font-size: 35px;
   text-align: left;
+  padding-left: 20px;
 }
 .banner1 .s-row {
   margin-top: 35px;
@@ -1247,26 +1272,56 @@ footer .content .s-row a {
   .banner1 .f-row {
     margin-bottom: 15px;
     display: flex;
-    flex-direction: column-reverse;
   }
   .banner1 .f-row .text {
     margin-top: 25px;
   }
+  .banner1 .f-row .logo-eric {
+    display: flex;
+    align-items: center;
+  }
   .banner1 .f-row .logo-eric img {
     width: 100%;
+    background-color: white;
+    padding: 20px;
   }
 }
 @media (max-width: 768px) {
   .banner1 .f-row {
     margin-bottom: 15px;
     display: flex;
-    flex-direction: column-reverse;
   }
   .banner1 .f-row .text {
     margin-top: 25px;
   }
+  .banner1 .f-row .logo-eric {
+    display: flex;
+    align-items: center;
+  }
   .banner1 .f-row .logo-eric img {
+    background-color: white;
+    padding: 20px;
     width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .banner1 .f-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner1 .f-row .text {
+    margin-top: 25px;
+  }
+  .banner1 .f-row .logo-eric {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner1 .f-row .logo-eric img {
+    background-color: white;
+    padding: 20px;
+    width: 55%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1279,11 +1334,19 @@ footer .content .s-row a {
     margin-bottom: 15px;
     margin-left: 15px;
     margin-right: 15px;
+    display: flex;
+    flex-direction: column;
   }
   .banner1 .f-row .text h3 {
     font-size: 18px;
   }
+  .banner1 .f-row .logo-eric {
+    display: flex;
+    align-items: center;
+  }
   .banner1 .f-row .logo-eric img {
+    background-color: white;
+    padding: 20px;
     width: 100%;
   }
   .banner1 .s-row {
@@ -1429,6 +1492,7 @@ footer .content .s-row a {
 }
 .cto .base img {
   width: 100%;
+  border-radius: 100%;
 }
 .cto .base .text {
   padding-left: 45px;
@@ -1528,6 +1592,9 @@ footer .content .s-row a {
 }
 .banner2 .content .photo {
   width: 50%;
+}
+.banner2 .content .photo img {
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1662,12 +1729,16 @@ footer .content .s-row a {
   align-content: center;
   margin-top: 35px;
 }
+.our-mission .row .body-block .stat-row p {
+  margin-bottom: 0;
+}
 .our-mission .row .body-block .stat-row .elem {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   font-family: "MuseoCyrl100", serif;
+  width: 25%;
 }
 .our-mission .row .body-block .stat-row .elem .f {
   color: #f15a29;
@@ -1702,6 +1773,9 @@ footer .content .s-row a {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between !important;
+  }
+  .our-mission .row .body-block .stat-row .elem {
+    width: 100%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -3499,7 +3573,7 @@ footer .content .s-row a {
 .schedule-page .schedule-page__date-picker-container h5 {
   font-size: 18px;
 }
-.schedule-page .schedule-page__date-picker-container .main-row {
+.schedule-page .schedule-page__date-picker-container .main-row form {
   display: flex;
   justify-content: space-between;
 }

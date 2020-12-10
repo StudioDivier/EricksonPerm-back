@@ -5,7 +5,8 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from .forms import MainForm
-from .services import database_form
+from .services import database_form, database_view
+from . import models
 from .models import Feeds, Games, Trainers
 from .models import Experience, WayWork, Education, Timetables
 
@@ -17,6 +18,9 @@ def index(request):
     :param request:
     :return: render index.html
     """
+
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -30,7 +34,8 @@ def index(request):
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'main/_index.html', {'form': form, 'form_status': form_status})
+        return render(request, 'main/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                     'description': description, 'keywords': keywords})
 
 
 def programs(request):
@@ -40,6 +45,8 @@ def programs(request):
     :param request:
     :return: render index.html
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -48,12 +55,15 @@ def programs(request):
             status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
             form_status = True
             return render(request, 'programs/_index.html',
-                                       {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+                                       {'form': form, "name": data['name'], 'form_status': form_status,
+                                        "status": status, 'title': title, 'description': description,
+                                        'keywords': keywords})
 
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'programs/_index.html', {'form': form, 'form_status': form_status})
+        return render(request, 'programs/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                        'description': description, 'keywords': keywords})
 
 
 def feed_list(request):
@@ -62,6 +72,8 @@ def feed_list(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     feeds = Feeds.objects.all()
     if request.method == 'POST':
         form = MainForm(request.POST)
@@ -75,7 +87,8 @@ def feed_list(request):
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'feed_list/_index.html', {'feeds': feeds, 'form': form, 'form_status': form_status})
+        return render(request, 'feed_list/_index.html', {'feeds': feeds, 'form': form, 'form_status': form_status, 'title': title,
+                                                     'description': description, 'keywords': keywords})
 
 
 def feed_detail(request, id):
@@ -108,6 +121,8 @@ def contacts(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -120,7 +135,8 @@ def contacts(request):
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'contacts/_index.html', {'form': form, 'form_status': form_status})
+        return render(request, 'contacts/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                     'description': description, 'keywords': keywords})
 
 
 def about(request):
@@ -129,6 +145,8 @@ def about(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -141,7 +159,8 @@ def about(request):
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'about/_index.html', {'form': form, 'form_status': form_status})
+        return render(request, 'about/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                     'description':description, 'keywords': keywords})
 
 
 def coaching(request):
@@ -150,6 +169,8 @@ def coaching(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -162,7 +183,8 @@ def coaching(request):
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'coaching/_index.html', {'form': form, 'form_status': form_status})
+        return render(request, 'coaching/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                     'description':description, 'keywords': keywords})
 
 
 def coaches(request):
@@ -171,6 +193,8 @@ def coaches(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     coach_list = Trainers.objects.all()
     page = request.GET.get('page', 1)
     paginator = Paginator(coach_list, 4)
@@ -194,7 +218,8 @@ def coaches(request):
         form_status = False
         form = MainForm()
         return render(request, 'coaches/_index.html', {'form': form, 'form_status': form_status,
-                                                       'coach_list': coach_list})
+                                                       'coach_list': coach_list, 'title': title,
+                                                     'description':description, 'keywords': keywords})
 
 
 def coaches_detail(request, id):
@@ -204,6 +229,7 @@ def coaches_detail(request, id):
     :param id:
     :return:
     """
+
     coach = get_object_or_404(Trainers, id=id)
     ed = Education.objects.filter(coach=id)
     exp = Experience.objects.filter(coach=id)
@@ -231,6 +257,8 @@ def games(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     game_list = Games.objects.all()
     page = request.GET.get('page', 1)
     paginator = Paginator(game_list, 10)
@@ -255,7 +283,8 @@ def games(request):
         form_status = False
         form = MainForm()
         return render(request, 'games/_index.html', {'form': form, 'form_status': form_status,
-                                                     'game_list': game_list})
+                                                     'game_list': game_list, 'title': title,
+                                                     'description':description, 'keywords': keywords})
 
 
 def games_detail(request, id):
@@ -288,7 +317,10 @@ def timetable(request):
     :param request:
     :return:
     """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
     prog = Timetables.objects.all()
+    way_t = models.WayCouch.objects.all()
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
@@ -297,8 +329,56 @@ def timetable(request):
             status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
             form_status = True
             return render(request, 'timetable/_index.html',
-                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status, 'prog': prog})
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status,
+                           'prog': prog, 'way_t': way_t})
     else:
         form_status = False
         form = MainForm()
-        return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': prog })
+        return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': prog,
+                                                         'way_t': way_t, 'title': title,
+                                                     'description':description, 'keywords': keywords})
+
+
+def timetable_filter(request):
+    """
+
+    :param request:
+    :return:
+    """
+    description = 'example description'
+    keywords = 'example keywords'
+    title = 'example title'
+
+    data_from = tuple(request.GET.get('from').split('.'))
+    data_to = tuple(request.GET.get('to').split('.'))
+    data_way = int(request.GET.get('way_id'))
+    prog_type = Timetables.objects.filter(way_id=data_way).values()
+    response = []
+    for item in prog_type:
+        date = tuple(str(item['date_full']).split('-')[::-1])
+        print(item['way_id'], type(item['way_id']))
+        print(data_way, type(data_way))
+        if (data_from <= date <= data_to) and (item['way_id'] == data_way):
+            print('yes')
+            response.append(item)
+        else:
+            print('no')
+            continue
+    print(response)
+    way_t = models.WayCouch.objects.all()
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'timetable/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'timetable/_index.html',
+                          {'form': form, "name": data['name'], 'form_status': form_status, "status": status,
+                           'prog': response, 'way_t': way_t})
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': response,
+                                                         'way_t': way_t, 'title': title,
+                                                     'description':description, 'keywords': keywords})

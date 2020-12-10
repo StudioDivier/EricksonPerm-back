@@ -48,12 +48,17 @@
         align-content: center;
         margin-top: 35px;
 
+        p {
+          margin-bottom: 0;
+        }
+
         .elem {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 18px;
           font-family: "MuseoCyrl100", serif;
+          width: 25%;
 
           .f {
             color: #f15a29;
@@ -74,7 +79,7 @@
   }
 }
 
-@include max-w(992){
+@include max-w(992) {
   .our-mission {
     .row {
       .body-block {
@@ -83,8 +88,9 @@
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          justify-content: left!important;
-          .elem{
+          justify-content: left !important;
+
+          .elem {
             display: flex;
             justify-content: left;
           }
@@ -103,59 +109,63 @@
           flex-wrap: wrap;
           display: flex;
           justify-content: space-between !important;
+
+          .elem {
+            width: 100%;
+          }
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 425px){
-  .our-mission{
-    .text{
+@media screen and (max-width: 425px) {
+  .our-mission {
+    .text {
       @include mxa(15px);
     }
   }
 }
 
-  @media screen and (max-width: 375px) {
-    .our-mission {
-      padding-top: $sectionPaddingTop375;
-      padding-bottom: $sectionPaddingBottom375;
-      @include mxa(15px);
+@media screen and (max-width: 375px) {
+  .our-mission {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    @include mxa(15px);
 
-      .row {
-        @include mya(15px);
+    .row {
+      @include mya(15px);
 
-        .text {
-          h2 {
-            font-size: $h2FontSize375 !important;
-          }
-
-          p {
-            font-size: $pFontSizeMin375 !important;
-          }
+      .text {
+        h2 {
+          font-size: $h2FontSize375 !important;
         }
 
-        .body-block {
-          .stat-row {
-            margin-top: 15px !important;
-            flex-wrap: wrap;
-            display: flex;
-            justify-content: space-between !important;
+        p {
+          font-size: $pFontSizeMin375 !important;
+        }
+      }
 
-            .elem {
-              @include mya(5px);
+      .body-block {
+        .stat-row {
+          margin-top: 15px !important;
+          flex-wrap: wrap;
+          display: flex;
+          justify-content: space-between !important;
 
-              .f {
-                font-size: $h3FontSize375 !important;
-              }
+          .elem {
+            @include mya(5px);
 
-              .s {
-                font-size: $pFontSizeMax375 !important;
-              }
+            .f {
+              font-size: $h3FontSize375 !important;
+            }
+
+            .s {
+              font-size: $pFontSizeMax375 !important;
             }
           }
         }
       }
     }
   }
+}

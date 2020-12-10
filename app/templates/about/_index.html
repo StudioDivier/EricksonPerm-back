@@ -1,7 +1,9 @@
 {% extends "base/base.html" %}
 {% load static %}
 
-{% block title %}Erickson Perm - О компании{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+{% block keywords %}{{ keywords }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
 
@@ -69,7 +71,7 @@
             </div>
         </div>
         <div class="btn-container">
-            <button class="btn btn-outline-secondary">Наши тренеры</button>
+            <a href="/coaches"><button class="btn btn-outline-secondary">Наши тренеры</button></a>
         </div>
     </div>
 </section>

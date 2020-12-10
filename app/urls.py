@@ -19,6 +19,7 @@ urlpatterns = [
     path('contacts', views.contacts, name='contacts'),
     path('about', views.about, name='about'),
     path('timetable', views.timetable, name='timetable'),
+    path('timetable-filter', views.timetable_filter, name='timetable_filter'),
     path('coaching', views.coaching, name='coaching'),
 ]
 if settings.DEBUG:

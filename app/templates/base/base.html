@@ -1,11 +1,13 @@
 <!doctype html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
+<link rel="icon" type="image/ico" href="{% static 'dev/img/favicon.ico' %}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'dev/css/bootstrap.min.css' %}">
     {#    <link rel="stylesheet" href="{% static 'dev/css/style.css' %}">#}

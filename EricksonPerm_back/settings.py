@@ -26,8 +26,8 @@ SECRET_KEY = '5#8km4+_-(0%zw3c38u=d=wbku1e156ojo3$i_ude$1c99nn02'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['ericksonperm.ru', 'www.ericksonperm.ru']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['ericksonperm.ru', 'www.ericksonperm.ru']
 
 # Application definition
 
@@ -82,23 +82,23 @@ WSGI_APPLICATION = 'EricksonPerm_back.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'u1165721_default',
+#         'USER': 'u1165721_default',
+#         'PASSWORD': '_217Csyv',
+#         'HOST': 'localhost',
 #     }
 # }
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u1165721_default',
-        'USER': 'u1165721_default',
-        'PASSWORD': '_217Csyv',
-        'HOST': 'localhost',
-    }
-}
 # import dj_database_url
 # DATABASES = {'default': dj_database_url.config(default='postgres://postgres:admin@localhost:5432/perm')}
 # db_from_env = dj_database_url.config(conn_max_age=500)
@@ -132,11 +132,25 @@ LANGUAGES = [
 
 ]
 
+PAGES = [
+     ('/', 'Главная'),
+     ('/coaching', 'О коучинге'),
+     ('/programs', 'Программы'),
+     ('/timetable', 'Распиание'),
+     ('/about', 'О нас'),
+     ('/news', 'Новости'),
+     ('/feed-list', 'Отзывы'),
+     ('/coaches', 'Тренеры'),
+     ('/contacts', 'Контакты')
+]
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
