@@ -402,6 +402,9 @@ def timetable_filter(request):
             else:
                 continue
 
+    if len(response) == 0:
+        data = "К сожалению, программ в эти даты и по выбранным направлениям нет."
+
     way_t = models.WayCouch.objects.all()
     if request.method == 'POST':
         form = MainForm(request.POST)
@@ -418,6 +421,6 @@ def timetable_filter(request):
         form = MainForm()
         return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': response,
                                                          'way_t': way_t, 'title': title,
-                                                     'description':description, 'keywords': keywords})
+                                                        'description':description, 'keywords': keywords, 'data': data})
 
 
