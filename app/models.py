@@ -77,57 +77,56 @@ class Feeds(models.Model):
 # тренеры
 class Trainers(models.Model):
 
-    title = models.CharField(name="title", max_length=128)
-    description = models.TextField(name="description")
-    img = models.ImageField(upload_to='coach_detail/')
+    title = models.CharField(name="title", max_length=128, verbose_name='ФИО')
+    description = models.TextField(name="description", verbose_name='Описание')
+    img = models.ImageField(upload_to='coach_detail/', verbose_name='Фото')
+    img_alt = models.CharField(name='img_alt', max_length=128, verbose_name='Фото альт')
 
     class Meta:
-        verbose_name = 'Trainer'
-        verbose_name_plural = 'Trainers'
+        verbose_name = 'Тренер'
+        verbose_name_plural = 'Тренеры'
 
     def get_absolute_url(self):
         return reverse('index:coaches_detail', args=[self.id])
-
-
 
     def __str__(self):
         return str(self.title)
 
 
 class Education(models.Model):
-    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
-    start = models.IntegerField(name='start_ed')
-    end = models.IntegerField(name='end_ed')
-    ed_title = models.CharField(name='ed_title', max_length=256)
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True, verbose_name='Тренер')
+    start = models.IntegerField(name='start_ed', verbose_name='Начал')
+    end = models.IntegerField(name='end_ed', verbose_name='Окончил')
+    ed_title = models.CharField(name='ed_title', max_length=256, verbose_name='Наименование учреждения')
 
     class Meta:
-        verbose_name = 'Education'
-        verbose_name_plural = 'Educations'
+        verbose_name = 'Образование'
+        verbose_name_plural = 'Образования'
 
     def __str__(self):
         return str(self.coach.title)
 
 
 class Experience(models.Model):
-    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
-    start_exp = models.IntegerField(name='start_exp')
-    title_exp = models.CharField(name='title_exp', max_length=256)
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True, verbose_name='Тренер')
+    start_exp = models.IntegerField(name='start_exp', verbose_name='Начал')
+    title_exp = models.CharField(name='title_exp', max_length=256, verbose_name='Наименование учреждения')
 
     class Meta:
-        verbose_name = 'Experience'
-        verbose_name_plural = 'Experiences'
+        verbose_name = 'Опыт'
+        verbose_name_plural = 'Опыта'
 
     def __str__(self):
         return str(self.coach.title)
 
 
 class WayWork(models.Model):
-    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
-    way = models.CharField(name='way', max_length=64)
+    coach = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True, verbose_name='Тренер')
+    way = models.CharField(name='way', max_length=64, verbose_name='Напрвление работы')
 
     class Meta:
-        verbose_name = 'WayWork'
-        verbose_name_plural = 'WayWork'
+        verbose_name = 'Направление работы'
+        verbose_name_plural = 'Направления работы'
 
     def __str__(self):
         return str(self.coach.title)
@@ -136,21 +135,22 @@ class WayWork(models.Model):
 # игры
 class Games(models.Model):
 
-    title = models.CharField(name="title", max_length=128)
-    title_short = models.CharField(name="title_short", max_length=64, null=True)
-    img = models.ImageField(upload_to='games/')
-    price = models.DecimalField(name='price', max_digits=9, decimal_places=2)
-    description_short = models.TextField(name="description_short")
-    couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True)
-    date_day = models.IntegerField(name='date_day', null=True)
-    date_month = models.IntegerField(name='date_month', null=True)
-    date_year = models.IntegerField(name='date_year', null=True)
-    long = models.CharField(name='long', max_length=64, null=True)
-    description = RichTextUploadingField(null=True)
+    title = models.CharField(name="title", max_length=128, verbose_name='Заголовок')
+    title_short = models.CharField(name="title_short", max_length=64, null=True, verbose_name='Заголовок короткий')
+    img = models.ImageField(upload_to='games/', verbose_name='Изображение')
+    img_alt = models.ImageField(name='img_alt', max_length=128, verbose_name='Изображение альт')
+    price = models.DecimalField(name='price', max_digits=9, decimal_places=2, verbose_name='Цена')
+    description_short = models.TextField(name="description_short", verbose_name='Описание короткое')
+    couch = models.ForeignKey(Trainers, on_delete=models.SET_NULL, null=True, verbose_name='Тренер')
+    date_day = models.IntegerField(name='date_day', null=True, verbose_name='День')
+    date_month = models.IntegerField(name='date_month', null=True, verbose_name='Месяц')
+    date_year = models.IntegerField(name='date_year', null=True, verbose_name='Год')
+    long = models.CharField(name='long', max_length=64, null=True, verbose_name='Продолжительность')
+    description = RichTextUploadingField(null=True, verbose_name='Описание')
 
     class Meta:
-        verbose_name = 'Game'
-        verbose_name_plural = 'Games'
+        verbose_name = 'Трансформационная игра'
+        verbose_name_plural = 'Трансформационные игры'
 
     def __str__(self):
         return str(self.title)
@@ -162,7 +162,7 @@ class Games(models.Model):
 # Расписание
 class WayCouch(models.Model):
 
-    way_t = models.CharField(name='way_t', max_length=128)
+    way_t = models.CharField(name='way_t', max_length=128, verbose_name='Наименование направления')
 
     class Meta:
         verbose_name = 'Направление коуча'
@@ -174,20 +174,20 @@ class WayCouch(models.Model):
 
 class Timetables(models.Model):
 
-    date_day = models.IntegerField(name='date_day')
-    month = models.CharField(name='date_month', max_length=64)
-    date_full = models.DateField(name='date_full')
-    start = models.TimeField(name='time_start')
-    end = models.TimeField(name='time_end')
-    long = models.CharField(name='long', max_length=64)
-    title = models.CharField(name='title', max_length=128)
-    description_short = models.TextField(name='description_short')
-    way = models.ForeignKey(WayCouch, on_delete=models.CASCADE)
-    price = models.CharField(name='price', max_length=16)
+    date_day = models.IntegerField(name='date_day', verbose_name='День')
+    month = models.CharField(name='date_month', max_length=64, verbose_name='Месяц(словестно)')
+    date_full = models.DateField(name='date_full', verbose_name='Дата')
+    start = models.TimeField(name='time_start', verbose_name='Начало в:')
+    end = models.TimeField(name='time_end', verbose_name='Конец:')
+    long = models.CharField(name='long', max_length=64, verbose_name='Продолжительность')
+    title = models.CharField(name='title', max_length=128, verbose_name='Заголовок')
+    description_short = models.TextField(name='description_short', verbose_name='Описание короткое')
+    way = models.ForeignKey(WayCouch, on_delete=models.CASCADE, verbose_name='Направление')
+    price = models.CharField(name='price', max_length=16, verbose_name='Цена')
 
     class Meta:
-        verbose_name = 'Timetable'
-        verbose_name_plural = 'Timetables'
+        verbose_name = 'Расписание'
+        verbose_name_plural = 'Расписания'
 
     def __str__(self):
         return str(self.title)

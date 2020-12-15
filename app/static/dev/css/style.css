@@ -2684,6 +2684,9 @@ footer .content .s-row a {
   .about-page .details {
     margin-top: 10px;
   }
+  .about-page .details p {
+    padding: 0 20px;
+  }
   .about-page .btn-container {
     display: flex;
     align-items: center;
