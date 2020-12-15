@@ -24,7 +24,7 @@ class TrainersAdmin(admin.ModelAdmin):
     list_filter = ('title', )
     fieldsets = (
         ('Коучер', {
-            'fields': ('img', ('title', 'description'))
+            'fields': ('img', 'img_alt', ('title', 'description'))
         }),
     )
     inlines = [
