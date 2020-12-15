@@ -45,7 +45,7 @@
                                                     <input class="form-check-input" type="radio" id="inlineCheckbox1"
                                                            name="way_id" value="{{ elem.id }}">
                                                     <label class="form-check-label"
-                                                           for="inlineCheckbox1">{{ elem.way_t }}</label>
+                                                           for="inlineCheckbox{{ elem.id }}">{{ elem.way_t }}</label>
                                                 </div>
                                             {% endif %}
                                         {% endfor %}
@@ -55,7 +55,7 @@
                                             {% if elem.id|divisibleby:2 %}
                                                 <div class="form-check {{ elem.id }}">
                                                     <input class="form-check-input" type="radio"
-                                                           id="inlineCheckbox4" name="way_id">
+                                                           id="inlineCheckbox{{ elem.id }}" name="way_id">
                                                     <label class="form-check-label"
                                                            for="inlineCheckbox4">{{ elem.way_t }}</label>
                                                 </div>
