@@ -403,7 +403,9 @@ def timetable_filter(request):
                 continue
 
     if len(response) == 0:
-        data = "К сожалению, программ в эти даты и по выбранным направлениям нет."
+        data = True
+    else:
+        data = False
 
     way_t = models.WayCouch.objects.all()
     if request.method == 'POST':
