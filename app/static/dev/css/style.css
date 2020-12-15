@@ -508,6 +508,7 @@ footer .content .s-row a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 15px;
 }
 .representation .eric-logo img {
   width: 35%;
@@ -655,6 +656,9 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 768px) {
+  .couching {
+    padding-left: 15px;
+  }
   .couching .row-blocks {
     display: flex;
     justify-content: space-around;
@@ -1259,6 +1263,8 @@ footer .content .s-row a {
   padding-left: 20px;
 }
 .banner1 .s-row {
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 35px;
 }
 .banner1 .s-row p {
@@ -1521,11 +1527,25 @@ footer .content .s-row a {
     display: flex;
     flex-direction: column;
   }
+  .cto .base .photo {
+    display: flex;
+    justify-content: center;
+  }
+  .cto .base .photo img {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   .cto .base {
     display: flex;
     flex-direction: column;
+  }
+  .cto .base .photo {
+    display: flex;
+    justify-content: center;
+  }
+  .cto .base .photo img {
+    width: 50%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1574,6 +1594,7 @@ footer .content .s-row a {
   color: white;
 }
 .banner2 .content .text {
+  padding-left: 15px;
   width: 50%;
   padding-top: 45px;
   padding-right: 15px;
@@ -1707,6 +1728,9 @@ footer .content .s-row a {
   display: flex;
   flex-direction: column;
 }
+.our-mission .row .text {
+  padding-left: 15px;
+}
 .our-mission .row .text h2 {
   font-family: "MuseoCyrl700", serif;
   font-size: 55px;
@@ -1835,6 +1859,7 @@ footer .content .s-row a {
   flex-direction: column;
 }
 .work .row .text_work {
+  padding-left: 15px;
   font-family: "MuseoCyrl100", serif;
 }
 .work .row .text_work .f_work {
@@ -1987,13 +2012,16 @@ footer .content .s-row a {
   padding-bottom: 35px;
   color: white;
 }
+.carousel-page .text {
+  padding-left: 15px;
+}
 .carousel-page .text h2 {
   font-family: "MuseoCyrl700", serif;
-  font-size: 55px;
+  font-size: 37px;
 }
 .carousel-page .text p {
   font-family: "MuseoCyrl100", serif;
-  font-size: 35px;
+  font-size: 25px;
 }
 .carousel-page #feedback-carousel {
   width: 100%;
@@ -2115,6 +2143,9 @@ footer .content .s-row a {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+.partners .row .text {
+  padding-left: 15px;
+}
 .partners .row .text h2 {
   font-family: "MuseoCyrl700", serif;
   font-size: 55px;
@@ -2133,6 +2164,9 @@ footer .content .s-row a {
   .partners .text {
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .partners .text h2 {
+    font-size: 40px !important;
   }
 }
 @media screen and (max-width: 375px) {
@@ -2339,8 +2373,127 @@ footer .content .s-row a {
   padding-bottom: 10px;
   font-family: "MuseoSansCyrl500", serif;
 }
-@media screen and (min-width: 320px) and (max-width: 765px) {
-  .under-elem {
+@media screen and (max-width: 576px) {
+  .feed-list {
+    font-family: "MuseoCyrl100", serif;
+  }
+  .feed-list h2 {
+    font-size: 30px;
+    font-family: "MuseoCyrl700", serif;
+  }
+  .feed-list h4 {
+    font-size: 35px;
+    font-family: "MuseoCyrl700", serif;
+  }
+  .feed-list p {
+    font-size: 22px;
+  }
+  .feed-list .list {
+    margin-top: 60px;
+  }
+  .feed-list .list .list-elem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+  .feed-list .list .list-elem .image-elem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .feed-list .list .list-elem .image-elem img {
+    width: 55%;
+  }
+  .feed-list .list .list-elem .text-elem {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .feed-list .list .list-elem .text-elem .name {
+    font-family: "MuseoCyrl700", serif;
+    font-size: 15px;
+  }
+  .feed-list .list .list-elem .text-elem .text {
+    font-size: 12px;
+  }
+  .feed-list .list .list-elem .text-elem .button-opac {
+    display: flex;
+    width: 100%;
+  }
+  .feed-list .list .list-elem .text-elem .button-opac .btn-opac {
+    border-radius: 19px;
+    border: 1px solid #1d1d1d;
+    color: #1d1d1d;
+    display: flex;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "MuseoSansCyrl500", serif;
+  }
+  .feed-list .list .list-elem .under-elem {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 765px) {
+  .feed-list {
+    font-family: "MuseoCyrl100", serif;
+  }
+  .feed-list h2 {
+    font-size: 30px;
+    font-family: "MuseoCyrl700", serif;
+  }
+  .feed-list h4 {
+    font-size: 35px;
+    font-family: "MuseoCyrl700", serif;
+  }
+  .feed-list p {
+    font-size: 22px;
+  }
+  .feed-list .list {
+    margin-top: 60px;
+  }
+  .feed-list .list .list-elem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+  .feed-list .list .list-elem .image-elem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .feed-list .list .list-elem .image-elem img {
+    width: 55%;
+  }
+  .feed-list .list .list-elem .text-elem {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .feed-list .list .list-elem .text-elem .name {
+    font-family: "MuseoCyrl700", serif;
+    font-size: 22px;
+  }
+  .feed-list .list .list-elem .text-elem .text {
+    font-size: 15px;
+  }
+  .feed-list .list .list-elem .text-elem .button-opac {
+    display: flex;
+    width: 100%;
+  }
+  .feed-list .list .list-elem .text-elem .button-opac .btn-opac {
+    border-radius: 19px;
+    border: 1px solid #1d1d1d;
+    color: #1d1d1d;
+    display: flex;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "MuseoSansCyrl500", serif;
+  }
+  .feed-list .list .list-elem .under-elem {
     display: none;
   }
 }
@@ -3594,11 +3747,12 @@ footer .content .s-row a {
   flex-direction: column;
   justify-content: space-between;
 }
+.schedule-page .schedule-page__date-picker-container .pick-date .input-group {
+  display: flex;
+  justify-content: space-around;
+}
 .schedule-page .schedule-page__date-picker-container .pick-date input {
   text-align: left;
-}
-.schedule-page .schedule-page__date-picker-container .pick-date input:first-child {
-  margin-right: 20px;
 }
 .schedule-page .schedule-page__date-picker-container .pick-date button {
   height: auto;
@@ -3646,6 +3800,19 @@ footer .content .s-row a {
   padding: 5px 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .schedule-page .schedule-page__date-picker-container form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .schedule-page .schedule-page__date-picker-container form .input-group .input-daterange input:first-child {
+    margin-right: 10px;
+  }
+  .schedule-page .schedule-page__date-picker-container form button {
+    margin-top: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .schedule-page h2 {
     font-size: 20px !important;

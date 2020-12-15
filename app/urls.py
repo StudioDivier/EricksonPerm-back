@@ -21,6 +21,7 @@ urlpatterns = [
     path('timetable', views.timetable, name='timetable'),
     path('timetable-filter', views.timetable_filter, name='timetable_filter'),
     path('coaching', views.coaching, name='coaching'),
+    path('news', views.news, name='news'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

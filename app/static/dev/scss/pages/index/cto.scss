@@ -21,7 +21,7 @@
 
     img {
       width: 100%;
-              border-radius: 100%;
+      border-radius: 100%;
     }
 
     .text {
@@ -52,20 +52,38 @@
   }
 }
 
-@include max-w(992){
-  .cto{
-    .base{
+@include max-w(992) {
+  .cto {
+    .base {
       display: flex;
       flex-direction: column;
+
+      .photo {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 50%;
+        }
+      }
     }
   }
 }
 
-@include max-w(768){
-  .cto{
-    .base{
+@include max-w(768) {
+  .cto {
+    .base {
       display: flex;
       flex-direction: column;
+
+      .photo {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 50%;
+        }
+      }
     }
   }
 }
@@ -82,18 +100,23 @@
       img {
         width: 100%;
       }
-      .text{
+
+      .text {
         padding-left: 25px;
-        .ons{
+
+        .ons {
           font-size: $h4FontSize375;
         }
-        .name{
+
+        .name {
           font-size: $h3FontSize375;
         }
-        .description{
+
+        .description {
           font-size: $pFontSizeMax375;
         }
-        .text-base{
+
+        .text-base {
           font-size: $pFontSizeMax375;
         }
       }

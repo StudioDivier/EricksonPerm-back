@@ -20,6 +20,7 @@ def index(request):
     """
 
     description, keywords, title = database_view.get_meta(page=request.path)
+    feeds = models.Feeds.objects.all().order_by('id')
 
     if request.method == 'POST':
         form = MainForm(request.POST)
@@ -29,13 +30,14 @@ def index(request):
             status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
             form_status = True
             return render(request, 'main/_index.html',
-                                       {'form': form, "name": data['name'], 'form_status': form_status, "status": status})
+                                       {'form': form, "name": data['name'], 'form_status': form_status,
+                                        "status": status, "feeds": feeds})
 
     else:
         form_status = False
         form = MainForm()
         return render(request, 'main/_index.html', {'form': form, 'form_status': form_status, 'title': title,
-                                                     'description': description, 'keywords': keywords})
+                                                     'description': description, 'keywords': keywords, "feeds": feeds})
 
 
 def programs(request):
@@ -63,6 +65,34 @@ def programs(request):
         form_status = False
         form = MainForm()
         return render(request, 'programs/_index.html', {'form': form, 'form_status': form_status, 'title': title,
+                                                        'description': description, 'keywords': keywords})
+
+
+def news(request):
+    """
+    Отрисовка главной страницы
+        методы POST для формы1
+    :param request:
+    :return: render index.html
+    """
+    description, keywords, title = database_view.get_meta(page=request.path)
+
+    if request.method == 'POST':
+        form = MainForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            form_place = 'news/form1'
+            status = database_form.add_offer_to_db(name=data['name'], email=data['email'], form=form_place)
+            form_status = True
+            return render(request, 'news/_index.html',
+                                       {'form': form, "name": data['name'], 'form_status': form_status,
+                                        "status": status, 'title': title, 'description': description,
+                                        'keywords': keywords})
+
+    else:
+        form_status = False
+        form = MainForm()
+        return render(request, 'news/_index.html', {'form': form, 'form_status': form_status, 'title': title,
                                                         'description': description, 'keywords': keywords})
 
 
@@ -351,20 +381,27 @@ def timetable_filter(request):
 
     data_from = tuple(request.GET.get('from').split('.'))
     data_to = tuple(request.GET.get('to').split('.'))
-    data_way = int(request.GET.get('way_id'))
-    prog_type = Timetables.objects.filter(way_id=data_way).values()
     response = []
-    for item in prog_type:
-        date = tuple(str(item['date_full']).split('-')[::-1])
-        print(item['way_id'], type(item['way_id']))
-        print(data_way, type(data_way))
-        if (data_from <= date <= data_to) and (item['way_id'] == data_way):
-            print('yes')
-            response.append(item)
-        else:
-            print('no')
-            continue
-    print(response)
+
+    if request.GET.get('way_id') != None:
+        data_way = int(request.GET.get('way_id'))
+        prog_type = Timetables.objects.filter(way_id=data_way).values()
+
+        for item in prog_type:
+            date = tuple(str(item['date_full']).split('-')[::-1])
+            if (data_from <= date <= data_to) and (item['way_id'] == data_way):
+                response.append(item)
+            else:
+                continue
+    else:
+        prog_type = Timetables.objects.all().values()
+        for item in prog_type:
+            date = tuple(str(item['date_full']).split('-')[::-1])
+            if (data_from <= date <= data_to):
+                response.append(item)
+            else:
+                continue
+
     way_t = models.WayCouch.objects.all()
     if request.method == 'POST':
         form = MainForm(request.POST)
@@ -382,3 +419,5 @@ def timetable_filter(request):
         return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': response,
                                                          'way_t': way_t, 'title': title,
                                                      'description':description, 'keywords': keywords})
+
+

@@ -79,12 +79,13 @@
       flex-direction: column;
       justify-content: space-between;
 
-      input {
-        text-align: left;
+      .input-group {
+        display: flex;
+        justify-content: space-around;
       }
 
-      input:first-child {
-        margin-right: 20px;
+      input {
+        text-align: left;
       }
 
       button {
@@ -153,6 +154,29 @@
 
 }
 
+@media screen and (max-width: 767px) {
+  .schedule-page {
+    .schedule-page__date-picker-container {
+      form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .input-group .input-daterange {
+          input {
+            &:first-child {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        button {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 375px) {
   .schedule-page {

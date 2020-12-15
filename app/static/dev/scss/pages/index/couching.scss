@@ -121,6 +121,7 @@
 
 @include max-w(768) {
   .couching {
+    padding-left: 15px;
     .row-blocks {
       display: flex;
       justify-content: space-around;

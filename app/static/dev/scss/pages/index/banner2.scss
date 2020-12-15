@@ -15,6 +15,8 @@
   padding-top: $sectionPaddingTop;
   padding-bottom: $sectionPaddingBottom;
 
+
+
   .content{
     @include mya(35px);
     margin-top: 35px;
@@ -22,6 +24,7 @@
     color: white;
 
     .text{
+      padding-left: 15px;
       width: 50%;
       padding-top: 45px;
       padding-right: 15px;

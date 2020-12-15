@@ -54,18 +54,24 @@ class ProgramOffers(models.Model):
 # отзывы
 class Feeds(models.Model):
 
-    img = models.ImageField(upload_to='feeds/')
-    title = models.CharField(name="title", max_length=128)
-    description_short = models.TextField(name="description_short")  # preview short
-    description_long = models.TextField(name="description_long")  # long
-    video_review = models.URLField(name='video_review')
+    img_detail = models.ImageField(upload_to='feeds/', verbose_name='Изображение на странице отзывов')
+    img_detail_alt = models.CharField(name='img_detail_alt', max_length=128, verbose_name='Изображение на странице отзывов (Alt)')
+    img_main = models.ImageField(upload_to='feeds/', verbose_name='Изображение на главной странице')
+    img_main_alt = models.CharField(name='img_main_alt', max_length=128, verbose_name='Изображение на главной странице (Alt)')
+    title = models.CharField(name="title", max_length=128, verbose_name='Заголовок')
+    description_short = models.TextField(name="description_short", verbose_name='Описание короткое')  # preview short
+    description_long = models.TextField(name="description_long", verbose_name='Описание полное')  # long
+    video_review = models.URLField(name='video_review', verbose_name='Видео')
 
     class Meta:
-        verbose_name = 'Feed'
-        verbose_name_plural = 'Feeds'
+        verbose_name = 'Отзывы'
+        verbose_name_plural = 'Отзывы'
 
     def get_absolute_url(self):
         return reverse('index:feed_list', args=[self.id])
+
+    def __str__(self):
+        return str(self.title)
 
 
 # тренеры

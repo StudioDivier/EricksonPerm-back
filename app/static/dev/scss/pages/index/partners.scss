@@ -18,6 +18,7 @@
   .row {
     @include mya(35px);
     .text {
+      padding-left: 15px;
       h2 {
         font-family: "MuseoCyrl700", serif;
         font-size: $h2FontSize;
@@ -53,6 +54,9 @@
   .partners{
     .text{
       @include mxa(15px);
+      h2 {
+        font-size: 40px!important;
+      }
     }
   }
 }

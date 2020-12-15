@@ -18,14 +18,15 @@
   color: white;
 
   .text {
+    padding-left: 15px;
     h2 {
       font-family: "MuseoCyrl700", serif;
-      font-size: $h2FontSize;
+      font-size: 37px;
     }
 
     p {
       font-family: "MuseoCyrl100", serif;
-      font-size: $h4FontSize;
+      font-size: 25px;
     }
   }
 
