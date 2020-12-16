@@ -24,34 +24,34 @@ class SEO(models.Model):
 # заявки
 class Offers(models.Model):
 
-    name = models.CharField(name="name", max_length=128)
-    email = models.EmailField(name='email', unique=True)
-    form = models.CharField(name="form", max_length=128)
+    name = models.CharField(name="name", max_length=128, verbose_name='Имя')
+    email = models.EmailField(name='email', unique=True, verbose_name='Почта')
+    form = models.CharField(name="form", max_length=128, verbose_name='Форма')
 
     class Meta:
-        verbose_name = 'Offer'
-        verbose_name_plural = 'Offers'
+        verbose_name = 'Заявка'
+        verbose_name_plural = 'Заявки'
 
     def __str__(self):
         return str(self.form)
 
 
-# программы
+# заявки на программы
 class ProgramOffers(models.Model):
 
-    program = models.CharField(name="program", max_length=128)
-    name = models.CharField(name="name", max_length=128)
-    phone = models.BigIntegerField(name="phone")
+    program = models.CharField(name="program", max_length=128, verbose_name='Программа')
+    name = models.CharField(name="name", max_length=128, verbose_name='Имя')
+    phone = models.BigIntegerField(name="phone", verbose_name='Номер телефона')
 
     class Meta:
-        verbose_name = 'ProgramOffer'
-        verbose_name_plural = 'ProgramOffers'
+        verbose_name = 'Заявка на программу'
+        verbose_name_plural = 'Заявки на программы'
 
     def __str__(self):
         return str(self.program)
 
 
-# отзывы
+# отзывы (_meta)
 class Feeds(models.Model):
 
     img_detail = models.ImageField(upload_to='feeds/', verbose_name='Изображение на странице отзывов')
@@ -62,6 +62,10 @@ class Feeds(models.Model):
     description_short = models.TextField(name="description_short", verbose_name='Описание короткое')  # preview short
     description_long = models.TextField(name="description_long", verbose_name='Описание полное')  # long
     video_review = models.URLField(name='video_review', verbose_name='Видео')
+
+    meta_title = models.CharField(name='meta_title', verbose_name='meta_ title', max_length=128)
+    meta_description = models.CharField(name='meta_description', verbose_name='meta_ description', max_length=128)
+    meta_keywords = models.CharField(name='meta_keywords', verbose_name='meta_ keywords', max_length=128)
 
     class Meta:
         verbose_name = 'Отзывы'
@@ -74,13 +78,18 @@ class Feeds(models.Model):
         return str(self.title)
 
 
-# тренеры
+# тренеры (_meta)
 class Trainers(models.Model):
 
     title = models.CharField(name="title", max_length=128, verbose_name='ФИО')
     description = models.TextField(name="description", verbose_name='Описание')
     img = models.ImageField(upload_to='coach_detail/', verbose_name='Фото')
     img_alt = models.CharField(name='img_alt', max_length=128, verbose_name='Фото альт')
+
+    meta_title = models.CharField(name='meta_title', verbose_name='meta_ title', max_length=128)
+    meta_description = models.CharField(name='meta_description', verbose_name='meta_ description', max_length=128)
+    meta_keywords = models.CharField(name='meta_keywords', verbose_name='meta_ keywords', max_length=128)
+
 
     class Meta:
         verbose_name = 'Тренер'

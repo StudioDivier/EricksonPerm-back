@@ -375,9 +375,7 @@ def timetable_filter(request):
     :param request:
     :return:
     """
-    description = 'example description'
-    keywords = 'example keywords'
-    title = 'example title'
+    description, keywords, title = database_view.get_meta(page=request.path)
 
     data_from = tuple(request.GET.get('from').split('.'))
     data_to = tuple(request.GET.get('to').split('.'))
