@@ -139,9 +139,86 @@
 
 @include max-w(768) {
   .near-date {
+    .name {
+      h2 {
+        font-size: 35px;
+      }
+    }
     .col-lg-4 {
       margin-bottom: 15px;
       @include mxa(35px);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .near-date {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .name {
+      h2 {
+        font-size: 25px;
+      }
+    }
+
+    .col-lg-4 {
+      @include mxa(15px);
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+
+      .card-date {
+        width: 100%;
+
+        .card-date-label {
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+
+        .date {
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+
+        .card-text {
+          h5 {
+            font-size: $h5FontSize375;
+          }
+
+          p {
+            font-size: $pFontSizeMin375;
+          }
+        }
+
+        .teach {
+          margin-top: 30px;
+
+          img {
+            width: 100%;
+          }
+
+          .teach-name {
+            h5 {
+              font-size: $h4FontSize375;
+            }
+
+            p {
+              font-size: $pFontSizeMin375;
+            }
+          }
+        }
+      }
+    }
+
+    .button-opac {
+      margin: 25px;
+
+      a {
+        font-size: $pFontSizeMax375;
+      }
     }
   }
 }
@@ -158,7 +235,7 @@
     }
 
     .col-lg-4 {
-      @include mxa(35px);
+      @include mxa(15px);
       margin-bottom: 15px;
       display: flex;
       justify-content: center;

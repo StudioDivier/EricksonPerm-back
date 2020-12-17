@@ -1010,10 +1010,62 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 768px) {
+  .near-date .name h2 {
+    font-size: 35px;
+  }
   .near-date .col-lg-4 {
     margin-bottom: 15px;
     margin-left: 35px;
     margin-right: 35px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .near-date {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .near-date .name h2 {
+    font-size: 25px;
+  }
+  .near-date .col-lg-4 {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .near-date .col-lg-4 .card-date {
+    width: 100%;
+  }
+  .near-date .col-lg-4 .card-date .card-date-label p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .date p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .card-text h5 {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .card-text p {
+    font-size: 12px;
+  }
+  .near-date .col-lg-4 .card-date .teach {
+    margin-top: 30px;
+  }
+  .near-date .col-lg-4 .card-date .teach img {
+    width: 100%;
+  }
+  .near-date .col-lg-4 .card-date .teach .teach-name h5 {
+    font-size: 14px;
+  }
+  .near-date .col-lg-4 .card-date .teach .teach-name p {
+    font-size: 12px;
+  }
+  .near-date .button-opac {
+    margin: 25px;
+  }
+  .near-date .button-opac a {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1025,8 +1077,8 @@ footer .content .s-row a {
     font-size: 20px;
   }
   .near-date .col-lg-4 {
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
@@ -1330,6 +1382,11 @@ footer .content .s-row a {
     width: 55%;
   }
 }
+@media (max-width: 425px) {
+  .banner1 .f-row .text h3 {
+    padding-left: 0;
+  }
+}
 @media screen and (max-width: 375px) {
   .banner1 {
     padding-top: 25px;
@@ -1344,6 +1401,7 @@ footer .content .s-row a {
     flex-direction: column;
   }
   .banner1 .f-row .text h3 {
+    padding-left: 0;
     font-size: 18px;
   }
   .banner1 .f-row .logo-eric {
@@ -1497,11 +1555,12 @@ footer .content .s-row a {
   margin-bottom: 35px;
 }
 .cto .base img {
-  width: 100%;
-  border-radius: 100%;
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
 }
 .cto .base .text {
-  padding-left: 45px;
+  padding-left: 25px;
   padding-top: 45px;
 }
 .cto .base .text .ons {
@@ -1510,7 +1569,7 @@ footer .content .s-row a {
 }
 .cto .base .text .name {
   font-family: "MuseoCyrl700", serif;
-  font-size: 38px;
+  font-size: 30px;
 }
 .cto .base .text .description {
   font-family: "MuseoCyrl100", serif;
@@ -1532,7 +1591,9 @@ footer .content .s-row a {
     justify-content: center;
   }
   .cto .base .photo img {
-    width: 50%;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
   }
 }
 @media (max-width: 768px) {
@@ -1545,7 +1606,9 @@ footer .content .s-row a {
     justify-content: center;
   }
   .cto .base .photo img {
-    width: 50%;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1558,10 +1621,12 @@ footer .content .s-row a {
     flex-direction: column;
   }
   .cto .base img {
-    width: 100%;
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
   }
   .cto .base .text {
-    padding-left: 25px;
+    padding-left: 15px;
   }
   .cto .base .text .ons {
     font-size: 14px;
@@ -1572,7 +1637,7 @@ footer .content .s-row a {
   .cto .base .text .description {
     font-size: 15px;
   }
-  .cto .base .text .text-base {
+  .cto .base .text-base {
     font-size: 15px;
   }
 }
@@ -1861,16 +1926,20 @@ footer .content .s-row a {
 .work .row .text_work {
   padding-left: 15px;
   font-family: "MuseoCyrl100", serif;
+  margin-bottom: 15px;
 }
 .work .row .text_work .f_work {
   font-size: 35px;
+  margin-bottom: 0;
 }
 .work .row .text_work .s_work {
   font-family: "MuseoCyrl700", serif;
   font-size: 45px;
+  margin-bottom: 0;
 }
 .work .row .text_work .t_work {
   font-size: 25px;
+  margin-bottom: 0;
 }
 .work .row .cards {
   display: flex;
@@ -1951,6 +2020,9 @@ footer .content .s-row a {
   .work .row .cards {
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .work .row .cards .branch {
+    margin-right: 0;
   }
   .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
     margin-top: 10px;

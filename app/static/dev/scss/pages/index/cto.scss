@@ -20,12 +20,13 @@
     @include mya(35px);
 
     img {
-      width: 100%;
-      border-radius: 100%;
+      height: 190px;
+      width: 190px;
+      border-radius: 50%;
     }
 
     .text {
-      padding-left: 45px;
+      padding-left: 25px;
       padding-top: 45px;
 
       .ons {
@@ -35,7 +36,7 @@
 
       .name {
         font-family: "MuseoCyrl700", serif;
-        font-size: 38px;
+        font-size: 30px;
       }
 
       .description {
@@ -63,7 +64,9 @@
         justify-content: center;
 
         img {
-          width: 50%;
+          height: 190px;
+          width: 190px;
+          border-radius: 50%;
         }
       }
     }
@@ -81,7 +84,9 @@
         justify-content: center;
 
         img {
-          width: 50%;
+          height: 190px;
+          width: 190px;
+          border-radius: 50%;
         }
       }
     }
@@ -98,11 +103,13 @@
       flex-direction: column;
 
       img {
-        width: 100%;
+        height: 190px;
+        width: 190px;
+        border-radius: 50%;
       }
 
       .text {
-        padding-left: 25px;
+        padding-left: 15px;
 
         .ons {
           font-size: $h4FontSize375;
@@ -115,10 +122,10 @@
         .description {
           font-size: $pFontSizeMax375;
         }
+      }
 
-        .text-base {
-          font-size: $pFontSizeMax375;
-        }
+      .text-base {
+        font-size: $pFontSizeMax375;
       }
     }
   }

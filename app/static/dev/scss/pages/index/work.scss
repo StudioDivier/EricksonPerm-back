@@ -23,19 +23,29 @@
     .text_work {
       padding-left: 15px;
       font-family: "MuseoCyrl100", serif;
+      margin-bottom: 15px;
       //width: 100%;
 
       .f_work {
         font-size: $h4FontSize;
+
+        margin-bottom: 0;
+
       }
 
       .s_work {
         font-family: "MuseoCyrl700", serif;
-        font-size:$h3FontSize;
+        font-size: $h3FontSize;
+
+        margin-bottom: 0;
+
       }
 
       .t_work {
         font-size: $h5FontSize;
+
+        margin-bottom: 0;
+
       }
 
     }
@@ -99,9 +109,9 @@
   }
 }
 
-@include max-w(1200){
-  .work{
-    .row{
+@include max-w(1200) {
+  .work {
+    .row {
 
       .cards {
         flex-wrap: wrap;
@@ -117,9 +127,9 @@
   }
 }
 
-@include max-w(992){
-  .work{
-    .row{
+@include max-w(992) {
+  .work {
+    .row {
 
       .cards {
         flex-wrap: wrap;
@@ -135,13 +145,18 @@
   }
 }
 
-@include max-w(768){
-  .work{
-    .row{
+@include max-w(768) {
+  .work {
+    .row {
       .cards {
         flex-wrap: wrap;
         justify-content: space-around;
         //margin-left: 10px;
+
+        .branch {
+          margin-right: 0;
+        }
+
         #first, #second, #third {
           @include mya(10px);
           width: 300px !important;
@@ -152,9 +167,9 @@
   }
 }
 
-@media screen and (max-width: 425px){
-  .work{
-    .text_work{
+@media screen and (max-width: 425px) {
+  .work {
+    .text_work {
       @include mxa(15px);
     }
   }
@@ -164,18 +179,21 @@
   .work {
     padding-top: $sectionPaddingTop375;
     padding-bottom: $sectionPaddingBottom375;
+
     .row {
       @include mya(15px);
       @include mxa(15px);
 
-      .text_work{
-        .f_work{
+      .text_work {
+        .f_work {
           font-size: $h4FontSize375;
         }
-        .s_work{
+
+        .s_work {
           font-size: $h3FontSize375;
         }
-        .t_work{
+
+        .t_work {
           font-size: $h5FontSize375;
         }
       }
@@ -194,10 +212,10 @@
 }
 
 @media screen and (max-width: 320px) {
-  .work{
-    .cards{
-      p{
-        font-size: 18px!important;
+  .work {
+    .cards {
+      p {
+        font-size: 18px !important;
         padding-right: 15px;
       }
     }
