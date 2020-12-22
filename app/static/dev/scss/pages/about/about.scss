@@ -66,6 +66,13 @@
   }
 }
 
+@include max-w(767){
+.about-page{
+  .text-container{
+    padding: 10px 0;
+  }
+}
+}
 
 @media screen and (max-width: 375px) {
   .about-page {
@@ -131,7 +138,7 @@
     }
 
     .text-container {
-      padding-top: 20px;
+      padding: 10px 20px;
 
       p {
         font-size: $pFontSizeMax375;
@@ -162,11 +169,5 @@
       align-items: center;
       justify-content: center;
     }
-  }
-}
-
-@media screen and (min-width: 426px) {
-  .about-page {
-
   }
 }

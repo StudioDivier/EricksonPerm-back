@@ -8,8 +8,8 @@
 {% block content %}
 
     <section class="breadcr">
-    <div class="breadcr-container container">
-        <p id="breadcrumbs">
+        <div class="breadcr-container container">
+            <p id="breadcrumbs">
             <span>
                 <span>
                     <a href="http://harmonyhere.ru/">Главная</a>
@@ -17,9 +17,9 @@
                     <a href="http://harmonyhere.ru/">О коучинге</a>
                 </span>
             </span>
-        </p>
-    </div>
-</section>
+            </p>
+        </div>
+    </section>
 
     <section class="coaching-page">
         <div class="container">
@@ -40,27 +40,33 @@
                     </div>
                 </div>
                 <div class="coaching-page__description-header__points-wrapper">
-                    <div class="col-xs-12 col-md-3 description__point-wrapper">
+                    <div class="col-xs-12 col-md-6 col-xl-3 description__point-wrapper">
                         <div class="description__point">
-                            <img src="{% static 'dev/img/coaching/point-logo1.png' %}" alt="">
+                            <div class="circle">
+                                <img src="{% static 'dev/img/handshake.png' %}" alt="business">
+                            </div>
                             <h5>Бизнес</h5>
                             <p>Как найти свою нишу и
                                 перевести свой бизнес на
                                 новую ступень развития.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-3 description__point-wrapper">
+                    <div class="col-xs-12 col-md-6 col-xl-3 description__point-wrapper">
                         <div class="description__point">
-                            <img src="{% static 'dev/img/coaching/point-logo2.png' %}" alt="">
+                            <div class="circle">
+                                <img src="{% static 'dev/img/family.png' %}" alt="business">
+                            </div>
                             <h5>Семья</h5>
                             <p>Как создать любящие и
                                 доверительные отношения с
                                 близкими.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-3 description__point-wrapper">
+                    <div class="col-xs-12 col-md-6 col-xl-3 description__point-wrapper">
                         <div class="description__point">
-                            <img src="{% static 'dev/img/coaching/point-logo3.png' %}" alt="">
+                            <div class="circle">
+                                <img src="{% static 'dev/img/finance.png' %}" alt="business">
+                            </div>
                             <h5>Финансы</h5>
                             <p>Как вдохновить сотрудников
                                 на повышение прибыли
@@ -68,9 +74,11 @@
                                 в 2 раза больше.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-3 description__point-wrapper">
+                    <div class="col-xs-12 col-md-6 col-xl-3 description__point-wrapper">
                         <div class="description__point">
-                            <img src="{% static 'dev/img/coaching/point-logo4.png' %}" alt="">
+                            <div class="circle">
+                                <img src="{% static 'dev/img/age.png' %}" alt="business">
+                            </div>
                             <h5>Наследие</h5>
                             <p>Как оставить свой след в
                                 истории и сделать так, чтобы
@@ -93,7 +101,8 @@
             <div class="row">
                 <div class="coaching-page__about-coaching">
                     <div class="col-xs-12 col-md-6">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                     </div>
@@ -126,34 +135,42 @@
                                 чтобы
                                 позволять ему концентрироваться на прошлом опыте и искать причины неудач.
                             </li>
-                            <li><strong>Системный подход</strong> – коуч поддерживает целостность личности клиента и фокус
+                            <li><strong>Системный подход</strong> – коуч поддерживает целостность личности клиента и
+                                фокус
                                 внимания на то, что
-                                изменения, которые происходят в одной области жизнедеятельности, влияют на более масштабную
+                                изменения, которые происходят в одной области жизнедеятельности, влияют на более
+                                масштабную
                                 картину
                                 его жизни.
                             </li>
-                            <li><strong>Концентрация на клиенте</strong> – коуч верит в то, что у клиента есть все ресурсы и
+                            <li><strong>Концентрация на клиенте</strong> – коуч верит в то, что у клиента есть все
+                                ресурсы и
                                 навыки для
                                 достижения
-                                своих целей, уважает его планы действий и те результаты, которых он хочет достичь. Коучинг –
+                                своих целей, уважает его планы действий и те результаты, которых он хочет достичь.
+                                Коучинг –
                                 это
                                 зона,
                                 свободная от советов.
                             </li>
-                            <li><strong>Ориентирован как на ценности, так и на действия</strong> – следуя плану изменений в
+                            <li><strong>Ориентирован как на ценности, так и на действия</strong> – следуя плану
+                                изменений в
                                 специфичных,
-                                вдохновляющих клиента шагах, клиент создаёт для себя фундаментальные изменения в отношениях,
+                                вдохновляющих клиента шагах, клиент создаёт для себя фундаментальные изменения в
+                                отношениях,
                                 поведении и сформировавшихся привычках.
                             </li>
                             <li><strong>Развитие осознанности</strong> – во время трансформационного коучинга клиент
                                 расширяет осознанность
                                 себя
-                                и своей жизни, отношений, своих целей и их достижения, что создает основу для дальнейшего
+                                и своей жизни, отношений, своих целей и их достижения, что создает основу для
+                                дальнейшего
                                 развития.
                             </li>
                         </ol>
                     </div>
-                    <p><strong>МЕТОДЫ:</strong> в основе всех обучающих программ Международного Эриксоновского Университета
+                    <p><strong>МЕТОДЫ:</strong> в основе всех обучающих программ Международного Эриксоновского
+                        Университета
                         лежат
                         методики системного мышления, технологии, направленные на результаты, новейшие исследования в
                         области

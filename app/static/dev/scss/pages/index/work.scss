@@ -175,14 +175,16 @@
       @include mxa(15px);
 
       .text_work{
+        padding-left: 0;
         .f_work{
-          font-size: $h4FontSize375;
+          font-size: 18px;
         }
         .s_work{
-          font-size: $h3FontSize375;
+          font-size: 26px;
+          margin-bottom: 0;
         }
         .t_work{
-          font-size: $h5FontSize375;
+          font-size: 16px;
         }
       }
 

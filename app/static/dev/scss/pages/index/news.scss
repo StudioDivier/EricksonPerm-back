@@ -79,6 +79,16 @@
   }
 }
 
+@include max-w(992){
+  .news{
+    .content{
+      .col-lg-4{
+        @include mya(25px);
+        @include mxa(25px);
+      }
+    }
+  }
+}
 
 @include max-w(768){
   .news{
