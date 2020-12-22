@@ -125,6 +125,31 @@
     .text {
       @include mxa(15px);
     }
+    .row{
+      .text{
+        h2{
+          font-size: 48px;
+        }
+        .under-name{
+          font-size: 26px;
+        }
+        p{
+          font-size: 18px;
+        }
+      }
+      .body-block{
+        .stat-row{
+          .elem{
+            .f{
+              font-size: 48px;
+            }
+            .s{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

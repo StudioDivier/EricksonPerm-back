@@ -156,6 +156,12 @@
   .work{
     .text_work{
       @include mxa(15px);
+      .f_work{
+        font-size: 30px;
+      }
+      .s_work{
+        font-size: 40px;
+      }
     }
   }
 }

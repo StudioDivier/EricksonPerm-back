@@ -146,6 +146,57 @@
   }
 }
 
+@include max-w(425){
+  .near-date{
+    .name{
+      h2{
+        font-size: 26px;
+      }
+    }
+    .card-date{
+      .card-date-label{
+        p{
+          font-size: 12px;
+        }
+      }
+      .date{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        p{
+          font-size: 12px;
+        }
+      }
+      .card-text{
+        h5{
+          font-size: 16px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+      .teach{
+        margin-top: 25px;
+        .teach-name{
+          h5{
+            font-size: 16px;
+          }
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+      .button{
+        .btn-orange{
+          font-size: 12px;
+        }
+      }
+    }
+    .button-opac{
+      margin: 15px;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .near-date {
     padding-top: $sectionPaddingTop375;

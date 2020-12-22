@@ -120,6 +120,14 @@
   .banner2{
     .content{
       @include mxa(15px);
+      .text{
+        .name{
+          font-size: 36px;
+        }
+        .main-text{
+          font-size: 16px;
+        }
+      }
     }
   }
 }

@@ -88,6 +88,21 @@
   }
 }
 
+@include max-w(425){
+  .cto{
+    .base{
+      .text{
+        .name{
+          font-size: 26px;
+        }
+        .text-base{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .cto {
     padding-top: $sectionPaddingTop375;

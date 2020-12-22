@@ -137,8 +137,35 @@
 }
 
 @media screen and (max-width: 425px) {
-  .f-row {
-    @include pxa(15px);
+  .couching {
+    .f-row {
+      @include pxa(15px);
+
+      h2 {
+        font-size: 36px;
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+    }
+    .row-blocks {
+      margin-top: 25px;
+      .couch-card{
+        .card-img{
+          .circle{
+            width: 100px;
+            height: 100px;
+            img{
+              width: 60%;
+            }
+          }
+        }
+        .card-text{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 

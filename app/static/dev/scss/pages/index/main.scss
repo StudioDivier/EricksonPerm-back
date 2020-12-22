@@ -58,6 +58,21 @@
   }
 }
 
+@include max-w(425){
+  .main{
+    h1{
+      font-size: 22px;
+    }
+    p{
+      font-size: 12px;
+    }
+    a{
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .main {
     .col-lg-7 {

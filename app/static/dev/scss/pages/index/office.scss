@@ -91,6 +91,19 @@
   }
 }
 
+@include max-w(435){
+  .office{
+    .head{
+      h3{
+        font-size: 24px;
+      }
+      h4{
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .office {
     padding-top: $sectionPaddingTop375;

@@ -177,7 +177,7 @@ footer .content .s-row a {
     font-family: "MuseoCyrl100", serif;
   }
   footer .content .logo-footer p {
-    font-size: 14px;
+    font-size: 15px;
   }
   footer .content .logo-footer .img-footer {
     display: flex;
@@ -228,7 +228,7 @@ footer .content .s-row a {
     flex-direction: column;
   }
   footer .s-row p {
-    font-size: 10px;
+    font-size: 10px !important;
   }
   footer .s-row a {
     color: #f15a29;
@@ -325,7 +325,7 @@ footer .content .s-row a {
     font-family: "MuseoCyrl100", serif;
   }
   footer .content .logo-footer p {
-    font-size: 14px;
+    font-size: 15px;
   }
   footer .content .logo-footer .img-footer {
     display: flex;
@@ -376,7 +376,7 @@ footer .content .s-row a {
     flex-direction: column;
   }
   footer .s-row p {
-    font-size: 10px;
+    font-size: 10px !important;
   }
   footer .s-row a {
     color: #f15a29;
@@ -482,6 +482,18 @@ footer .content .s-row a {
     margin-bottom: 15px;
   }
 }
+@media (max-width: 425px) {
+  .main h1 {
+    font-size: 22px;
+  }
+  .main p {
+    font-size: 12px;
+  }
+  .main a {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
 @media screen and (max-width: 375px) {
   .main .col-lg-7 h1 {
     font-size: 20px;
@@ -556,6 +568,13 @@ footer .content .s-row a {
   .s-row {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .s-row h3 {
+    font-size: 26px !important;
+  }
+  .s-row p {
+    font-size: 22px !important;
+    margin-top: 16px !important;
   }
 }
 @media screen and (max-width: 375px) {
@@ -671,9 +690,28 @@ footer .content .s-row a {
   }
 }
 @media screen and (max-width: 425px) {
-  .f-row {
+  .couching .f-row {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .couching .f-row h2 {
+    font-size: 36px;
+  }
+  .couching .f-row h5 {
+    font-size: 16px;
+  }
+  .couching .row-blocks {
+    margin-top: 25px;
+  }
+  .couching .row-blocks .couch-card .card-img .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .couching .row-blocks .couch-card .card-img .circle img {
+    width: 60%;
+  }
+  .couching .row-blocks .couch-card .card-text {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1016,6 +1054,42 @@ footer .content .s-row a {
     margin-right: 35px;
   }
 }
+@media (max-width: 425px) {
+  .near-date .name h2 {
+    font-size: 26px;
+  }
+  .near-date .card-date .card-date-label p {
+    font-size: 12px;
+  }
+  .near-date .card-date .date {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .near-date .card-date .date p {
+    font-size: 12px;
+  }
+  .near-date .card-date .card-text h5 {
+    font-size: 16px;
+  }
+  .near-date .card-date .card-text p {
+    font-size: 12px;
+  }
+  .near-date .card-date .teach {
+    margin-top: 25px;
+  }
+  .near-date .card-date .teach .teach-name h5 {
+    font-size: 16px;
+  }
+  .near-date .card-date .teach .teach-name p {
+    font-size: 12px;
+  }
+  .near-date .card-date .button .btn-orange {
+    font-size: 12px;
+  }
+  .near-date .button-opac {
+    margin: 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .near-date {
     padding-top: 25px;
@@ -1330,6 +1404,18 @@ footer .content .s-row a {
     width: 55%;
   }
 }
+@media (max-width: 425px) {
+  .banner1 .f-row h3 {
+    font-size: 26px;
+  }
+  .banner1 .s-row {
+    margin-top: 0;
+  }
+  .banner1 .s-row p {
+    font-size: 16px !important;
+    margin-top: 0 !important;
+  }
+}
 @media screen and (max-width: 375px) {
   .banner1 {
     padding-top: 25px;
@@ -1441,6 +1527,14 @@ footer .content .s-row a {
     margin-right: 15px;
   }
 }
+@media (max-width: 435px) {
+  .office .head h3 {
+    font-size: 24px;
+  }
+  .office .head h4 {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 375px) {
   .office {
     padding-top: 25px;
@@ -1546,6 +1640,14 @@ footer .content .s-row a {
   }
   .cto .base .photo img {
     width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .cto .base .text .name {
+    font-size: 26px;
+  }
+  .cto .base .text .text-base {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1677,6 +1779,12 @@ footer .content .s-row a {
     margin-left: 15px;
     margin-right: 15px;
   }
+  .banner2 .content .text .name {
+    font-size: 36px;
+  }
+  .banner2 .content .text .main-text {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 375px) {
   .banner2 {
@@ -1806,6 +1914,21 @@ footer .content .s-row a {
   .our-mission .text {
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .our-mission .row .text h2 {
+    font-size: 48px;
+  }
+  .our-mission .row .text .under-name {
+    font-size: 26px;
+  }
+  .our-mission .row .text p {
+    font-size: 18px;
+  }
+  .our-mission .row .body-block .stat-row .elem .f {
+    font-size: 48px;
+  }
+  .our-mission .row .body-block .stat-row .elem .s {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1964,6 +2087,12 @@ footer .content .s-row a {
     margin-left: 15px;
     margin-right: 15px;
   }
+  .work .text_work .f_work {
+    font-size: 30px;
+  }
+  .work .text_work .s_work {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 375px) {
   .work {
@@ -2095,6 +2224,22 @@ footer .content .s-row a {
   .carousel-page .text {
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .carousel-page .text h2 {
+    font-size: 25px;
+  }
+  .carousel-page .text p {
+    font-size: 18px;
+  }
+  .carousel-page .carousel-inner .carousel-item .carousel-item__inner {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-page .carousel-inner .carousel-item .carousel-item__inner img {
+    width: 75%;
+  }
+  .carousel-page .carousel-inner .carousel-item .carousel-item__inner p {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 375px) {
