@@ -3994,6 +3994,9 @@ footer .content .s-row a {
   .schedule-page .schedule-page__page-content .schedule-page__date-picker-container form button {
     margin-top: 15px;
   }
+  .schedule-page .schedule-page__date-picker-container .main-row form {
+    flex-direction: column;
+  }
 }
 @media (max-width: 576px) {
   .schedule-page h2 {
@@ -4035,6 +4038,15 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 425px) {
+  .schedule-page .schedule-page__date-picker-container .main-row form .wrapper {
+    flex-direction: column;
+  }
+  .schedule-page .schedule-page__date-picker-container .main-row form .wrapper .checkbox-group-1 {
+    width: 100%;
+  }
+  .schedule-page .schedule-page__date-picker-container .main-row form .wrapper .checkbox-group-2 {
+    width: 100%;
+  }
   .schedule-page .schedule-page__date-picker-container .pick-date .input-group .input-date {
     margin-bottom: 10px;
   }
