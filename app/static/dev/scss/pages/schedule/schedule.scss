@@ -109,6 +109,11 @@
       display: flex;
       flex-direction: column;
 
+      .event-date-day {
+        font-family: "MuseoCyrl700", serif;
+        font-size: 50px;
+      }
+
       span:first-child {
         font-family: "MuseoCyrl700", serif;
         font-size: 50px;
@@ -116,6 +121,7 @@
 
       p {
         margin-bottom: 0;
+        font-size: 16px;
       }
 
       svg {
@@ -154,24 +160,153 @@
 
 }
 
+@include max-w(991) {
+  .schedule-page {
+    .schedule-page__page-content{
+      .event-date{
+        padding-right: 10px;
+      }
+      .upper-text-wrapper{
+        flex-direction: column;
+        align-items: flex-start!important;
+        margin-bottom: 15px;
+      }
+    }
+    .schedule-page__date-picker-container {
+
+      .pick-date {
+        .input-group {
+          .input-date {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .schedule-page {
-    .schedule-page__date-picker-container {
-      form {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+    .schedule-page__page-content {
+      .event-container {
+        justify-content: center;
+      }
 
-        .input-group .input-daterange {
-          input {
-            &:first-child {
-              margin-right: 10px;
+      .event-date {
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 50%;
+      }
+      .event-info{
+        h5{
+          font-size: 16px;
+        }
+        .upper-text-wrapper{
+          flex-direction: column;
+          margin-bottom: 15px;
+        }
+      }
+
+      .schedule-page__date-picker-container {
+        form {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+
+          .input-group .input-daterange {
+            input {
+              &:first-child {
+                margin-right: 10px;
+              }
             }
+          }
+
+          button {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include max-w(576) {
+  .schedule-page {
+    h2 {
+      font-size: 40px;
+    }
+
+    .schedule-page__page-content {
+      .event-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .event-date {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        margin-bottom: 20px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .event-info {
+        .upper-text-wrapper {
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          h5 {
+            font-size: 16px;
           }
         }
 
-        button {
-          margin-top: 15px;
+        .btn-wrapper {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(460) {
+  .schedule-page {
+    .schedule-page__page-content {
+      .event-info {
+        .btn-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include max-w(425) {
+  .schedule-page {
+    .schedule-page__date-picker-container {
+      .pick-date {
+        .input-group {
+          .input-date {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .schedule-page__page-content {
+      .event-date {
+        .event-date-day {
+          font-size: 35px !important;
         }
       }
     }
@@ -198,7 +333,7 @@
     }
 
     p, li, span, label {
-      font-size: $pFontSizeMin375 !important;
+      font-size: 14px !important;
     }
 
     .schedule-page__page-content {
@@ -214,6 +349,10 @@
         margin-bottom: 20px;
         text-align: center;
         width: 50%;
+
+        .event-date-day {
+          font-size: 35px !important;
+        }
 
         span:first-child {
           font-size: 20px;
@@ -262,9 +401,9 @@
       font-size: $h4FontSize375 !important;
     }
 
-    h5 {
-      font-size: $h5FontSize375 !important;
-    }
+    //h5 {
+    //  font-size: $h5FontSize375 !important;
+    //}
 
     p, li, span, label {
       font-size: $pFontSizeMax375 !important;

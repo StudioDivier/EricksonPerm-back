@@ -3915,12 +3915,17 @@ footer .content .s-row a {
   display: flex;
   flex-direction: column;
 }
+.schedule-page .schedule-page__page-content .event-date .event-date-day {
+  font-family: "MuseoCyrl700", serif;
+  font-size: 50px;
+}
 .schedule-page .schedule-page__page-content .event-date span:first-child {
   font-family: "MuseoCyrl700", serif;
   font-size: 50px;
 }
 .schedule-page .schedule-page__page-content .event-date p {
   margin-bottom: 0;
+  font-size: 16px;
 }
 .schedule-page .schedule-page__page-content .event-date svg {
   color: #f15a29;
@@ -3948,17 +3953,93 @@ footer .content .s-row a {
   padding: 5px 15px;
 }
 
+@media (max-width: 991px) {
+  .schedule-page .schedule-page__page-content .event-date {
+    padding-right: 10px;
+  }
+  .schedule-page .schedule-page__page-content .upper-text-wrapper {
+    flex-direction: column;
+    align-items: flex-start !important;
+    margin-bottom: 15px;
+  }
+  .schedule-page .schedule-page__date-picker-container .pick-date .input-group .input-date {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 767px) {
-  .schedule-page .schedule-page__date-picker-container form {
+  .schedule-page .schedule-page__page-content .event-container {
+    justify-content: center;
+  }
+  .schedule-page .schedule-page__page-content .event-date {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+  }
+  .schedule-page .schedule-page__page-content .event-info h5 {
+    font-size: 16px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .upper-text-wrapper {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .schedule-page .schedule-page__page-content .schedule-page__date-picker-container form {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
   }
-  .schedule-page .schedule-page__date-picker-container form .input-group .input-daterange input:first-child {
+  .schedule-page .schedule-page__page-content .schedule-page__date-picker-container form .input-group .input-daterange input:first-child {
     margin-right: 10px;
   }
-  .schedule-page .schedule-page__date-picker-container form button {
+  .schedule-page .schedule-page__page-content .schedule-page__date-picker-container form button {
     margin-top: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .schedule-page h2 {
+    font-size: 40px;
+  }
+  .schedule-page .schedule-page__page-content .event-container {
+    display: flex;
+    justify-content: center;
+  }
+  .schedule-page .schedule-page__page-content .event-date {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .schedule-page .schedule-page__page-content .event-date p {
+    font-size: 20px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .upper-text-wrapper {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .upper-text-wrapper h5 {
+    font-size: 16px;
+  }
+  .schedule-page .schedule-page__page-content .event-info .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 460px) {
+  .schedule-page .schedule-page__page-content .event-info .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .schedule-page .schedule-page__page-content .event-info .btn-wrapper button {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .schedule-page .schedule-page__date-picker-container .pick-date .input-group .input-date {
+    margin-bottom: 10px;
+  }
+  .schedule-page .schedule-page__page-content .event-date .event-date-day {
+    font-size: 35px !important;
   }
 }
 @media screen and (max-width: 375px) {
@@ -3976,7 +4057,7 @@ footer .content .s-row a {
     font-size: 12px !important;
   }
   .schedule-page p, .schedule-page li, .schedule-page span, .schedule-page label {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   .schedule-page .schedule-page__page-content .event-container {
     margin: 0;
@@ -3988,6 +4069,9 @@ footer .content .s-row a {
     margin-bottom: 20px;
     text-align: center;
     width: 50%;
+  }
+  .schedule-page .schedule-page__page-content .event-date .event-date-day {
+    font-size: 35px !important;
   }
   .schedule-page .schedule-page__page-content .event-date span:first-child {
     font-size: 20px;
@@ -4017,9 +4101,6 @@ footer .content .s-row a {
   }
   .schedule-page h4 {
     font-size: 14px !important;
-  }
-  .schedule-page h5 {
-    font-size: 12px !important;
   }
   .schedule-page p, .schedule-page li, .schedule-page span, .schedule-page label {
     font-size: 15px !important;
