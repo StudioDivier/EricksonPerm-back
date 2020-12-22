@@ -41,15 +41,15 @@
         align-items: center;
         flex-direction: column;
 
-                .circle {
-        background-color: #f15a29;
-        border-radius: 100%;
-        /* padding: 50px; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 150px;
+        .circle {
+          background-color: #f15a29;
+          border-radius: 100%;
+          /* padding: 50px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 150px;
 
           img {
             //width: 100%;
@@ -228,14 +228,17 @@
         margin-top: 0;
       }
     }
+
     .results__wrapper {
       div {
         font-size: $pFontSizeMin375;
       }
+
       .wide {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
+
         div {
           width: 100% !important;
         }
@@ -285,14 +288,17 @@
         margin-top: 0;
       }
     }
+
     .results__wrapper {
       div {
         font-size: $pFontSizeMax375;
       }
+
       .wide {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
+
         div {
           width: 100% !important;
         }
@@ -307,38 +313,162 @@
 
 @media screen and (min-width: 426px) and (max-width: 576px) {
   .coaching-page {
-    h2{
+    h2 {
       font-size: 38px;
     }
-    h5{
+
+    h5 {
       font-size: 18px;
     }
-    .description__point-wrapper{
+
+    .description__point-wrapper {
       margin-bottom: 25px;
+    }
+
+    .results__wrapper {
+      .direction-num {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      div {
+        font-size: $pFontSizeMax375;
+      }
+
+      .wide {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        div {
+          width: 100% !important;
+        }
+      }
+
+      .number {
+        font-size: 20px;
+      }
     }
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px){
-  .coaching-page{
-        h2{
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .coaching-page {
+    h2 {
       font-size: 40px;
     }
-    h5{
+
+    h5 {
       font-size: 20px;
     }
-        .description__point-wrapper{
+
+    .description__point-wrapper {
       margin-bottom: 25px;
+    }
+
+    .results__wrapper {
+      .direction-num {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      div {
+        font-size: $pFontSizeMax375;
+      }
+
+      .wide {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        div {
+          width: 100% !important;
+        }
+      }
+
+      .number {
+        font-size: 20px;
+      }
     }
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px){
-  .coaching-page{
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .coaching-page {
     .coaching-page__description-header__points-wrapper {
       .description__point-wrapper {
         margin-bottom: 25px;
       }
     }
+
+    .results__wrapper {
+      .direction-num {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
+
+      div {
+        font-size: 20px;
+      }
+
+      .wide {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        div {
+          width: 100% !important;
+        }
+      }
+
+      .number {
+        font-size: 24px;
+      }
+    }
   }
 }
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .coaching-page {
+    .coaching-page__description-header__points-wrapper {
+      .description__point-wrapper {
+        margin-bottom: 25px;
+      }
+    }
+
+    .results__wrapper {
+      .text {
+        font-size: 12px;
+      }
+
+      div {
+        font-size: 20px;
+      }
+
+      .wide {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        div {
+          width: 100% !important;
+        }
+      }
+
+      .number {
+        font-size: 24px;
+      }
+    }
+  }
+}
+

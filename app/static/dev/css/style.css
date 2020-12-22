@@ -1595,9 +1595,14 @@ footer .content .s-row a {
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.cto .base img {
-  width: 100%;
-  border-radius: 100%;
+.cto .base .img-photo {
+  background-image: url("../img/../img/main/cto/cto-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 .cto .base .text {
   padding-left: 45px;
@@ -1630,8 +1635,14 @@ footer .content .s-row a {
     display: flex;
     justify-content: center;
   }
-  .cto .base .photo img {
-    width: 50%;
+  .cto .base .photo .img-photo {
+    background-image: url("../img/../img/main/cto/cto-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
   }
 }
 @media (max-width: 768px) {
@@ -1644,7 +1655,9 @@ footer .content .s-row a {
     justify-content: center;
   }
   .cto .base .photo img {
-    width: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
   }
 }
 @media (max-width: 425px) {
@@ -1664,8 +1677,14 @@ footer .content .s-row a {
     display: flex;
     flex-direction: column;
   }
-  .cto .base img {
-    width: 100%;
+  .cto .base .img-photo {
+    background-image: url("../img/../img/main/cto/cto-img.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
   }
   .cto .base .text {
     padding-left: 25px;
@@ -3872,6 +3891,26 @@ footer .content .s-row a {
   .coaching-page .description__point-wrapper {
     margin-bottom: 25px;
   }
+  .coaching-page .results__wrapper .direction-num {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 15px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .coaching-page h2 {
@@ -3883,10 +3922,75 @@ footer .content .s-row a {
   .coaching-page .description__point-wrapper {
     margin-bottom: 25px;
   }
+  .coaching-page .results__wrapper .direction-num {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 15px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 20px;
+  }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .coaching-page .coaching-page__description-header__points-wrapper .description__point-wrapper {
     margin-bottom: 25px;
+  }
+  .coaching-page .results__wrapper .direction-num {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .coaching-page .results__wrapper .text {
+    font-size: 12px;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 20px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .coaching-page .coaching-page__description-header__points-wrapper .description__point-wrapper {
+    margin-bottom: 25px;
+  }
+  .coaching-page .results__wrapper .text {
+    font-size: 12px;
+  }
+  .coaching-page .results__wrapper div {
+    font-size: 20px;
+  }
+  .coaching-page .results__wrapper .wide {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .coaching-page .results__wrapper .wide div {
+    width: 100% !important;
+  }
+  .coaching-page .results__wrapper .number {
+    font-size: 24px;
   }
 }
 .schedule-page {
