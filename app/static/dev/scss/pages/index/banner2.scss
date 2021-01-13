@@ -116,10 +116,25 @@
   }
 }
 
+@include max-w(576){
+  .banner2{
+    .content{
+      .text{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 425px){
   .banner2{
     .content{
       @include mxa(15px);
+      .text{
+            padding-left: 0;
+    padding-right: 0;
+      }
     }
   }
 }
@@ -136,6 +151,7 @@
       justify-content: center;
       .text{
         padding-top: 0;
+        padding-left: 0;
         width: 100%;
         .our{
           font-size: $h3FontSize375!important;

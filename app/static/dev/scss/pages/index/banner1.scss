@@ -23,10 +23,15 @@
       display: flex;
       align-items: center;
 
-      img {
+      .img-eric {
+        background-image: url("../img/main/logo40.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
         background-color: white;
-        padding: 20px;
-        width: 100%;
       }
     }
 
@@ -74,11 +79,6 @@
         display: flex;
         align-items: center;
 
-        img {
-          width: 100%;
-          background-color: white;
-          padding: 20px;
-        }
       }
     }
   }
@@ -117,6 +117,10 @@
 
       .text {
         margin-top: 25px;
+
+        h3{
+          padding-left: 0;
+        }
       }
 
       .logo-eric {
@@ -137,6 +141,8 @@
 @include max-w(425) {
   .banner1 {
     .f-row {
+          padding-left: 15px;
+    padding-right: 15px;
       .text {
         h3 {
           padding-left: 0;
@@ -180,7 +186,7 @@
 
     .s-row {
       margin-top: 15px;
-      @include mxa(15px);
+      @include mxa(0px);
 
       p {
         font-size: $pFontSizeMax375;

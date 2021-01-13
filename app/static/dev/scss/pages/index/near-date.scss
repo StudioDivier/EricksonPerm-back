@@ -73,6 +73,7 @@
     .card-text {
       padding-top: 15px;
       padding-left: 15px;
+      padding-right: 10px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -111,6 +112,9 @@
       .btn-orange {
         @include pxa(25px);
         @include pya(10px);
+      }
+      a:hover {
+        text-decoration: unset;
       }
 
 
@@ -228,9 +232,12 @@
 
     .button-opac {
       margin: 25px;
-
+      .btn-opac{
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
       a {
-        font-size: $pFontSizeMax375;
+        font-size: 12px;
       }
     }
   }
@@ -300,9 +307,12 @@
 
     .button-opac {
       margin: 25px;
+      .btn-opac{
+        padding: 5px 20px;
+      }
 
       a {
-        font-size: $pFontSizeMax375;
+        font-size: 10px;
       }
     }
   }

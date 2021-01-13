@@ -113,7 +113,13 @@
 @media screen and (max-width: 425px){
   .carousel-page{
     .text{
-      @include mxa(15px);
+      @include mxa(0);
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 19px;
+      }
     }
   }
 }
@@ -123,7 +129,7 @@
     padding-top: $sectionPaddingTop375;
     padding-bottom: $sectionPaddingBottom375;
     .text {
-      @include mxa(15px);
+      @include mxa(0);
 
       h2 {
         font-size: $h2FontSize375;

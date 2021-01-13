@@ -19,9 +19,13 @@
     display: flex;
     @include mya(35px);
 
-    img {
-      height: 190px;
-      width: 190px;
+    .img-photo {
+      background-image: url("../img/../img/main/cto/cto-img.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
     }
 
@@ -55,6 +59,8 @@
 
 @include max-w(992) {
   .cto {
+        padding-top: 0;
+    padding-bottom: 0;
     .base {
       display: flex;
       flex-direction: column;
@@ -93,6 +99,27 @@
   }
 }
 
+@include max-w(576){
+  .cto{
+    .base{
+      .text{
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@include max-w(425){
+  .cto{
+    .base{
+      .text{
+            padding-left: 0;
+    padding-right: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .cto {
     padding-top: $sectionPaddingTop375;
@@ -109,7 +136,7 @@
       }
 
       .text {
-        padding-left: 15px;
+        padding-left: 0;
 
         .ons {
           font-size: $h4FontSize375;
@@ -125,7 +152,7 @@
       }
 
       .text-base {
-        font-size: $pFontSizeMax375;
+        font-size: $pFontSizeMax375!important;
       }
     }
   }

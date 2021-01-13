@@ -139,13 +139,28 @@
 @include max-w(425) {
   .couching {
     .f-row {
-      @include pxa(15px);
+      @include pxa(0);
 
       h2{
         font-size: 35px;
       }
       h5{
         font-size: 19px;
+      }
+    }
+    .row-blocks{
+      .couch-card{
+        .text-center{
+          .card-text{
+            font-size: 12px;
+          }
+        }
+        .card-img{
+          .circle{
+            width: 125px;
+    height: 125px;
+          }
+        }
       }
     }
   }
@@ -158,6 +173,8 @@
     @include pxa(15px);
 
     .f-row {
+      padding-left: 0;
+    padding-right: 0;
       h2 {
         font-size: $h2FontSize375;
       }

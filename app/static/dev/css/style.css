@@ -523,7 +523,7 @@ footer .content .s-row a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 0;
 }
 .representation .eric-logo img {
   width: 35%;
@@ -538,7 +538,7 @@ footer .content .s-row a {
   width: 100%;
   margin-top: 8px;
   font-family: "MuseoCyrl700", serif;
-  font-size: 50px;
+  font-size: 42px;
 }
 .representation .s-row {
   margin-top: 38px;
@@ -557,12 +557,20 @@ footer .content .s-row a {
   font-family: "MuseoCyrl700", serif;
 }
 
+@media (max-width: 576px) {
+  .representation .s-row p {
+    font-size: 28px;
+  }
+}
 @media (max-width: 425px) {
+  .representation {
+    padding-left: 0;
+  }
   .representation .f-row {
     padding-right: 0;
   }
   .representation .f-row h2 {
-    padding-left: 8px;
+    padding-left: 0;
     font-size: 28px;
   }
   .representation .eric-logo img {
@@ -585,8 +593,8 @@ footer .content .s-row a {
   .representation {
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .representation .f-row h2 {
     font-size: 20px;
@@ -603,7 +611,7 @@ footer .content .s-row a {
 @media (max-width: 375px) {
   .representation .f-row h2 {
     font-size: 19px;
-    padding-left: 5px;
+    padding-left: 0;
   }
 }
 .couching {
@@ -695,14 +703,21 @@ footer .content .s-row a {
 }
 @media (max-width: 425px) {
   .couching .f-row {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .couching .f-row h2 {
     font-size: 35px;
   }
   .couching .f-row h5 {
     font-size: 19px;
+  }
+  .couching .row-blocks .couch-card .text-center .card-text {
+    font-size: 12px;
+  }
+  .couching .row-blocks .couch-card .card-img .circle {
+    width: 125px;
+    height: 125px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -711,6 +726,10 @@ footer .content .s-row a {
     padding-bottom: 25px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .couching .f-row {
+    padding-left: 0;
+    padding-right: 0;
   }
   .couching .f-row h2 {
     font-size: 20px;
@@ -984,6 +1003,7 @@ footer .content .s-row a {
 .near-date .card-date .card-text {
   padding-top: 15px;
   padding-left: 15px;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1019,6 +1039,9 @@ footer .content .s-row a {
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.near-date .card-date .button a:hover {
+  text-decoration: unset;
 }
 .near-date .button-opac {
   display: flex;
@@ -1105,8 +1128,12 @@ footer .content .s-row a {
   .near-date .button-opac {
     margin: 25px;
   }
+  .near-date .button-opac .btn-opac {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
   .near-date .button-opac a {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1154,8 +1181,11 @@ footer .content .s-row a {
   .near-date .button-opac {
     margin: 25px;
   }
+  .near-date .button-opac .btn-opac {
+    padding: 5px 20px;
+  }
   .near-date .button-opac a {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 .form-1 {
@@ -1338,10 +1368,15 @@ footer .content .s-row a {
   display: flex;
   align-items: center;
 }
-.banner1 .f-row .logo-eric img {
+.banner1 .f-row .logo-eric .img-eric {
+  background-image: url("../img/main/logo40.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   background-color: white;
-  padding: 20px;
-  width: 100%;
 }
 .banner1 .f-row .text {
   display: flex;
@@ -1379,11 +1414,6 @@ footer .content .s-row a {
     display: flex;
     align-items: center;
   }
-  .banner1 .f-row .logo-eric img {
-    width: 100%;
-    background-color: white;
-    padding: 20px;
-  }
 }
 @media (max-width: 768px) {
   .banner1 .f-row {
@@ -1412,6 +1442,9 @@ footer .content .s-row a {
   .banner1 .f-row .text {
     margin-top: 25px;
   }
+  .banner1 .f-row .text h3 {
+    padding-left: 0;
+  }
   .banner1 .f-row .logo-eric {
     display: flex;
     align-items: center;
@@ -1424,6 +1457,10 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 425px) {
+  .banner1 .f-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .banner1 .f-row .text h3 {
     padding-left: 0;
   }
@@ -1456,8 +1493,8 @@ footer .content .s-row a {
   }
   .banner1 .s-row {
     margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .banner1 .s-row p {
     font-size: 15px;
@@ -1595,9 +1632,13 @@ footer .content .s-row a {
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.cto .base img {
-  height: 190px;
-  width: 190px;
+.cto .base .img-photo {
+  background-image: url("../img/../img/main/cto/cto-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 .cto .base .text {
@@ -1623,6 +1664,10 @@ footer .content .s-row a {
 }
 
 @media (max-width: 992px) {
+  .cto {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .cto .base {
     display: flex;
     flex-direction: column;
@@ -1652,6 +1697,17 @@ footer .content .s-row a {
     border-radius: 50%;
   }
 }
+@media (max-width: 576px) {
+  .cto .base .text {
+    padding-left: 0;
+  }
+}
+@media (max-width: 425px) {
+  .cto .base .text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 375px) {
   .cto {
     padding-top: 25px;
@@ -1667,7 +1723,7 @@ footer .content .s-row a {
     border-radius: 50%;
   }
   .cto .base .text {
-    padding-left: 15px;
+    padding-left: 0;
   }
   .cto .base .text .ons {
     font-size: 14px;
@@ -1679,7 +1735,7 @@ footer .content .s-row a {
     font-size: 15px;
   }
   .cto .base .text-base {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 }
 .banner2 {
@@ -1777,10 +1833,20 @@ footer .content .s-row a {
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .banner2 .content .text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 425px) {
   .banner2 .content {
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .banner2 .content .text {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1798,6 +1864,7 @@ footer .content .s-row a {
   }
   .banner2 .content .text {
     padding-top: 0;
+    padding-left: 0;
     width: 100%;
   }
   .banner2 .content .text .our {
@@ -1909,20 +1976,33 @@ footer .content .s-row a {
 }
 @media screen and (max-width: 425px) {
   .our-mission .text {
+    padding-left: 0;
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .our-mission .text h2 {
+    font-size: 35px !important;
+  }
+  .our-mission .text .under-name {
+    font-size: 22px !important;
+  }
+  .our-mission .text p {
+    font-size: 19px !important;
   }
 }
 @media screen and (max-width: 375px) {
   .our-mission {
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .our-mission .row {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  .our-mission .row .text {
+    padding-left: 0;
   }
   .our-mission .row .text h2 {
     font-size: 20px !important;
@@ -1957,59 +2037,59 @@ footer .content .s-row a {
   padding-top: 35px;
   padding-bottom: 35px;
 }
-.work .row {
+.work .row-w {
   margin-top: 35px;
   margin-bottom: 35px;
   display: flex;
   flex-direction: column;
 }
-.work .row .text_work {
+.work .row-w .text_work {
   font-family: "MuseoCyrl100", serif;
   margin-bottom: 15px;
 }
-.work .row .text_work .f_work {
+.work .row-w .text_work .f_work {
   font-size: 35px;
   margin-bottom: 0;
 }
-.work .row .text_work .s_work {
+.work .row-w .text_work .s_work {
   font-family: "MuseoCyrl700", serif;
   font-size: 45px;
   margin-bottom: 0;
 }
-.work .row .text_work .t_work {
+.work .row-w .text_work .t_work {
   font-size: 25px;
   margin-bottom: 0;
 }
-.work .row .cards {
+.work .row-w .cards {
   display: flex;
   width: 100%;
 }
-.work .row .cards .branch {
+.work .row-w .cards .branch {
   margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 35px;
 }
-.work .row .cards .branch .bottom {
+.work .row-w .cards .branch .bottom {
   padding-left: 20px;
 }
-.work .row .cards .branch .bottom p {
+.work .row-w .cards .branch .bottom p {
   color: white;
   font-family: "MuseoCyrl500", serif;
   text-transform: uppercase;
   font-size: 22px;
 }
-.work .row .cards .branch .bottom .btn {
+.work .row-w .cards .branch .bottom .btn {
   padding-left: 0;
 }
-.work .row .cards .branch .bottom .btn-orange {
+.work .row-w .cards .branch .bottom .btn-orange {
   padding-left: 17px;
   padding-right: 17px;
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.work .row .cards #first {
+.work .row-w .cards #first {
   background-image: url("../img/main/work/card1.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -2017,7 +2097,7 @@ footer .content .s-row a {
   width: 433px;
   height: 433px;
 }
-.work .row .cards #second {
+.work .row-w .cards #second {
   background-image: url("../img/main/work/card2.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -2025,7 +2105,7 @@ footer .content .s-row a {
   width: 433px;
   height: 433px;
 }
-.work .row .cards #third {
+.work .row-w .cards #third {
   background-image: url("../img/main/work/card3.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -2035,11 +2115,11 @@ footer .content .s-row a {
 }
 
 @media (max-width: 1200px) {
-  .work .row .cards {
+  .work .row-w .cards {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+  .work .row-w .cards #first, .work .row-w .cards #second, .work .row-w .cards #third {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 320px !important;
@@ -2047,11 +2127,11 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 992px) {
-  .work .row .cards {
+  .work .row-w .cards {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+  .work .row-w .cards #first, .work .row-w .cards #second, .work .row-w .cards #third {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 290px !important;
@@ -2059,14 +2139,14 @@ footer .content .s-row a {
   }
 }
 @media (max-width: 768px) {
-  .work .row .cards {
+  .work .row-w .cards {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .work .row .cards .branch {
+  .work .row-w .cards .branch {
     margin-right: 0;
   }
-  .work .row .cards #first, .work .row .cards #second, .work .row .cards #third {
+  .work .row-w .cards #first, .work .row-w .cards #second, .work .row-w .cards #third {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 300px !important;
@@ -2078,26 +2158,29 @@ footer .content .s-row a {
     margin-left: 15px;
     margin-right: 15px;
   }
+  .work .text_work .f_work {
+    font-size: 30px !important;
+  }
+  .work .text_work .s_work {
+    font-size: 34px !important;
+  }
+  .work .text_work .t_work {
+    font-size: 22px !important;
+  }
 }
 @media screen and (max-width: 375px) {
   .work {
     padding-top: 25px;
     padding-bottom: 25px;
   }
-  .work .row {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
   .work .row .text_work .f_work {
-    font-size: 14px;
-  }
-  .work .row .text_work .s_work {
     font-size: 18px;
   }
+  .work .row .text_work .s_work {
+    font-size: 22px;
+  }
   .work .row .text_work .t_work {
-    font-size: 12px;
+    font-size: 15px;
   }
   .work .row .cards {
     flex-wrap: wrap;
@@ -2207,8 +2290,14 @@ footer .content .s-row a {
 }
 @media screen and (max-width: 425px) {
   .carousel-page .text {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .carousel-page .text h2 {
+    font-size: 22px;
+  }
+  .carousel-page .text p {
+    font-size: 19px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -2217,8 +2306,8 @@ footer .content .s-row a {
     padding-bottom: 25px;
   }
   .carousel-page .text {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .carousel-page .text h2 {
     font-size: 20px;
@@ -2265,19 +2354,21 @@ footer .content .s-row a {
   font-size: 55px;
 }
 .partners .row .partners-img {
-  margin-top: 10px;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .partners .row .partners-img img {
   width: 100% !important;
+  height: 100%;
 }
 
 @media screen and (max-width: 425px) {
   .partners .text {
     margin-left: 15px;
     margin-right: 15px;
+    padding-left: 0 !important;
   }
   .partners .text h2 {
     font-size: 40px !important;
@@ -2289,6 +2380,10 @@ footer .content .s-row a {
     padding-bottom: 25px;
     margin-left: 15px;
     margin-right: 15px;
+  }
+  .partners .text {
+    padding-left: 0 !important;
+    margin-left: 0;
   }
   .partners .text h2 {
     font-size: 20px !important;
@@ -2315,20 +2410,19 @@ footer .content .s-row a {
   margin-bottom: 25px;
 }
 .news .content .program-card {
-  height: 100%;
+  height: 475px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .news .content .program-card .photo img {
   width: 100%;
 }
 .news .content .program-card .news-date {
   padding-top: 10px;
+  padding-left: 15px;
 }
 .news .content .program-card .news-date p {
-  padding-left: 15px;
   font-family: "MuseoCyrl100", serif;
   margin-bottom: 0;
 }
@@ -2345,9 +2439,8 @@ footer .content .s-row a {
 .news .content .program-card .news-more {
   padding-left: 15px;
   padding-bottom: 25px;
-  position: absolute;
   bottom: 0;
-  left: 0;
+  position: absolute;
 }
 .news .content .program-card .news-more a {
   color: #f15a29;
@@ -2360,7 +2453,7 @@ footer .content .s-row a {
   margin: 35px;
 }
 .news .content .button-opac .btn-opac {
-  border-radius: 19px;
+  border-radius: 26px;
   border: 1px solid #1d1d1d;
   color: #1d1d1d;
   display: flex;
@@ -2380,6 +2473,74 @@ footer .content .s-row a {
     margin-right: 25px;
   }
 }
+@media (max-width: 991px) {
+  .news .content .program-card {
+    height: 600px;
+    margin-bottom: 25px;
+  }
+  .news .content .program-card .news-more {
+    bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .news .content .program-card {
+    height: 525px;
+  }
+  .news .content .program-card .news-more {
+    bottom: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .news .content .name h2 {
+    font-size: 34px;
+  }
+  .news .content .row {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .news .content .row .col-lg-4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .news .content .row .col-lg-4 .program-card {
+    height: 375px;
+  }
+  .news .content .row .col-lg-4 .program-card .photo {
+    width: 100%;
+  }
+  .news .content .row .col-lg-4 .program-card .news-date p {
+    font-size: 12px;
+  }
+  .news .content .row .col-lg-4 .program-card .text {
+    padding: 15px 15px 0 15px;
+  }
+  .news .content .row .col-lg-4 .program-card .text p {
+    font-size: 12px;
+  }
+  .news .content .row .col-lg-4 .program-card .text h5 {
+    font-size: 11px;
+  }
+  .news .content .row .col-lg-4 .program-card .news-more {
+    position: absolute;
+    bottom: 10px;
+  }
+  .news .content .row .col-lg-4 .program-card .news-more a {
+    font-size: 13px;
+  }
+  .news .content .button-opac .btn-opac {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .news .content .button-opac a {
+    font-size: 12px;
+  }
+}
 @media (max-width: 375px) {
   .news .content .name h2 {
     font-size: 20px;
@@ -2396,20 +2557,39 @@ footer .content .s-row a {
     margin-right: 0;
     margin-left: 0;
   }
+  .news .content .row .col-lg-4 .program-card {
+    height: 375px;
+  }
   .news .content .row .col-lg-4 .program-card .photo {
     width: 100%;
   }
-  .news .content .row .col-lg-4 .program-card .text p {
-    font-size: 15px;
-  }
-  .news .content .row .col-lg-4 .program-card .text h5 {
+  .news .content .row .col-lg-4 .program-card .news-date p {
     font-size: 12px;
   }
-  .news .content .row .col-lg-4 .program-card .text a {
-    font-size: 15px;
+  .news .content .row .col-lg-4 .program-card .text {
+    padding: 15px 15px 0 15px;
+  }
+  .news .content .row .col-lg-4 .program-card .text p {
+    font-size: 12px;
+  }
+  .news .content .row .col-lg-4 .program-card .text h5 {
+    font-size: 11px;
+  }
+  .news .content .row .col-lg-4 .program-card .news-more {
+    position: absolute;
+    bottom: 10px;
+  }
+  .news .content .row .col-lg-4 .program-card .news-more a {
+    font-size: 13px;
+  }
+  .news .content .button-opac .btn-opac {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .news .content .button-opac a {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 .find {

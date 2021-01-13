@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 0;
 
   .eric-logo {
     img {
@@ -38,7 +38,7 @@
       //margin-left: 34px;
       font-family: "MuseoCyrl700", serif;
       //padding-left: 34px;
-      font-size: 50px;
+      font-size: 42px;
     }
   }
 
@@ -64,13 +64,24 @@
   }
 }
 
+@include max-w(576){
+  .representation{
+    .s-row{
+      p{
+        font-size: 28px;
+      }
+    }
+  }
+}
+
 @include max-w(425) {
   .representation {
+    padding-left: 0;
     .f-row {
       padding-right: 0;
 
       h2 {
-        padding-left: 8px;
+        padding-left: 0;
         font-size: 28px;
       }
     }
@@ -99,7 +110,7 @@
   .representation {
     padding-top: $sectionPaddingTop375;
     padding-bottom: $sectionPaddingBottom375;
-    @include pxa(15px);
+    @include pxa(0px);
 
     .f-row {
       h2 {
@@ -127,7 +138,7 @@
     .f-row {
       h2 {
         font-size: 19px;
-        padding-left: 5px;
+        padding-left: 0;
       }
     }
   }

@@ -26,13 +26,14 @@
     }
 
     .partners-img {
-      margin-top: 10px;
+      padding-top: 10px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
 
       img {
         width: 100%!important;
+        height: 100%;
       }
     }
   }
@@ -54,6 +55,7 @@
   .partners{
     .text{
       @include mxa(15px);
+      padding-left: 0!important;
       h2 {
         font-size: 40px!important;
       }
@@ -67,6 +69,8 @@
     padding-bottom: $sectionPaddingBottom375;
     @include mxa(15px);
     .text {
+      padding-left: 0!important;
+      margin-left: 0;
       h2 {
         font-size: $h2FontSize375!important;
       }

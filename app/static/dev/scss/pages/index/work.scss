@@ -15,7 +15,7 @@
   padding-top: $sectionPaddingTop;
   padding-bottom: $sectionPaddingBottom;
 
-  .row {
+  .row-w {
     @include mya(35px);
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@
 
 @include max-w(1200) {
   .work {
-    .row {
+    .row-w {
 
       .cards {
         flex-wrap: wrap;
@@ -132,7 +132,7 @@
 
 @include max-w(992) {
   .work {
-    .row {
+    .row-w {
 
       .cards {
         flex-wrap: wrap;
@@ -150,7 +150,7 @@
 
 @include max-w(768) {
   .work {
-    .row {
+    .row-w {
       .cards {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -170,10 +170,21 @@
   }
 }
 
+
+
 @media screen and (max-width: 425px) {
   .work {
     .text_work {
       @include mxa(15px);
+      .f_work{
+        font-size: 30px!important;
+      }
+      .s_work{
+        font-size: 34px!important;
+      }
+      .t_work{
+        font-size: 22px!important;
+      }
     }
   }
 }
@@ -184,20 +195,20 @@
     padding-bottom: $sectionPaddingBottom375;
 
     .row {
-      @include mya(15px);
-      @include mxa(15px);
+      //@include mya(15px);
+      //@include mxa(15px);
 
       .text_work {
         .f_work {
-          font-size: $h4FontSize375;
+          font-size: 18px;
         }
 
         .s_work {
-          font-size: $h3FontSize375;
+          font-size: 22px;
         }
 
         .t_work {
-          font-size: $h5FontSize375;
+          font-size: 15px;
         }
       }
 

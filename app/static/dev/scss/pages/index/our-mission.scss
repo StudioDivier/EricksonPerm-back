@@ -123,7 +123,17 @@
 @media screen and (max-width: 425px) {
   .our-mission {
     .text {
+      padding-left: 0;
       @include mxa(15px);
+      h2{
+        font-size: 35px!important;
+      }
+      .under-name{
+        font-size: 22px!important;
+      }
+      p{
+        font-size: 19px!important;
+      }
     }
   }
 }
@@ -132,12 +142,13 @@
   .our-mission {
     padding-top: $sectionPaddingTop375;
     padding-bottom: $sectionPaddingBottom375;
-    @include mxa(15px);
+    @include mxa(0px);
 
     .row {
       @include mya(15px);
 
       .text {
+        padding-left: 0;
         h2 {
           font-size: $h2FontSize375 !important;
         }
