@@ -136,9 +136,18 @@
   }
 }
 
-@media screen and (max-width: 425px) {
-  .f-row {
-    @include pxa(15px);
+@include max-w(425) {
+  .couching {
+    .f-row {
+      @include pxa(15px);
+
+      h2{
+        font-size: 35px;
+      }
+      h5{
+        font-size: 19px;
+      }
+    }
   }
 }
 

@@ -31,14 +31,22 @@
       background-color: #ffffff;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      //justify-content: space-between;
+      position: relative;
 
       .photo {
         img {
           width: 100%;
         }
       }
-
+      .news-date{
+        padding-top: 10px;
+        p {
+          padding-left: 15px;
+          font-family: "MuseoCyrl100", serif;
+          margin-bottom: 0;
+        }
+      }
       .text {
         padding: 25px 15px 0 15px;
 
@@ -52,6 +60,13 @@
           font-family: "MuseoCyrl100", serif;
         }
 
+      }
+      .news-more {
+        padding-left: 15px;
+        padding-bottom: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         a {
           color: #f15a29;
           text-decoration: underline;
@@ -71,8 +86,8 @@
         color: #1d1d1d;
         display: flex;
         justify-content: center;
-        @include pxa(29px);
-        @include pya(10px);
+        @include pxa(30px);
+        @include pya(8px);
         font-family: "MuseoCyrl500", serif;
       }
     }
