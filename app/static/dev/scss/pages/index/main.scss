@@ -34,6 +34,9 @@
     letter-spacing: 0.5px;
     padding: 10px 35px;
   }
+  a:hover{
+    background-color: white;
+  }
 }
 
 @include max-w(992){
@@ -54,6 +57,21 @@
     }
     a{
       margin-bottom: 15px;
+    }
+  }
+}
+
+@include max-w(425){
+  .main{
+    h1{
+      font-size: 34px;
+    }
+    p{
+      font-size: 12px;
+    }
+    a{
+      font-size: 12px;
+      margin-top: 20px;
     }
   }
 }

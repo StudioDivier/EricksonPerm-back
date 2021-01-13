@@ -59,6 +59,15 @@
       padding: 10px;
       margin-top: 10px;
       width: 100%;
+
+      .color-black{
+        margin-bottom: 0;
+    align-items: center;
+      }
+      .color-orange{
+        margin-bottom: 0;
+    align-items: center;
+      }
     }
 
     .card-text {
@@ -100,8 +109,8 @@
       margin-bottom: 20px;
 
       .btn-orange {
-        @include pxa(10px);
-        @include pya(4px);
+        @include pxa(25px);
+        @include pya(10px);
       }
 
 
@@ -115,14 +124,18 @@
     margin: 35px;
 
     .btn-opac {
-      border-radius: 19px;
+      border-radius: 25px;
       border: 1px solid #1d1d1d;
       color: #1d1d1d;
       display: flex;
       justify-content: center;
       @include pxa(29px);
-      @include pya(10px);
+      @include pya(8px);
       font-family: "MuseoSansCyrl500", serif;
+    }
+    .btn-opac:hover{
+      color: white!important;
+    background-color: #515151;
     }
   }
 }
