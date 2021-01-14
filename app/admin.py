@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Trainers, Education, WayWork, Experience, SEO
-from .models import Games, Offers, Feeds, Timetables, WayCouch
+from .models import Games, Offers, Feeds, Timetables, WayCouch, Articles
 
 
 class EducationAdmin(admin.TabularInline):
@@ -39,3 +39,4 @@ admin.site.register(Games)
 admin.site.register(Timetables)
 admin.site.register(WayCouch)
 admin.site.register(SEO)
+admin.site.register(Articles)

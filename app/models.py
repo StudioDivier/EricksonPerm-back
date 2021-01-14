@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 from django.conf import settings
 
 
@@ -202,8 +203,8 @@ class Timetables(models.Model):
         return str(self.title)
 
 
-# Новости
-class News(models.Model):
+# Статьи
+class Articles(models.Model):
     img = models.ImageField(upload_to='news/', verbose_name='Изображение новости')
     img_alt = models.CharField(name='img_alt', verbose_name='alt изображение', max_length=32)
     date = models.DateField(name='date', verbose_name='Дата')
@@ -211,11 +212,12 @@ class News(models.Model):
     description = models.CharField(name='description', verbose_name='Описание', max_length=256)
     keywords_seo = models.CharField(name='keywords_seo', verbose_name='Ключевые слова для СЕО', max_length=1024)
     description_seo = models.CharField(name='description_seo', verbose_name='Описание для СЕО', max_length=2048)
+    text = RichTextField()
 
     class Meta:
-        verbose_name = 'Новости'
-        verbose_name_plural = 'Новости'
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
 
     def __str__(self):
-        return 'Новость {}'.format(self.title)
+        return 'Статья {}'.format(self.title)
 

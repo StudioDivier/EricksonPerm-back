@@ -14,7 +14,7 @@
                 <span>
                     <a href="/">Главная</a>
                     /
-                    <span class="breadcrumb_last" aria-current="page">Новости</span>
+                    <span class="breadcrumb_last" aria-current="page">Статьи</span>
 
                 </span>
             </span>
@@ -22,7 +22,85 @@
         </div>
     </section>
 
-    {% include 'main/components/news.html' %}
+    {% load static %}
+<section class="news">
+    <div class="container">
+        <div class="content">
+            <div class="name">
+                <h2>Статьи</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="program-card">
+
+                        <div class="photo">
+                            <img src="{% static 'dev/img/main/news/news-pic1.png' %}" alt="sience&art">
+                        </div>
+                        <div class="news-date">
+                            <p>25.08.2020</p>
+                        </div>
+                        <div class="text">
+                            <h5>Коучинг в образовании -
+                                завершили первый модуль</h5>
+                            <p>21 августа мы успешно завешили
+                                #обучениекоучингу в 1 модуле
+                                программы "Коучинг в образовании".</p>
+                        </div>
+                        <div class="news-more">
+                            <a href="#" class="click">Подробнее</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="program-card">
+
+                        <div class="photo">
+                            <img src="{% static 'dev/img/main/news/news-pic2.png' %}" alt="sience&art">
+                        </div>
+                        <div class="news-date">
+                            <p>25.08.2020</p>
+                        </div>
+                        <div class="text">
+                            <h5>Завершили самый
+                                трансформационный
+                                поток - группа 27</h5>
+                            <p>Мы это сделали. Сейчас я уже точно могу
+                                сказать, что это самый необычный, самый...</p>
+                        </div>
+                        <div class="news-more">
+                            <a href="#" class="click">Подробнее</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="program-card">
+
+                        <div class="photo">
+                            <img src="{% static 'dev/img/main/news/news-pic3.png' %}" alt="sience&art">
+                        </div>
+                        <div class="news-date">
+                            <p>25.08.2020</p>
+                        </div>
+                        <div class="text">
+
+                            <h5>Открыли 27 программу
+                                началом первого модуля</h5>
+                            <p>Это только начало. Первые 4 дня из 16
+                                дней профессионального пути ребят, но
+                                они уже большие профессионалы.</p>
+                        </div>
+                        <div class="news-more">
+                            <a href="#" class="click">Подробнее</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     {% include 'base/form.html' %}
 
