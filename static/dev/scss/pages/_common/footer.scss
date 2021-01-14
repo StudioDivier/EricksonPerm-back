@@ -1,0 +1,178 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+footer {
+  .content {
+
+    a{
+      color: black;
+    }
+
+    @include mya(35px);
+    font-size: 15px;
+    font-family: "MuseoCyrl100", serif;
+
+    .logo-footer {
+      p {
+        font-size: 14px;
+      }
+
+      .img-footer {
+        img {
+          width: 40%;
+        }
+      }
+    }
+
+
+    .list12 {
+      display: flex;
+    }
+
+    .list1 {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          a {
+            color: black;
+            font-family: "MuseoCyrl700", serif;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .list2 {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+
+    .list3 {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-family: "MuseoCyrl700", serif;
+        font-weight: 700;
+      }
+    }
+
+    .s-row {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: #f15a29;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  footer .content .row {
+    flex-direction: column;
+  }
+  footer .content .logo-footer .list01 {
+    width: 100%;
+  }
+}
+
+@include max-w(425) {
+  footer {
+    .content {
+
+      @include mya(35px);
+      font-size: 15px;
+      font-family: "MuseoCyrl100", serif;
+
+      .logo-footer {
+        p {
+          font-size: 15px;
+        }
+
+        .img-footer {
+              display: flex;
+          align-items: center;
+
+          img {
+            width: 50%;
+          }
+        }
+      }
+
+      .list1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+            a {
+              color: black;
+              font-family: "MuseoCyrl700", serif;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .list2 {
+        display: none;
+      }
+
+      .list3 {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-family: "MuseoCyrl700", serif;
+          font-weight: 700;
+        }
+
+        .phone, .social {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .social-img {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    .s-row {
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      p {
+        font-size: 10px!important;
+      }
+
+      a {
+        color: #f15a29;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.cto {
+  background-image: url("../img/main/cto/bg-cto.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .base {
+    display: flex;
+    @include mya(35px);
+
+            .img-photo {
+          @include bgImgCover('../img/main/cto/cto-img');
+          width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+
+    .text {
+      padding-left: 45px;
+      padding-top: 45px;
+
+      .ons {
+        font-family: "MuseoCyrl100", serif;
+        font-size: 30px;
+      }
+
+      .name {
+        font-family: "MuseoCyrl700", serif;
+        font-size: 38px;
+      }
+
+      .description {
+        font-family: "MuseoCyrl100", serif;
+        font-size: 18px;
+      }
+
+      .text-base {
+        padding-top: 25px;
+        font-family: "MuseoCyrl100", serif;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include max-w(992) {
+  .cto {
+    .base {
+      display: flex;
+      flex-direction: column;
+
+      .photo {
+        display: flex;
+        justify-content: center;
+
+        .img-photo {
+          @include bgImgCover('../img/main/cto/cto-img');
+          width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  .cto {
+    .base {
+      display: flex;
+      flex-direction: column;
+
+      .photo {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 200px;
+      height: 200px;
+      border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(425){
+  .cto{
+    .base{
+      .text{
+        .name{
+          font-size: 26px;
+        }
+        .text-base{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cto {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .base {
+      display: flex;
+      flex-direction: column;
+
+              .img-photo {
+          @include bgImgCover('../img/main/cto/cto-img');
+          width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        }
+
+      .text {
+        padding-left: 25px;
+
+        .ons {
+          font-size: $h4FontSize375;
+        }
+
+        .name {
+          font-size: $h3FontSize375;
+        }
+
+        .description {
+          font-size: $pFontSizeMax375;
+        }
+
+        .text-base {
+          font-size: $pFontSizeMax375;
+        }
+      }
+    }
+  }
+}

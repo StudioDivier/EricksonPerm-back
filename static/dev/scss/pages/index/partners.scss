@@ -1,0 +1,75 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.partners {
+  //background-image: url("../img/carousel-page/bg-carousel-page.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .row {
+    @include mya(35px);
+    .text {
+      padding-left: 15px;
+      h2 {
+        font-family: "MuseoCyrl700", serif;
+        font-size: $h2FontSize;
+      }
+    }
+
+    .partners-img {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      img {
+        width: 100%!important;
+      }
+    }
+  }
+}
+
+@include max-w(992){
+  .partners{
+
+  }
+}
+
+@include max-w(768){
+  .partners{
+
+  }
+}
+
+@media screen and (max-width: 425px){
+  .partners{
+    .text{
+      @include mxa(15px);
+      h2 {
+        font-size: 40px!important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .partners {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    @include mxa(15px);
+    .text {
+      h2 {
+        font-size: $h2FontSize375!important;
+      }
+    }
+  }
+}

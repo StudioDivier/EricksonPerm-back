@@ -1,0 +1,188 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.banner1 {
+  background-image: url("../img/main/banner1/bg-banner1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: $sectionPaddingTop;
+  padding-bottom: $sectionPaddingBottom;
+
+  .f-row {
+    @include mya(45px);
+    display: flex;
+
+    .logo-eric {
+      display: flex;
+        align-items: center;
+      img {
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+      }
+    }
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      color: white;
+      font-family: "MuseoCyrl700", serif;
+      font-size: $h4FontSize;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+  }
+
+  .s-row {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 35px;
+
+    p {
+      font-family: "MuseoCyrl100", serif;
+      color: white;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+}
+
+@include max-w(992) {
+  .banner1 {
+    .f-row {
+      margin-bottom: 15px;
+      display: flex;
+
+      .text {
+        margin-top: 25px;
+      }
+
+      .logo-eric {
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+          background-color: white;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(768) {
+  .banner1 {
+    .f-row {
+      margin-bottom: 15px;
+      display: flex;
+
+      .text {
+        margin-top: 25px;
+      }
+
+      .logo-eric {
+        display: flex;
+        align-items: center;
+        img {
+          background-color: white;
+          padding: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(576) {
+  .banner1 {
+    .f-row {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+
+      .text {
+        margin-top: 25px;
+      }
+
+      .logo-eric {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          background-color: white;
+          padding: 20px;
+          width: 55%;
+        }
+      }
+    }
+  }
+}
+
+@include max-w(425){
+  .banner1{
+    .f-row{
+      h3{
+        font-size: 26px;
+      }
+    }
+    .s-row{
+      margin-top: 0;
+      p{
+        font-size: 16px!important;
+        margin-top: 0!important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner1 {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+
+    .f-row {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      @include mxa(15px);
+      display: flex;
+      flex-direction: column;
+
+      .text {
+        h3 {
+          font-size: $h3FontSize375;
+        }
+      }
+
+      .logo-eric {
+        display: flex;
+        align-items: center;
+        img {
+          background-color: white;
+          padding: 20px;
+          width: 100%;
+        }
+      }
+    }
+
+    .s-row {
+      margin-top: 15px;
+      @include mxa(15px);
+
+      p {
+        font-size: $pFontSizeMax375;
+      }
+    }
+  }
+}

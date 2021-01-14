@@ -1,0 +1,17 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.breadcr {
+  margin: 30px 0;
+  font-family: "MuseoCyrl100", serif;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  p {
+    margin: 0;
+  }
+}
