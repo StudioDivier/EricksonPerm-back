@@ -632,6 +632,10 @@ footer .content .s-row a {
   font-size: 25px;
   font-family: "MuseoCyrl500", serif;
 }
+.couching .f-row .h-cit {
+  font-size: 20px;
+  font-style: italic;
+}
 .couching .row-blocks {
   margin-top: 65px;
   display: flex;
@@ -712,6 +716,10 @@ footer .content .s-row a {
   .couching .f-row h5 {
     font-size: 19px;
   }
+  .couching .f-row .h-cit {
+    font-size: 14px;
+    font-style: italic;
+  }
   .couching .row-blocks .couch-card .text-center .card-text {
     font-size: 12px;
   }
@@ -736,6 +744,10 @@ footer .content .s-row a {
   }
   .couching .f-row h5 {
     font-size: 12px;
+  }
+  .couching .f-row .h-cit {
+    font-size: 7px;
+    font-style: italic;
   }
   .couching .row-blocks {
     display: flex;

@@ -24,6 +24,10 @@
       font-size: $h5FontSize;
       font-family: "MuseoCyrl500", serif;
     }
+    .h-cit{
+      font-size: $h5FontSize - 5;
+      font-style: italic;
+    }
 
   }
 
@@ -147,6 +151,10 @@
       h5{
         font-size: 19px;
       }
+      .h-cit{
+      font-size: 14px;
+      font-style: italic;
+    }
     }
     .row-blocks{
       .couch-card{
@@ -182,6 +190,10 @@
       h5 {
         font-size: $h5FontSize375;
       }
+      .h-cit{
+      font-size: $h5FontSize375 - 5;
+      font-style: italic;
+    }
     }
 
     .row-blocks {

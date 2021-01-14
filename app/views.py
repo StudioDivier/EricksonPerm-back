@@ -70,6 +70,22 @@ def programs(request):
                                                         'description': description, 'keywords': keywords})
 
 
+def enter_coaching(request):
+    return render(request, 'programs/enter-coaching.html')
+
+
+def science_and_art(request):
+    return render(request, 'programs/science-and-art.html')
+
+
+def team_coaching(request):
+    return render(request, 'programs/team-coaching.html')
+
+
+def upraclencheskiy(request):
+    return render(request, 'programs/upraclencheskiy.html')
+
+
 def news(request):
     """
     Отрисовка главной страницы
