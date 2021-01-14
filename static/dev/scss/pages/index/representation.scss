@@ -1,0 +1,146 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.representation {
+  background-image: url("../img/main/bg-representation.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0;
+
+  .eric-logo {
+    img {
+      width: 35%;
+    }
+  }
+
+
+  .f-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //text-align: center;
+    img {
+      //width: 100%;
+    }
+
+    h2 {
+      color: #000000;
+      width: 100%;
+      margin-top: 8px;
+      //margin-left: 34px;
+      font-family: "MuseoCyrl700", serif;
+      //padding-left: 34px;
+      font-size: 42px;
+    }
+  }
+
+  .s-row {
+    margin-top: 38px;
+
+    h3 {
+      font-size: $h3FontSize;
+      font-family: "MuseoCyrl700", serif;
+    }
+
+    p {
+      color: #000000;
+      font-size: $pFontSizeMax;
+      margin-top: 26px;
+
+      font-family: "MuseoCyrl100", serif;
+    }
+
+    b {
+      font-family: "MuseoCyrl700", serif;
+    }
+  }
+}
+
+@include max-w(576){
+  .representation{
+    .s-row{
+      p{
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@include max-w(425) {
+  .representation {
+    padding-left: 0;
+    .f-row {
+      padding-right: 0;
+
+      h2 {
+        padding-left: 0;
+        font-size: 28px;
+      }
+    }
+
+    .eric-logo {
+      img {
+        width: 60%;
+      }
+    }
+  }
+  .s-row {
+    @include pxa(15px);
+
+    h3 {
+      font-size: 26px!important;
+    }
+
+    p {
+      font-size: 21px!important;
+      margin-top: 14px!important;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .representation {
+    padding-top: $sectionPaddingTop375;
+    padding-bottom: $sectionPaddingBottom375;
+    @include pxa(0px);
+
+    .f-row {
+      h2 {
+        font-size: $h2FontSize375;
+        width: 100%;
+      }
+    }
+
+    .s-row {
+      h3 {
+        font-size: $h3FontSize375;
+
+      }
+
+      p {
+        margin-top: 15px;
+        font-size: $pFontSizeMax375;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .representation {
+    .f-row {
+      h2 {
+        font-size: 19px;
+        padding-left: 0;
+      }
+    }
+  }
+}
+

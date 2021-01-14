@@ -1,0 +1,37 @@
+@import "../../common/colors";
+@import "../../common/screen";
+@import "../../common/variables";
+@import "../../common/mixins";
+
+header {
+
+  .navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+    img{
+      //width: 88px;
+      width: 110px;
+    }
+  }
+
+  a {
+    color: black;
+    font-family: "MuseoCyrl300", serif;
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+  a :hover {
+      color: #f15a29;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  header{
+    a{
+      font-size: 13px;
+    }
+  }
+}
+
+
