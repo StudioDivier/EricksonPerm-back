@@ -2,6 +2,10 @@
   .enter-coaching h1 {
     text-align: center; } }
 
+a:hover {
+  text-decoration: none;
+}
+
 .enter-coaching .mc__results p {
   font-family: "MuseoCyrl700", serif !important;
   color: #ed6a1e; }
