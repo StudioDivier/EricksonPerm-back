@@ -37,8 +37,10 @@
 
     .couch-card {
       height: 100%;
-      border: 15px solid #ed700b;
-      border-image: url("../img/main/border-card.png") 20 round round;
+      //border: 15px solid #ed700b;
+      //border-image: url("../img/main/border-card.png") 20 round round;
+      border: 4px solid #8e8e8e;
+      padding: 25px 10px;
       opacity: 0.8;
       position: center;
       display: flex;

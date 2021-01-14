@@ -46,6 +46,7 @@
         .carousel-item__inner {
           display: flex;
           align-items: center;
+          padding: 15px;
           img {
             @include pxa(20px);
             @include pya(20px);

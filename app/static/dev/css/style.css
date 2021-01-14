@@ -642,8 +642,8 @@ footer .content .s-row a {
 }
 .couching .row-blocks .couch-card {
   height: 100%;
-  border: 15px solid #ed700b;
-  border-image: url("../img/main/border-card.png") 20 round round;
+  border: 4px solid #8e8e8e;
+  padding: 25px 10px;
   opacity: 0.8;
   position: center;
   display: flex;
@@ -1389,6 +1389,7 @@ footer .content .s-row a {
   height: 200px;
   border-radius: 50%;
   background-color: white;
+  background-size: contain;
 }
 .banner1 .f-row .text {
   display: flex;
@@ -1655,7 +1656,6 @@ footer .content .s-row a {
 }
 .cto .base .text {
   padding-left: 25px;
-  padding-top: 45px;
 }
 .cto .base .text .ons {
   font-family: "MuseoCyrl100", serif;
@@ -2251,6 +2251,7 @@ footer .content .s-row a {
 .carousel-page #feedback-carousel .carousel-inner .carousel-item .carousel-item__inner {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 .carousel-page #feedback-carousel .carousel-inner .carousel-item .carousel-item__inner img {
   padding-left: 20px;
