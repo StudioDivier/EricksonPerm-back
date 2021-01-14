@@ -1,70 +1,127 @@
 {% load static %}
-<section class="couching">
+
+{#<section class="couching">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="f-row">#}
+{#                <h2>Что такое коучинг?</h2>#}
+{#                <h5>“Коучинг - процесс партнерства, стимулирующий работу мысли и креативность клиента,#}
+{#                    в котором он с помощью коуча максимально раскрывает свой личный и#}
+{#                    профессиональный потенциал”</h5>#}
+{#                <p class="h-cit"> - Определение коучинга согласно Международной Федерации Коучинга (ICF)</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="row card-row">#}
+{#            <div class="row-blocks">#}
+{#                <div class="col-lg-3">#}
+{#                    <div class="couch-card">#}
+{#                        <div class="card-img">#}
+{#                            <div class="circle">#}
+{#                                <img src="{% static 'dev/img/handshake.png' %}" alt="business">#}
+{#                            </div>#}
+{#                            <p class="card-name">Бизнес</p>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <p class="card-text">найти свои сферу и место с продвижением бизнеса на новый качественный уровень</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3">#}
+{#                    <div class="couch-card">#}
+{#                        <div class="card-img">#}
+{#                            <div class="card-img">#}
+{#                                <div class="circle">#}
+{#                                    <img src="{% static 'dev/img/family.png' %}" alt="business">#}
+{#                                </div>#}
+{#                                <p class="card-name">Семья</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <p class="card-text">построить отношения с близкими в атмосфере любви и доверия</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3">#}
+{#                    <div class="couch-card">#}
+{#                        <div class="card-img">#}
+{#                            <div class="circle">#}
+{#                                <img src="{% static 'dev/img/finance.png' %}" alt="business">#}
+{#                            </div>#}
+{#                            <p class="card-name">Финансы</p>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <p class="card-text">вдохновить сотрудников на работу на благо компании и свое благо, когда рост прибыли означает увеличение индивидуальных доходов</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3">#}
+{#                    <div class="couch-card">#}
+{#                        <div class="card-img">#}
+{#                            <div class="circle">#}
+{#                                <img src="{% static 'dev/img/age.png' %}" alt="business">#}
+{#                            </div>#}
+{#                            <p class="card-name">Наследние</p>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <p class="card-text">оставить о себе для потомков память в делах и поступках</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+<section class="coaching">
     <div class="container">
-        <div class="row">
-            <div class="f-row">
-                <h2>Что такое коучинг?</h2>
+        <h2>Что такое коучинг?</h2>
                 <h5>“Коучинг - процесс партнерства, стимулирующий работу мысли и креативность клиента,
                     в котором он с помощью коуча максимально раскрывает свой личный и
                     профессиональный потенциал”</h5>
                 <p class="h-cit"> - Определение коучинга согласно Международной Федерации Коучинга (ICF)</p>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="coaching__item">
+                    <div class="coaching__item__image">
+                        <div class="coaching__item__circle">
+                            <img src="{% static 'dev/img/handshake.png' %}" alt="handshake">
+                        </div>
+                    </div>
+                    <span>Бизнес</span>
+                    <p>найти свои сферу и место с продвижением бизнеса на новый качественный уровень</p>
+                </div>
             </div>
-        </div>
-        <div class="row card-row">
-            <div class="row-blocks">
-                <div class="col-lg-3">
-                    <div class="couch-card">
-                        <div class="card-img">
-                            <div class="circle">
-                                <img src="{% static 'dev/img/handshake.png' %}" alt="business">
-                            </div>
-                            <p class="card-name">Бизнес</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="card-text">найти свои сферу и место с продвижением бизнеса на новый качественный уровень</p>
+            <div class="col-lg-3 col-md-6">
+                <div class="coaching__item">
+                    <div class="coaching__item__image">
+                        <div class="coaching__item__circle">
+                            <img src="{% static 'dev/img/family.png' %}" alt="family">
                         </div>
                     </div>
+                    <span>Семья</span>
+                    <p>построить отношения с близкими в атмосфере любви и доверия</p>
                 </div>
-                <div class="col-lg-3">
-                    <div class="couch-card">
-                        <div class="card-img">
-                            <div class="card-img">
-                                <div class="circle">
-                                    <img src="{% static 'dev/img/family.png' %}" alt="business">
-                                </div>
-                                <p class="card-name">Семья</p>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="card-text">построить отношения с близкими в атмосфере любви и доверия</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="coaching__item">
+                    <div class="coaching__item__image">
+                        <div class="coaching__item__circle">
+                            <img src="{% static 'dev/img/finance.png' %}" alt="finance">
                         </div>
                     </div>
+                    <span>Финансы</span>
+                    <p>вдохновить сотрудников на работу на благо компании и свое благо, когда рост прибыли означает увеличение индивидуальных доходов</p>
                 </div>
-                <div class="col-lg-3">
-                    <div class="couch-card">
-                        <div class="card-img">
-                            <div class="circle">
-                                <img src="{% static 'dev/img/finance.png' %}" alt="business">
-                            </div>
-                            <p class="card-name">Финансы</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="card-text">вдохновить сотрудников на работу на благо компании и свое благо, когда рост прибыли означает увеличение индивидуальных доходов</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="coaching__item">
+                    <div class="coaching__item__image">
+                        <div class="coaching__item__circle">
+                            <img src="{% static 'dev/img/age.png' %}" alt="age">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="couch-card">
-                        <div class="card-img">
-                            <div class="circle">
-                                <img src="{% static 'dev/img/age.png' %}" alt="business">
-                            </div>
-                            <p class="card-name">Наследние</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="card-text">оставить о себе для потомков память в делах и поступках</p>
-                        </div>
-                    </div>
+                    <span>Наследние</span>
+                    <p>оставить о себе для потомков память в делах и поступках</p>
                 </div>
             </div>
         </div>

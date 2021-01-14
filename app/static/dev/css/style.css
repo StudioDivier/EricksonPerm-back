@@ -513,279 +513,6 @@ footer .content .s-row a {
     padding: 5px 18px !important;
   }
 }
-.representation {
-  background-image: url("../img/main/bg-representation.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 0;
-}
-.representation .eric-logo img {
-  width: 35%;
-}
-.representation .f-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.representation .f-row h2 {
-  color: #000000;
-  width: 100%;
-  margin-top: 8px;
-  font-family: "MuseoCyrl700", serif;
-  font-size: 42px;
-}
-.representation .s-row {
-  margin-top: 38px;
-}
-.representation .s-row h3 {
-  font-size: 45px;
-  font-family: "MuseoCyrl700", serif;
-}
-.representation .s-row p {
-  color: #000000;
-  font-size: 35px;
-  margin-top: 26px;
-  font-family: "MuseoCyrl100", serif;
-}
-.representation .s-row b {
-  font-family: "MuseoCyrl700", serif;
-}
-
-@media (max-width: 576px) {
-  .representation .s-row p {
-    font-size: 28px;
-  }
-}
-@media (max-width: 425px) {
-  .representation {
-    padding-left: 0;
-  }
-  .representation .f-row {
-    padding-right: 0;
-  }
-  .representation .f-row h2 {
-    padding-left: 0;
-    font-size: 28px;
-  }
-  .representation .eric-logo img {
-    width: 60%;
-  }
-
-  .s-row {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .s-row h3 {
-    font-size: 26px !important;
-  }
-  .s-row p {
-    font-size: 21px !important;
-    margin-top: 14px !important;
-  }
-}
-@media screen and (max-width: 375px) {
-  .representation {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .representation .f-row h2 {
-    font-size: 20px;
-    width: 100%;
-  }
-  .representation .s-row h3 {
-    font-size: 18px;
-  }
-  .representation .s-row p {
-    margin-top: 15px;
-    font-size: 15px;
-  }
-}
-@media (max-width: 375px) {
-  .representation .f-row h2 {
-    font-size: 19px;
-    padding-left: 0;
-  }
-}
-.couching {
-  background-image: url("../img/main/bg-couch.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-.couching .f-row h2 {
-  font-size: 55px;
-  font-family: "MuseoCyrl700", serif;
-}
-.couching .f-row h5 {
-  font-size: 25px;
-  font-family: "MuseoCyrl500", serif;
-}
-.couching .f-row .h-cit {
-  font-size: 20px;
-  font-style: italic;
-}
-.couching .row-blocks {
-  margin-top: 65px;
-  display: flex;
-}
-.couching .row-blocks .couch-card {
-  height: 100%;
-  border: 4px solid #8e8e8e;
-  padding: 25px 10px;
-  opacity: 0.8;
-  position: center;
-  display: flex;
-  flex-direction: column;
-}
-.couching .row-blocks .couch-card .card-img {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.couching .row-blocks .couch-card .card-img .circle {
-  background-color: #f15a29;
-  border-radius: 100%;
-  /* padding: 50px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-}
-.couching .row-blocks .couch-card .card-img .card-name {
-  margin-top: 15px;
-  text-transform: uppercase;
-  font-family: "MuseoCyrl500", serif;
-}
-.couching .row-blocks .couch-card .text-center {
-  display: flex;
-  flex-direction: column;
-}
-.couching .row-blocks .couch-card .text-center .card-text {
-  font-family: "MuseoCyrl100", serif;
-}
-
-@media (max-width: 992px) {
-  .couching .row-blocks {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .couching .row-blocks .col-lg-3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .couching {
-    padding-left: 15px;
-  }
-  .couching .row-blocks {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .couching .row-blocks .col-lg-3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 50%;
-  }
-}
-@media (max-width: 425px) {
-  .couching .f-row {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .couching .f-row h2 {
-    font-size: 35px;
-  }
-  .couching .f-row h5 {
-    font-size: 19px;
-  }
-  .couching .f-row .h-cit {
-    font-size: 14px;
-    font-style: italic;
-  }
-  .couching .row-blocks .couch-card .text-center .card-text {
-    font-size: 12px;
-  }
-  .couching .row-blocks .couch-card .card-img .circle {
-    width: 125px;
-    height: 125px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .couching {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .couching .f-row {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .couching .f-row h2 {
-    font-size: 20px;
-  }
-  .couching .f-row h5 {
-    font-size: 12px;
-  }
-  .couching .f-row .h-cit {
-    font-size: 7px;
-    font-style: italic;
-  }
-  .couching .row-blocks {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .couching .row-blocks .col-lg-3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  .couching .row-blocks .col-lg-3 .couch-card {
-    margin-top: 15px;
-    width: 100%;
-    height: 100%;
-  }
-  .couching .row-blocks .col-lg-3 .couch-card .card-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .couching .row-blocks .col-lg-3 .couch-card .card-img .circle {
-    background-color: #f15a29;
-    border-radius: 100%;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .couching .row-blocks .col-lg-3 .couch-card .card-img .card-name {
-    font-size: 16px;
-  }
-  .couching .row-blocks .col-lg-3 .couch-card .text-center .card-text {
-    font-size: 14px;
-  }
-}
 .our-programs {
   background-image: url("../img/main/bg-programs.png");
   background-position: center center;
@@ -1384,12 +1111,11 @@ footer .content .s-row a {
   background-image: url("../img/main/logo40.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   background-color: white;
-  background-size: contain;
+  background-size: 80%;
 }
 .banner1 .f-row .text {
   display: flex;
@@ -4125,6 +3851,11 @@ footer .content .s-row a {
   padding: 5px 15px;
 }
 
+@media (max-width: 992px) {
+  .schedule-page .schedule-page__date-picker-container .pick-date .input-date {
+    padding-bottom: 15px;
+  }
+}
 @media screen and (max-width: 767px) {
   .schedule-page .schedule-page__date-picker-container form {
     display: flex;

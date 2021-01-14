@@ -154,6 +154,18 @@
 
 }
 
+@include max-w(992){
+  .schedule-page{
+    .schedule-page__date-picker-container{
+      .pick-date{
+        .input-date{
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .schedule-page {
     .schedule-page__date-picker-container {

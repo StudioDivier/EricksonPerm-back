@@ -1,20 +1,36 @@
 {% load static %}
+{#<section class="representation">#}
+{#    <div class="container">#}
+{#        <div class="rowd">#}
+{#            <div class="f-row">#}
+{#                <img src="{% static 'dev/img/main/exclamation-mark-in-a-circle.png' %}" alt="representation">#}
+{#                <h2>Представительство</h2>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="eric-logo">#}
+{#            <img src="{% static 'dev/img/header/Erickson-Perm-04.png' %}" alt="logo">#}
+{#        </div>#}
+{#        <div class="rowd">#}
+{#            <div class="s-row">#}
+{#                <span>Международного Эриксоновского университета</span>#}
+{#                <p>коучинга, основанного в <b>1990 году</b></p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
 <section class="representation">
     <div class="container">
-        <div class="rowd">
-            <div class="f-row">
-{#                <img src="{% static 'dev/img/main/exclamation-mark-in-a-circle.png' %}" alt="representation">#}
-                <h2>Представительство</h2>
-            </div>
+        <div class="representation__title">
+{#            <img src="{% static 'dev/img/main/exclamation-mark-in-a-circle.png' %}" alt="representation">#}
+            <h3>Представительство</h3>
         </div>
-        <div class="eric-logo">
+        <div class="representation__logo">
             <img src="{% static 'dev/img/header/Erickson-Perm-04.png' %}" alt="logo">
         </div>
-        <div class="rowd">
-            <div class="s-row">
-                <h3>Международного Эриксоновского университета</h3>
-                <p>коучинга, основанного в <b>1990 году</b></p>
-            </div>
+        <div class="representation__text">
+            <span>Международного Эриксоновского университета</span>
+            <p>коучинга, основанного в <strong>1990 году</strong></p>
         </div>
     </div>
 </section>
