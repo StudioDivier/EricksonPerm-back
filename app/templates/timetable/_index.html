@@ -42,7 +42,7 @@
                                         {% for elem in way_t %}
                                             {% if not elem.id|divisibleby:2 %}
                                                 <div class="form-check {{ elem.id }}">
-                                                    <input class="form-check-input" type="radio" id="inlineCheckbox{{ elem.id }}"
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox{{ elem.id }}"
                                                            name="way_id" value="{{ elem.id }}">
                                                     <label class="form-check-label"
                                                            for="inlineCheckbox{{ elem.id }}">{{ elem.way_t }}</label>
@@ -54,7 +54,7 @@
                                         {% for elem in way_t %}
                                             {% if elem.id|divisibleby:2 %}
                                                 <div class="form-check {{ elem.id }}">
-                                                    <input class="form-check-input" type="radio" value="{{ elem.id }}"
+                                                    <input class="form-check-input" type="checkbox" value="{{ elem.id }}"
                                                            id="inlineCheckbox{{ elem.id }}" name="way_id">
                                                     <label class="form-check-label"
                                                            for="inlineCheckbox4">{{ elem.way_t }}</label>

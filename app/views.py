@@ -1,3 +1,5 @@
+import re
+
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -382,15 +384,20 @@ def timetable_filter(request):
     response = []
 
     if request.GET.get('way_id') != None:
-        data_way = int(request.GET.get('way_id'))
-        prog_type = Timetables.objects.filter(way_id=data_way).values()
+        s = str(request)
+        print(s)
+        s1 = re.findall(r'way_id=\d+', s)
+        for i in range(len(s1)):
+            s1[i] = s[i].replace('way_id=', '')
+        for data_way in range(len(s1)):
+            prog_type = Timetables.objects.filter(way_id=data_way).values()
 
-        for item in prog_type:
-            date = tuple(str(item['date_full']).split('-')[::-1])
-            if (data_from <= date <= data_to) and (item['way_id'] == data_way):
-                response.append(item)
-            else:
-                continue
+            for item in prog_type:
+                date = tuple(str(item['date_full']).split('-')[::-1])
+                if (data_from <= date <= data_to) and (item['way_id'] == data_way):
+                    response.append(item)
+                else:
+                    continue
     else:
         prog_type = Timetables.objects.all().values()
         for item in prog_type:
