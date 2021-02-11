@@ -187,13 +187,13 @@ class Timetables(models.Model):
     date_day = models.IntegerField(name='date_day', verbose_name='День')
     month = models.CharField(name='date_month', max_length=64, verbose_name='Месяц(словестно)')
     date_full = models.DateField(name='date_full', verbose_name='Дата')
-    start = models.TimeField(name='time_start', verbose_name='Начало в:')
-    end = models.TimeField(name='time_end', verbose_name='Конец:')
-    long = models.CharField(name='long', max_length=64, verbose_name='Продолжительность')
+    start = models.TimeField(name='time_start', verbose_name='Начало в:', blank=True, null=True)
+    end = models.TimeField(name='time_end', verbose_name='Конец:', blank=True, null=True)
+    long = models.CharField(name='long', max_length=64, verbose_name='Продолжительность', blank=True, null=True)
     title = models.CharField(name='title', max_length=128, verbose_name='Заголовок')
-    description_short = models.TextField(name='description_short', verbose_name='Описание короткое')
-    way = models.ForeignKey(WayCouch, on_delete=models.CASCADE, verbose_name='Направление')
-    price = models.CharField(name='price', max_length=16, verbose_name='Цена')
+    description_short = models.TextField(name='description_short', verbose_name='Описание короткое', blank=True, null=True)
+    way = models.ForeignKey(WayCouch, on_delete=models.CASCADE, verbose_name='Направление', blank=True, null=True)
+    price = models.CharField(name='price', max_length=16, verbose_name='Цена', blank=True, null=True)
 
     class Meta:
         verbose_name = 'Расписание'

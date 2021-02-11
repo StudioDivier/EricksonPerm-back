@@ -361,13 +361,13 @@ def games_detail(request, id):
 
 def timetable(request):
     """
-
+     'title': title, 'description':description, 'keywords': keywords
     :param request:
     :return:
     """
     description, keywords, title = database_view.get_meta(page=request.path)
 
-    prog = Timetables.objects.all()
+    prog = models.Timetables.objects.order_by('date_full')
     way_t = models.WayCouch.objects.all()
     if request.method == 'POST':
         form = MainForm(request.POST)
@@ -378,13 +378,12 @@ def timetable(request):
             form_status = True
             return render(request, 'timetable/_index.html',
                           {'form': form, "name": data['name'], 'form_status': form_status, "status": status,
-                           'prog': prog, 'way_t': way_t})
+                           'prog': prog, 'way_t': way_t, 'title': title, 'description':description, 'keywords': keywords})
     else:
         form_status = False
         form = MainForm()
         return render(request, 'timetable/_index.html', {'form': form, 'form_status': form_status, 'prog': prog,
-                                                         'way_t': way_t, 'title': title,
-                                                     'description':description, 'keywords': keywords})
+                                                         'way_t': way_t, 'title': title, 'description':description, 'keywords': keywords})
 
 
 def timetable_filter(request):

@@ -34,9 +34,18 @@ class TrainersAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.register(Timetables)
+class TrainersTimetables(admin.ModelAdmin):
+    """
+
+    """
+    list_display = ('title', 'date_full',)
+    list_filter = ('title', 'date_full',)
+
+
+
 admin.site.register(Feeds)
 admin.site.register(Games)
-admin.site.register(Timetables)
 admin.site.register(WayCouch)
 admin.site.register(SEO)
 admin.site.register(Articles)
